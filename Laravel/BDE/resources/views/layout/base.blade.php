@@ -11,27 +11,42 @@
 <body>
     <header>
         <div id="menu-bar">
-            <img id="logo-menu" src="/pic/Logo_bde.png" alt="Logo">
+            <img id="logo-menu" src="/images/Logo_bde.png" alt="Logo">
 
             <nav>
                 <ul>
-                    <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Evénements</a></li>
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="#">Événements</a></li>
                     <li><a href="#">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
                 </ul>
             </nav>
 
-            <div>
-                <div id="menu-profil">
-                    <p id="user_name">Corentin</p>
-                    <img id="user_icon" src="/pic/user_icon.png" alt="user">
+            <div id="menu_profil">
+                <div id="menu_profil_content">
+                    <p id="user_name">Christophe</p>
+                    <img id="user_icon" src="/images/user_icon.png" alt="user">
                     <ul id="submenu_profil">
-                        <li><a href="#">Mon Profile</a></li>
+                        <li><a href="#">Mon profil</a></li>
                         <li><a href="#">Mes commandes</a></li>
                         <li><a href="#">Mes notifs</a></li>
                     </ul>
                 </div>
+            </div>
+
+            <div id="burger_menu">
+                <div id="burger_bar"></div>
+                <div id="burger_bar"></div>
+                <div id="burger_bar"></div>
+                <ul id="submenu_burger">
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="#">Événements</a></li>
+                    <li><a href="#">Boite à idées</a></li>
+                    <li><a href="#">Boutique</a></li>
+                    <li><a href="#">Mon profil</a></li>
+                    <li><a href="#">Mes commandes</a></li>
+                    <li><a href="#">Mes notifs</a></li>
+                </ul>
             </div>
         </div>
     </header>
