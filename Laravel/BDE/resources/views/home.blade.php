@@ -1,1 +1,1 @@
-@extends('layout/small')
+@extends('layout/base')
