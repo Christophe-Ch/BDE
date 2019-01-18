@@ -25,7 +25,6 @@
         <div id="profile">
 
         </div>
-
     </header>
 </body>
 </html>
