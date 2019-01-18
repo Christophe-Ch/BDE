@@ -14,12 +14,12 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('id_article');
-            $table->string('nom_article', 40);
-            $table->string('description_article', 255);
-            $table->integer('prix_article');
-            $table->string('photo_article', 40);
-            $table->integer('stock_article');
+            $table->increments('id');
+            $table->string('nom', 40);
+            $table->string('description', 255);
+            $table->integer('prix');
+            $table->string('photo', 40);
+            $table->integer('stock');
             $table->integer('id_centre');
         });
     }

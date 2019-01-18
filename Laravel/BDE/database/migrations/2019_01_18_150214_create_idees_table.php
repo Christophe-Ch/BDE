@@ -14,10 +14,10 @@ class CreateIdeesTable extends Migration
     public function up()
     {
         Schema::create('idees', function (Blueprint $table) {
-            $table->increments('id_idee');
-            $table->string('nom_idee', 40);
+            $table->increments('id');
+            $table->string('nom', 40);
             $table->string('description', 255);
-            $table->integer('vote_idee');
+            $table->integer('vote');
             $table->integer('id_user');
             $table->integer('id_centre');
         });

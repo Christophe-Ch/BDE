@@ -14,9 +14,9 @@ class CreateCommunicationsTable extends Migration
     public function up()
     {
         Schema::create('communications', function (Blueprint $table) {
-            $table->increments('id_com');
-            $table->string('contenu_com', 255);
-            $table->dateTime('date_com');
+            $table->increments('id');
+            $table->string('contenu', 255);
+            $table->dateTime('date');
             $table->integer('id_photo');
             $table->integer('id_user');
         });

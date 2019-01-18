@@ -14,11 +14,11 @@ class CreateManifestationsTable extends Migration
     public function up()
     {
         Schema::create('manifestations', function (Blueprint $table) {
-            $table->increments('id_manif');
-            $table->string('nom_manif', 40);
-            $table->string('description_manif', 40);
-            $table->dateTime('date_manif');
-            $table->integer('prix_manif');
+            $table->increments('id');
+            $table->string('nom', 40);
+            $table->string('description', 40);
+            $table->dateTime('date');
+            $table->integer('prix');
             $table->integer('id_centre');
         });
     }
