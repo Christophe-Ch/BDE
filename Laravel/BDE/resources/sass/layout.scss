@@ -1,14 +1,88 @@
 header{
-    width: 100%;
     height: 100vh;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
     background: linear-gradient(#1c385e,#1c4b5e);
 }
 #menu-bar{
     display: flex;
     justify-content: space-between;
+    padding: 20px 50px;
 }
-nav ul{
+#logo-menu{
+    width: 150px;
+}
+nav{
+}
+nav > ul{
+    list-style-type: none;
+}
+nav > ul > li{
+    display: inline;
+    padding: 0px 25px;
+}
+nav > ul > li > a{
+    position: relative;
+    font-size: 20pt;
+    color: white;
+    text-decoration: none;
+}
+nav > ul > li > a::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right,#155b64, #14b0b0);
+    width: 0;
+    border-radius: 4px;
+    transform: translateY(10px);
+    transition: width 0.3s;
+    pointer-events: none;
+}
+nav > ul > li > a:hover::after,
+nav > ul > li > a:focus::after{
+    width: 100%;
+}
+#menu-profil{
+    position: relative;
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#user_name{
+    padding-right: 10px;
+}
+#user_icon{
+    width: 55px;
+    height: 55px;
+}
+#submenu_profil{
+    list-style-type: none;
+    font-size: 15pt;
+    display: none;
+}
+#submenu_profil > li{
+    padding: 10px 5px;
+    text-align: center;
+}
+#submenu_profil > li > a{
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.3s;
+}
+#submenu_profil > li > a:hover{
+    color: #14b0b0;
+}
+#submenu_profil{
+    background: #102138;
+    border-radius: 5px;
+}
+#menu-profil:hover #submenu_profil{
+    display: inline-block;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    padding: 0;
+    z-index: 100000;
 }

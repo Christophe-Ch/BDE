@@ -11,20 +11,28 @@
 <body>
     <header>
         <div id="menu-bar">
-            <div id="logo-menu">
-                <img src="" alt="Logo">
-            </div>
+            <img id="logo-menu" src="/pic/Logo_bde.png" alt="Logo">
 
             <nav>
                 <ul>
                     <li><a href="#">Acceuil</a></li>
-                    <li><a href="#">Evenements</a></li>
+                    <li><a href="#">Evénements</a></li>
                     <li><a href="#">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
                 </ul>
             </nav>
 
-            <div id="profile"></div>
+            <div>
+                <div id="menu-profil">
+                    <p id="user_name">Corentin</p>
+                    <img id="user_icon" src="/pic/user_icon.png" alt="user">
+                    <ul id="submenu_profil">
+                        <li><a href="#">Mon Profile</a></li>
+                        <li><a href="#">Mes commandes</a></li>
+                        <li><a href="#">Mes notifs</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 </body>

@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/develop
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
@@ -66,10 +67,16 @@ main,
 nav,
 section {
   display: block;
+=======
+@font-face {
+  font-family: "font_content";
+  src: url(/fonts/segoeui.woff?a1ff5ea4b5043dee2773c80012448ac8);
+>>>>>>> Add the menu (static)
 }
 
 body {
   margin: 0;
+<<<<<<< refs/remotes/origin/develop
 <<<<<<< refs/remotes/origin/develop
   font-family: "Segoe UI", sans-serif;
 =======
@@ -10510,5 +10517,9 @@ a.text-dark:focus {
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+=======
+  padding: 0;
+  font-family: font_content;
+>>>>>>> Add the menu (static)
 }
 
