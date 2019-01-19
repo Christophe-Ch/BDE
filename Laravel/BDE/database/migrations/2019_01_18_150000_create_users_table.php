@@ -17,10 +17,10 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('nom', 40);
             $table->string('prenom', 40);
-            $table->string('addresse_mail_user', 255);
+            $table->string('adresse_mail', 255);
             $table->string('mdp', 255);
-            $table->integer('id_centre');
-            $table->integer('id_statut');
+            $table->integer('centre_id');
+            $table->integer('statut_id');
         });
     }
 

@@ -18,8 +18,8 @@ class CreateIdeesTable extends Migration
             $table->string('nom', 40);
             $table->string('description', 255);
             $table->integer('vote');
-            $table->integer('id_user');
-            $table->integer('id_centre');
+            $table->integer('user_id');
+            $table->integer('centre_id');
         });
     }
 

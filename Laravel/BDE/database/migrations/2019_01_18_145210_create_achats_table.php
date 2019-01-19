@@ -14,6 +14,8 @@ class CreateAchatsTable extends Migration
     public function up()
     {
         Schema::create('achats', function (Blueprint $table) {
+            $table->integer('id_user');
+            $table->integer('id_article');
             $table->integer('quantite');
         });
     }

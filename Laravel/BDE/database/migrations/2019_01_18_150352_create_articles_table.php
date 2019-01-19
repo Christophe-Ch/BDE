@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->integer('prix');
             $table->string('photo', 40);
             $table->integer('stock');
-            $table->integer('id_centre');
+            $table->integer('centre_id');
         });
     }
 
