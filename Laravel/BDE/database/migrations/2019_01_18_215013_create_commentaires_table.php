@@ -17,7 +17,7 @@ class CreateCommentairesTable extends Migration
             $table->increments('id');
             $table->string('contenu', 255);
             $table->dateTime('date');
-            $table->integer('photo_id');
+            $table->integer('user_id');
             $table->integer('photo_id');
         });
     }

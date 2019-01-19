@@ -9,6 +9,6 @@ class Article extends Model
     //
     
     public function centre() {
-        return $this->belongsTo('App\Centre', 'id_centre');
+        return $this->belongsTo('App\Centre');
     }
 }
