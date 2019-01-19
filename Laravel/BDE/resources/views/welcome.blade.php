@@ -86,8 +86,7 @@
 
                 <?php
 
-                echo \App\Achat::find(1)->user->adresse_mail;
-
+               echo \App\User::find(1)->manifestation;
 
                 ?>
 

@@ -9,10 +9,10 @@ class Commentaire extends Model
     //
 
     public function photo() {
-        return $this->belongsTo('App\Photo', 'id_photo');
+        return $this->belongsTo('App\Photo');
     }
 
     public function user() {
-        return $this->belongsTo('App\User', 'id_user');
+        return $this->belongsTo('App\User');
     }
 }
