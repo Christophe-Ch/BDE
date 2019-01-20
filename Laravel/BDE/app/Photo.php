@@ -9,11 +9,11 @@ class Photo extends Model
     //
 
     public function manifestation() {
-        return $this->belongsTo('App\Manifestation', 'id_manif');
+        return $this->belongsTo('App\Manifestation');
     }
 
     public function user() {
-        return $this->belongsTo('App\User', 'id_user');
+        return $this->belongsTo('App\User');
     }
 
     public function userLike() {

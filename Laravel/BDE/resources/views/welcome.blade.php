@@ -86,7 +86,7 @@
 
                 <?php
 
-               echo \App\User::find(1)->manifestation;
+               echo \App\Commentaire::find(1)->user;
 
                 ?>
 
