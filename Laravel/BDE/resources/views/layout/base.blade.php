@@ -50,5 +50,48 @@
             </div>
         </div>
     </header>
+    <footer>
+            <div id="content">
+                <div id="logo-bde">
+                    <img src="images/Logo_bde.png" alt="Logo">
+                </div>
+                <div id="links">
+                    <p>Liens rapides</p>
+                    <nav>
+                        <li><a href="#">Boutique</a></li>
+                        <li><a href="#">Evènements</a></li>
+                        <li><a href="#">Idées</a></li>
+                        <li><a href="#">Mon profil</a></li>
+                    </nav>
+                </div>
+    
+                <div id="contact">
+                    <p>Contact</p>
+                    <form method="post" action="">
+                        <input type="text" placeholder="Nom">
+                        <input type="email" placeholder="E-mail">
+                        <textarea placeholder="Message..." rows="4"></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    
+                </div>
+            </div>
+            
+            
+            <div id="social">
+                <p>Retrouvez-nous sur :</p>
+                <div id="social-logos">
+                    <a id="facebook" href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a id="twitter" href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a id="youtube" href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+    
+            <div id="legal">
+                <span><a href="#">Mentions légales</a></span>
+                <span>Crédits</span>
+                <span>&copy; Groupe3 2019</span>
+            </div>
+        </footer>
 </body>
 </html>

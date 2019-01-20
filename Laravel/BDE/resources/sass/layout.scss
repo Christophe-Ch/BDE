@@ -132,14 +132,183 @@ nav > ul > li > a:focus::after{
 @media only screen and (max-width:1200px){
     #menu-bar{align-items: center;}
     #logo-menu{width: 100px;object-fit: contain;}
-    nav{display: none;}
+    header nav{display: none;}
     #burger_menu{display: unset;};
 }
 @media only screen and (max-width:992px){
     #menu-bar{align-items: center;}
     #logo-menu{width: 100px;object-fit: contain;}
-    nav{display: none;}
+    header nav{display: none;}
     #menu_profil{display:none;}
     #burger_menu{display: unset;};
 }
+
+footer {
+    background: black;
+
+    #content {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 30px;
+        align-items: center;
+
+        #links {
+            li {
+                list-style-type: none;
+                font-family: 'Segoe UI';
+                font-style: italic;
+                font-weight: lighter;
+                margin-bottom: 20px;
+                font-size: 1.3em;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            p {
+                color: white;
+                font-family: 'Segoe UI';
+                margin-bottom: 20px;
+                font-size: 1.5em;
+            }
+        }
+    
+        #logo-bde {
+        
+            img {
+                width: 100px;
+            }
+        }
+
+        #contact {
+            
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                color: white;
+                font-family: 'Segoe UI';
+                margin-bottom: 15px; 
+                font-size: 1.5em;      
+            }
+
+            input, textarea {
+                background: none;
+                font-family: 'Segoe UI';
+                font-weight: lighter;
+                color: white;
+                font-style: italic;
+                border: none;
+                border-bottom: 0.1px solid rgb(204, 203, 203);
+                margin-bottom: 15px;
+                outline: none;
+                font-size: 1.3em;
+            }
+
+            textarea {
+                resize: none;
+                overflow: hidden;
+            }
+
+            input::placeholder, textarea::placeholder {
+                color: white;
+            }
+
+            button {
+                border-radius: 30px;
+                border: none;
+                width: 105px;
+                font-family: 'Segoe UI';
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 30px;
+                font-size: 1.3em;
+                padding-bottom: 5px;
+            }
+        }   
+    }
+
+    #social {
+        p {
+            text-align: center;
+            font-family: 'Segoe UI';
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        #social-logos {
+            display: flex;
+            justify-content: center;
+
+            a {
+                margin: 10px;
+                height: 30px;
+                border-radius: 100%;
+                transition: background-color 0.3s;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            #facebook:hover {
+                background: #3C5A99;
+            }
+
+            #twitter:hover {
+                background: #38A1F3;
+            }
+
+            #youtube:hover {
+                background: #ED3833;
+            }
+        }
+    }
+
+    #legal {
+        display: flex;
+        justify-content: center;
+        font-family: 'Segoe UI';
+        font-weight: lighter;
+        font-style: italic;
+        color: rgb(190, 190, 190);
+        margin-top: 10px;
+        padding-bottom: 5px;
+        font-size: 1.1em;
+
+        a {
+            color: rgb(190, 190, 190);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        span {
+            padding: 0px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #content {flex-direction: column;text-align:center;}
+    #links nav {display:flex;justify-content: space-around; width: 100vw;}
+    footer #content #logo-bde img {width:80px;}
+    footer {font-size: 0.8em;}
+}
+
+
+
+
 
