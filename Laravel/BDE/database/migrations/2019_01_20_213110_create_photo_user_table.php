@@ -14,6 +14,7 @@ class CreatePhotoUserTable extends Migration
     public function up()
     {
         Schema::create('photo_user', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('photo_id');
             $table->integer('user_id');
         });

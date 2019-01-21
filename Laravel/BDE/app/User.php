@@ -34,4 +34,8 @@ class User extends Model
     public function commentaires() {
         return $this->hasMany('\App\Commentaire');
     }
+
+    public function notifications() {
+        return $this->hasMany('App\Notification');
+    }
 }

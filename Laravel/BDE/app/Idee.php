@@ -12,6 +12,10 @@ class Idee extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function votes() {
+        return $this->belongsToMany('App\User');
+    }
+
     public function centre() {
         return $this->belongsTo('App\Centre');
     }

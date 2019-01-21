@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PhotoUserTableSeeder::class);
         $this->call(PhotoTableSeeder::class);
         $this->call(IdeeTableSeeder::class);
+        $this->call(IdeeUserTableSeeder::class);
+        $this->call(NotificationTableSeeder::class);
     }
 }

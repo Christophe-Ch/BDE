@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Like extends Model
+class Vote extends Model
 {
     //
-
-    protected $table = 'photo_user';
+    
+    protected $table = 'idee_user'
 }

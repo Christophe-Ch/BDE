@@ -16,7 +16,6 @@ class IdeeTableSeeder extends Seeder
         DB::table('idees')->insert([
             "nom" => "idee1",
             "description" => "une idee geniale",
-            "vote" => 1,
             "user_id" => 1,
             "centre_id" => 1
         ]);

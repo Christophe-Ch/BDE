@@ -19,4 +19,8 @@ class Photo extends Model
     public function likes() {
         return $this->belongsToMany('App\User');
     }
+
+    public function commentaires() {
+        return $this->hasMany('App\Commentaire');
+    }
 }

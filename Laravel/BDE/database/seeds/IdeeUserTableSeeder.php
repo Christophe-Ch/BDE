@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PhotoTableSeeder extends Seeder
+class IdeeUserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +13,8 @@ class PhotoTableSeeder extends Seeder
     {
         //
 
-        DB::table('photos')->insert([
-            "url" => "photo.png",
-            "manifestation_id" => 1,
+        DB::table('idee_user')->insert([
+            "idee_id" => 1,
             "user_id" => 1
         ]);
     }
