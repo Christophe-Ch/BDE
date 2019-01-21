@@ -1,3 +1,4 @@
+<<<<<<<
 .button {
   background: #ffc252;
   color: white;
@@ -75,8 +76,39 @@
 }
 
 <<<<<<< develop
+<<<<<<< develop
 
 >>>>>>>
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
 =======
 >>>>>>> Revert "Merge branch 'feature/pages' into develop"
+=======
+
+=======
+.button {
+  background: #ffc252;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  display: inline-block;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button :active {
+  cursor: click;
+}
+
+.is-light {
+  color: black;
+  background: white;
+}
+
+.is-valid {
+  background: #00a390;
+}
+
+
+>>>>>>>
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
