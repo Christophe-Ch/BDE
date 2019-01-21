@@ -309,7 +309,64 @@ footer {
     footer {font-size: 0.8em;}
 }
 
+.left{
+    background: white;
+    width: 55%;
+    height: 100vh;
+    float: left;
+    text-align: center;
 
+    #title_left{
+        font-size: 60pt;
+        margin: 0;
+        margin-bottom: 10%;
+    }
+    .title_input_left{
+        margin: 0;
+        font-size: 20pt;
+        font-style: italic;
+    }
+    .input_left{
+        width: 45%;
+        height: 50px;
+        border-radius: 15px;
+        border: 4px solid #1c385e;
+        font-size: 15pt;
+        margin-bottom: 15px;
+    }
+    .btn_left{
+        background: #ffc252;
+        color: white;
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        border: none;
+        font-size: 1.5em;
+        display: inline-block;
+        border-radius: 50px;
+        outline: none;
+    }
+}
+.right{
+    background: linear-gradient(#1c385e,#1c4b5e);
+    width: 45%;
+    height: 100vh;
+    float: right;
+    text-align: center;
 
+    #img_right{
+        width: 50%;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+}
 
+@media only screen and (max-width: 992px){
+    .right{display: none;}
+    .left{width: 100%;}
+}
 
+@media only screen and (max-width: 545px){
+    .left{.input_left{width: 75%;}}
+}

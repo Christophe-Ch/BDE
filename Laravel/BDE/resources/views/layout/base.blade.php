@@ -28,7 +28,7 @@
                     <img id="user_icon" src="/images/user_icon.png" alt="user">
                     <ul id="submenu_profil">
                         <li><a href="#">Mon profil</a></li>
-                        <li><a href="#">Mes commandes</a></li>
+                        <li><a href="#">Mon panier</a></li>
                         <li><a href="#">Mes notifs</a></li>
                     </ul>
                 </div>

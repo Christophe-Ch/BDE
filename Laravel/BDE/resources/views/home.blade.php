@@ -1,1 +1,1 @@
-@extends('layout/base')
+@extends('layout/duo')
