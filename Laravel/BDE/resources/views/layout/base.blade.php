@@ -21,26 +21,18 @@
                     <li><a href="#">Boutique</a></li>
                 </ul>
             </nav>
-           
+
             <div id="menu_profil">
-                @if (Auth::check())
-                    <div id="menu_profil_content">
-                        <p id="user_name"><a href="">{{ Auth::user()->nom }}</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
-                        <ul id="submenu_profil">
-                            <li><a href="#">Mon profil</a></li>
-                            <li><a href="#">Mon panier</a></li>
-                            <li><a href="#">Mes notifs</a></li>
-                        </ul>
-                    </div>
-                @else
-                    <div id="menu_profil_content">
-                        <p id="user_name"><a href="">Se connecter</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
-                    </div>
-                @endif
+                <div id="menu_profil_content">
+                    <p id="user_name">Christophe</p>
+                    <img id="user_icon" src="/images/user_icon.png" alt="user">
+                    <ul id="submenu_profil">
+                        <li><a href="#">Mon profil</a></li>
+                        <li><a href="#">Mon panier</a></li>
+                        <li><a href="#">Mes notifs</a></li>
+                    </ul>
+                </div>
             </div>
-            
 
             <div id="burger_menu">
                 <div id="burger_bar"></div>
@@ -57,9 +49,7 @@
                 </ul>
             </div>
         </div>
-        @yield('content')
     </header>
-    
     <footer>
             <div id="content">
                 <div id="logo-bde">
