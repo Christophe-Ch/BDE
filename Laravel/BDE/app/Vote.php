@@ -8,5 +8,5 @@ class Vote extends Model
 {
     //
     
-    protected $table = 'idee_user'
+    protected $table = 'idee_user';
 }

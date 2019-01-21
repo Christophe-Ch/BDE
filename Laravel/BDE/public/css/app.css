@@ -12,6 +12,7 @@ body {
 
 #text_home {
   margin-left: 10%;
+  margin-top: 6%;
   width: 50%;
 }
 
@@ -38,6 +39,7 @@ body {
   display: inline-block;
   border-radius: 50px;
   outline: none;
+  transition-duration: 0.5s;
 }
 
 #auth_home #input_home {
@@ -51,6 +53,16 @@ body {
   display: inline-block;
   border-radius: 50px;
   outline: none;
+  transition-duration: 0.5s;
+}
+
+#auth_home #input_home_color:hover {
+  color: black;
+  box-shadow: 0px 0px 10px 5px #ffc252;
+}
+
+#auth_home #input_home:hover {
+  color: black;
 }
 
 #img_home {

@@ -2,14 +2,13 @@
 
 @section('content')
 <div id="text_home">
-    {{ \App\Notification::find(1)->user }}
     <h1 id="title_home">It's not too late to participate !</h1>
     <p id="description_home">Venez découvrir tous les éléments proposés par le BDE ...</p>
 </div>
 @if (!Auth::check())
     <div id="auth_home">
-        <input id="input_home_color" type="button" value="Se connecter">
-        <input id="input_home" type="button" value="S'inscrire">
+        <a href="/login"><input id="input_home_color" type="button" value="Se connecter"></a>
+        <a href="/register"><input id="input_home" type="button" value="S'inscrire"></a>
     </div>
 @endif
 <div id="img_home">

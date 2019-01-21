@@ -3,10 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
-class User extends Model
+class User extends Authenticatable
 {
-    //
+    protected $fillable = ['name', 'email', 'password'];
+    public $timestamps = false;
+
     public function centre() {
         return $this->belongsTo('App\Centre');
     }
