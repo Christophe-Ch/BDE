@@ -48097,18 +48097,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< refs/remotes/origin/develop
-<<<<<<< refs/remotes/origin/develop
-/***/ "./resources/sass/list-element.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/list-element.scss ***!
-  \******************************************/
-=======
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
   \************************************/
->>>>>>> Update Css
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -48116,20 +48108,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< refs/remotes/origin/develop
-/***/ 0:
-/*!************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/list-element.scss ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Source\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Source\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Source\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
-=======
-=======
->>>>>>> Update Css
 /***/ 0:
 /*!******************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ***!
@@ -48137,26 +48115,9 @@ module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projet
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< refs/remotes/origin/develop
-<<<<<<< refs/remotes/origin/develop
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-<<<<<<< refs/remotes/origin/develop
-module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> Update Layout
-=======
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
->>>>>>> Update Css
-=======
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
->>>>>>> Adding a footer
-=======
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
->>>>>>> Add auth template
 
 
 /***/ })
