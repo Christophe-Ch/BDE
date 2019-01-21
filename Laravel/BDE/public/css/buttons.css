@@ -2,13 +2,19 @@
 .button {
   background: #ffc252;
   color: white;
+<<<<<<< develop
 <<<<<<< Updated upstream
+=======
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
   width: 200px;
   height: 50px;
   border: none;
   font-size: 15pt;
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
+=======
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
   display: inline-block;
   border-radius: 20px;
   outline: none;
@@ -28,6 +34,7 @@
   background: #00a390;
 }
 
+<<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
 .blue {
@@ -83,6 +90,8 @@
 =======
 >>>>>>> Revert "Merge branch 'feature/pages' into develop"
 =======
+=======
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
 
 =======
 .button {
@@ -110,5 +119,9 @@
 }
 
 
+<<<<<<< develop
+>>>>>>>
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
 >>>>>>>
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
