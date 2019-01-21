@@ -84,11 +84,9 @@
                     Laravel
                 </div>
 
-                <?php
+                {{ \App\User::find(1)->achats->first()->pivot }}
 
-               echo \App\Commentaire::find(1)->user;
-
-                ?>
+               
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>

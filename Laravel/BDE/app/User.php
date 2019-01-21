@@ -15,13 +15,19 @@ class User extends Model
         return $this->belongsTo('App\Statut');
     }
 
-    public function manifestation() {
+    public function idees() {
+        return $this->hasMany('\App\Idee');
+    }
+
+    public function manifestations() {
         return $this->belongsToMany('App\Manifestation');
     }
 
-    public function photo() {
-        return $this->belongsToMany('App\Photo');
+    public function photos() {
+        return $this->hasMany('App\Photo');
     }
 
-
+    public function achats() {
+        return $this->belongsToMany('\App\Article', 'achats');
+    }
 }

@@ -16,7 +16,7 @@ class Photo extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function userLike() {
+    public function likes() {
         return $this->belongsToMany('App\User');
     }
 }

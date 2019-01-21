@@ -12,7 +12,7 @@ class Manifestation extends Model
         return $this->belongsTo('App\Centre');
     }
 
-    public function user() {
+    public function users() {
         return $this->belongsToMany('App\User');
     }
 }
