@@ -83,11 +83,6 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
-                {{ \App\User::find(1)->achats }}
-
-               
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
