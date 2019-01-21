@@ -7,6 +7,7 @@
     <title>BDE CESI ROUEN</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/buttons.css">
 </head>
 <body>
     <header>
@@ -31,7 +32,7 @@
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
                             <li><a href="#">Mes notifs</a></li>
-                            <li><form action="/logout" method="post">@csrf<button type="submit">Déconnexion</button></form></li>
+                            <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>
                 @else

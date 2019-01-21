@@ -1,0 +1,26 @@
+.button {
+  background: #ffc252;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-size: 15pt;
+  display: inline-block;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button :active {
+  cursor: click;
+}
+
+.is-light {
+  color: black;
+  background: white;
+}
+
+.is-valid {
+  background: #00a390;
+}
+
