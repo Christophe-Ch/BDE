@@ -392,6 +392,7 @@ footer #legal span {
 
 .left {
   background: white;
+  color: black;
   width: 55%;
   height: 100vh;
   float: left;
@@ -410,6 +411,12 @@ footer #legal span {
   font-style: italic;
 }
 
+.left .title_condition_left {
+  margin: 0;
+  font-size: 10pt;
+  padding-left: 20px;
+}
+
 .left .input_left {
   width: 45%;
   height: 50px;
@@ -417,6 +424,7 @@ footer #legal span {
   border: 4px solid #1c385e;
   font-size: 15pt;
   margin-bottom: 15px;
+  padding: 0px 10px;
 }
 
 .left .btn_left {
@@ -430,6 +438,11 @@ footer #legal span {
   display: inline-block;
   border-radius: 50px;
   outline: none;
+}
+
+.left #condition {
+  display: flex;
+  justify-content: center;
 }
 
 .right {
@@ -461,6 +474,10 @@ footer #legal span {
 @media only screen and (max-width: 545px) {
   .left .input_left {
     width: 75%;
+  }
+
+  .left #title_left {
+    font-size: 40pt;
   }
 }
 

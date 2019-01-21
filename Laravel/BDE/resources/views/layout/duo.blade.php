@@ -10,15 +10,11 @@
 </head>
 <body>
     <div class="left">
-        <h1 id="title_left">Title</h1>
-        <form action="POST">
-            <p class="title_input_left">title input</p>
-            <input class="input_left" type="text"><br>
-            <input class="btn_left" type="button" value="Button">
-        </form>
+        <h1 id="title_left">@yield('title')</h1>
+        @yield('content_form')
     </div>
     <div class="right">
-        <img id="img_right" src="images/pull.png" alt="Logo">
+        <img id="img_right" src="images/Logo_bde2.png" alt="Logo">
     </div>
 </body>
 </html>

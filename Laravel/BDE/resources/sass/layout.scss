@@ -315,6 +315,7 @@ footer {
 
 .left{
     background: white;
+    color: black;
     width: 55%;
     height: 100vh;
     float: left;
@@ -330,6 +331,11 @@ footer {
         font-size: 20pt;
         font-style: italic;
     }
+    .title_condition_left{
+        margin: 0;
+        font-size: 10pt;
+        padding-left: 20px;
+    }
     .input_left{
         width: 45%;
         height: 50px;
@@ -337,6 +343,7 @@ footer {
         border: 4px solid #1c385e;
         font-size: 15pt;
         margin-bottom: 15px;
+        padding: 0px 10px;
     }
     .btn_left{
         background: #ffc252;
@@ -349,6 +356,10 @@ footer {
         display: inline-block;
         border-radius: 50px;
         outline: none;
+    }
+    #condition{
+        display: flex;
+        justify-content: center;
     }
 }
 .right{
@@ -373,4 +384,5 @@ footer {
 
 @media only screen and (max-width: 545px){
     .left{.input_left{width: 75%;}}
+    .left{#title_left{font-size: 40pt;}}
 }

@@ -35,7 +35,7 @@
                     </div>
                 @else
                     <div id="menu_profil_content">
-                        <p id="user_name"><a href="">Se connecter</a></p>
+                        <p id="user_name"><a href="/login">Se connecter</a></p>
                         <img id="user_icon" src="/images/user_icon.png" alt="user">
                     </div>
                 @endif
