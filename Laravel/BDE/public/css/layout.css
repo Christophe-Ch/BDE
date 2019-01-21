@@ -60,6 +60,11 @@ nav > ul > li > a:focus::after {
   color: white;
 }
 
+#menu_profil_content a {
+  color: white;
+  text-decoration: none;
+}
+
 #user_name {
   padding-right: 10px;
 }
@@ -207,7 +212,6 @@ footer #content {
   display: flex;
   justify-content: space-around;
   padding-top: 30px;
-  align-items: center;
 }
 
 footer #content #links li {
@@ -368,6 +372,7 @@ footer #legal span {
   #content {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   #links nav {

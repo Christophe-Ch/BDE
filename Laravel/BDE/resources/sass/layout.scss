@@ -50,6 +50,11 @@ nav > ul > li > a:focus::after{
     justify-content: center;
     align-items: center;
     color: white;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }
 #user_name{
     padding-right: 10px;
@@ -151,7 +156,6 @@ footer {
         display: flex;
         justify-content: space-around;
         padding-top: 30px;
-        align-items: center;
 
         #links {
             li {
@@ -303,7 +307,7 @@ footer {
 }
 
 @media only screen and (max-width: 768px){
-    #content {flex-direction: column;text-align:center;}
+    #content {flex-direction: column;text-align:center;align-items: center;}
     #links nav {display:flex;justify-content: space-around; width: 100vw;}
     footer #content #logo-bde img {width:80px;}
     footer {font-size: 0.8em;}
