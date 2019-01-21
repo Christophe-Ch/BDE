@@ -1,4 +1,3 @@
-<<<<<<<
 .button {
   background: #ffc252;
   color: white;
@@ -6,6 +5,7 @@
   height: 50px;
   border: none;
   font-size: 15pt;
+<<<<<<< develop
   display: inline-block;
   border-radius: 20px;
   outline: none;
@@ -32,6 +32,8 @@
   color: white;
   border: none;
   font-size: 1.5em;
+=======
+>>>>>>> Revert "Merge branch 'feature/pages' into develop"
   display: inline-block;
   border-radius: 20px;
   outline: none;
@@ -51,5 +53,3 @@
   background: #00a390;
 }
 
-
->>>>>>>
