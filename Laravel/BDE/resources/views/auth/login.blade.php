@@ -3,23 +3,22 @@
 @section('title', 'CONNEXION')
 
 @section('content_form')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form action="/login" method="post">
-    {{csrf_field()}}
+    @csrf
     <p class="title_input_left">E-mail</p>
-    <input class="input_left" type="text" name="email"><br>
-    @if ($errors->has('email'))
-        <span class="help-block">
-            <strong>{{ $errors->first('email') }}</strong>
-        </span>
-    @endif
+    <input class="input_left" type="email" name="email" value="{{ old('email') }}"><br>
 
     <p class="title_input_left">Mot de passe</p>
     <input class="input_left" type="password" name="password"><br>
-    @if ($errors->has('password'))
-        <span class="help-block">
-            <strong>{{ $errors->first('password') }}</strong>
-        </span>
-    @endif
 
     <input class="btn_left" type="submit" value="Se connecter">
 </form>

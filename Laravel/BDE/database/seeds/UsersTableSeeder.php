@@ -13,11 +13,10 @@ class UsersTableSeeder extends Seeder
     {
         //
         DB::table('users')->insert([
-            'nom' => "ADMIN",
+            'name' => "ADMIN",
             "prenom" => "ADMIN",
-            "adresse_mail" => "Admin@bde.fr",
-            "mdp" => "ADMIN",
-            "photo" => 'photo.png',
+            "email" => "Admin@bde.fr",
+            "password" => "$2y$10$7fhO/cPdBUnGEiGpRnNiEenUB4SNVTsZAQxzOJjSc/Q6IZEUnnWQG",
             "centre_id" => "1",
             "statut_id" => "1"
         ]);

@@ -15,7 +15,7 @@
 
             <nav>
                 <ul>
-                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="/">Accueil</a></li>
                     <li><a href="#">Événements</a></li>
                     <li><a href="#">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
@@ -25,12 +25,13 @@
             <div id="menu_profil">
                 @if (Auth::check())
                     <div id="menu_profil_content">
-                        <p id="user_name"><a href="">{{ Auth::user()->nom }}</a></p>
+                        <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
                         <img id="user_icon" src="/images/user_icon.png" alt="user">
                         <ul id="submenu_profil">
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
                             <li><a href="#">Mes notifs</a></li>
+                            <li><form action="/logout" method="post">@csrf<button type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>
                 @else
