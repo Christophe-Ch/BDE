@@ -28,6 +28,6 @@ class User extends Model
     }
 
     public function achats() {
-        return $this->belongsToMany('\App\Article', 'achats');
+        return $this->belongsToMany('\App\Article', 'articles', 'user_id', 'quantite');
     }
 }

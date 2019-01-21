@@ -84,7 +84,7 @@
                     Laravel
                 </div>
 
-                {{ \App\User::find(1)->achats->first()->pivot }}
+                {{ \App\User::find(1)->achats }}
 
                
 

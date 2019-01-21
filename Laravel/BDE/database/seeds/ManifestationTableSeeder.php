@@ -20,6 +20,7 @@ class ManifestationTableSeeder extends Seeder
             "description" => "Le futuuur",
             "date" => $date,
             "prix" => 0,
+            "photo" => "photo.png",
             "centre_id" => 1
         ]);
     }

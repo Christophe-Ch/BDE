@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             "prenom" => "ADMIN",
             "adresse_mail" => "Admin@bde.fr",
             "mdp" => "ADMIN",
+            "photo" => 'photo.png',
             "centre_id" => "1",
             "statut_id" => "1"
         ]);

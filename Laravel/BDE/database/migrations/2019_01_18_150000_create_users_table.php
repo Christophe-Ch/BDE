@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('prenom', 40);
             $table->string('adresse_mail', 255);
             $table->string('mdp', 255);
+            $table->string('photo', 255);
             $table->integer('centre_id');
             $table->integer('statut_id');
         });

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AchatTableSeeder extends Seeder
+class ArticleUserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,10 +13,10 @@ class AchatTableSeeder extends Seeder
     {
         //
 
-        DB::table('achats')->insert([
-            "user_id" => 1,
+        DB::table('article_user')->insert([
             "article_id" => 1,
-            "quantite" => 1
+            "user_id" => 1,
+            "quantite" => 50
         ]);
     }
 }

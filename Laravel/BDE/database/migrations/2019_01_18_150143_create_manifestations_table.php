@@ -19,6 +19,7 @@ class CreateManifestationsTable extends Migration
             $table->string('description', 40);
             $table->dateTime('date');
             $table->integer('prix');
+            $table->string('photo', 255);
             $table->integer('centre_id');
         });
     }
