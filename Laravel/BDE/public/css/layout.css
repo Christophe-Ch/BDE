@@ -1,0 +1,461 @@
+header {
+  height: 100vh;
+  background: linear-gradient(#1c385e, #1c4b5e);
+}
+
+#menu-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+#logo-menu {
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav > ul > li {
+  display: inline;
+  padding: 0px 25px;
+}
+
+nav > ul > li > a {
+  position: relative;
+  font-size: 20pt;
+  color: white;
+  text-decoration: none;
+}
+
+nav > ul > li > a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #155b64, #14b0b0);
+  width: 0;
+  border-radius: 4px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  transition: width 0.3s;
+  pointer-events: none;
+}
+
+nav > ul > li > a:hover::after,
+nav > ul > li > a:focus::after {
+  width: 100%;
+}
+
+#menu_profil_content {
+  position: relative;
+  font-size: 20pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#user_name {
+  padding-right: 10px;
+}
+
+#user_icon {
+  width: 50px;
+  height: 50px;
+}
+
+#submenu_profil {
+  list-style-type: none;
+  font-size: 15pt;
+  display: none;
+}
+
+#submenu_profil > li {
+  margin: 0px 15px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#submenu_profil > li > a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+#submenu_profil > li > a:hover {
+  color: #14b0b0;
+}
+
+#submenu_profil {
+  background: #102138;
+  border-radius: 5px;
+}
+
+#menu_profil_content:hover #submenu_profil {
+  display: inline-block;
+  position: absolute;
+  top: 75%;
+  left: 0;
+  padding: 0;
+}
+
+#burger_menu {
+  position: relative;
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+
+#burger_bar {
+  width: 50px;
+  height: 5px;
+  background: white;
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+#submenu_burger {
+  list-style-type: none;
+  font-size: 15pt;
+  display: none;
+}
+
+#submenu_burger > li {
+  margin: 0px 15px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#submenu_burger > li > a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+#submenu_burger > li > a:hover {
+  color: #14b0b0;
+}
+
+#submenu_burger {
+  background: #2b425f;
+  border-radius: 5px;
+}
+
+#burger_menu:hover #submenu_burger {
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 250px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  #menu-bar {
+    align-items: center;
+  }
+
+  #logo-menu {
+    width: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #burger_menu {
+    display: unset;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #menu-bar {
+    align-items: center;
+  }
+
+  #logo-menu {
+    width: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #menu_profil {
+    display: none;
+  }
+
+  #burger_menu {
+    display: unset;
+  }
+}
+
+footer {
+  background: black;
+}
+
+footer #content {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  align-items: center;
+}
+
+footer #content #links li {
+  list-style-type: none;
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+footer #content #links li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer #content #links li a:hover {
+  text-decoration: underline;
+}
+
+footer #content #links p {
+  color: white;
+  font-family: "Segoe UI";
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+footer #content #logo-bde img {
+  width: 100px;
+}
+
+footer #content #contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer #content #contact p {
+  color: white;
+  font-family: "Segoe UI";
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+footer #content #contact input,
+footer #content #contact textarea {
+  background: none;
+  font-family: "Segoe UI";
+  font-weight: lighter;
+  color: white;
+  font-style: italic;
+  border: none;
+  border-bottom: 0.1px solid #cccbcb;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 1.3em;
+}
+
+footer #content #contact textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+footer #content #contact input::-webkit-input-placeholder,
+footer #content #contact textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+footer #content #contact input:-ms-input-placeholder,
+footer #content #contact textarea:-ms-input-placeholder {
+  color: white;
+}
+
+footer #content #contact input::-ms-input-placeholder,
+footer #content #contact textarea::-ms-input-placeholder {
+  color: white;
+}
+
+footer #content #contact input::placeholder,
+footer #content #contact textarea::placeholder {
+  color: white;
+}
+
+footer #content #contact button {
+  border-radius: 30px;
+  border: none;
+  width: 105px;
+  font-family: "Segoe UI";
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  font-size: 1.3em;
+  padding-bottom: 5px;
+}
+
+footer #social p {
+  text-align: center;
+  font-family: "Segoe UI";
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+footer #social #social-logos {
+  display: flex;
+  justify-content: center;
+}
+
+footer #social #social-logos a {
+  margin: 10px;
+  height: 30px;
+  border-radius: 100%;
+  transition: background-color 0.3s;
+}
+
+footer #social #social-logos a img {
+  width: 30px;
+}
+
+footer #social #social-logos #facebook:hover {
+  background: #3C5A99;
+}
+
+footer #social #social-logos #twitter:hover {
+  background: #38A1F3;
+}
+
+footer #social #social-logos #youtube:hover {
+  background: #ED3833;
+}
+
+footer #legal {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI";
+  font-weight: lighter;
+  font-style: italic;
+  color: #bebebe;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  font-size: 1.1em;
+}
+
+footer #legal a {
+  color: #bebebe;
+  text-decoration: none;
+}
+
+footer #legal a:hover {
+  text-decoration: underline;
+}
+
+footer #legal span {
+  padding: 0px 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  #content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #links nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+  }
+
+  footer #content #logo-bde img {
+    width: 80px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+.left {
+  background: white;
+  width: 55%;
+  height: 100vh;
+  float: left;
+  text-align: center;
+}
+
+.left #title_left {
+  font-size: 60pt;
+  margin: 0;
+  margin-bottom: 10%;
+}
+
+.left .title_input_left {
+  margin: 0;
+  font-size: 20pt;
+  font-style: italic;
+}
+
+.left .input_left {
+  width: 45%;
+  height: 50px;
+  border-radius: 15px;
+  border: 4px solid #1c385e;
+  font-size: 15pt;
+  margin-bottom: 15px;
+}
+
+.left .btn_left {
+  background: #ffc252;
+  color: white;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  font-size: 1.5em;
+  display: inline-block;
+  border-radius: 50px;
+  outline: none;
+}
+
+.right {
+  background: linear-gradient(#1c385e, #1c4b5e);
+  width: 45%;
+  height: 100vh;
+  float: right;
+  text-align: center;
+}
+
+.right #img_right {
+  width: 50%;
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 992px) {
+  .right {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .left .input_left {
+    width: 75%;
+  }
+}
+

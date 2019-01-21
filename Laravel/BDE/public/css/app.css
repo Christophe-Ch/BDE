@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/develop
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 /*!
@@ -34,7 +35,11 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+<<<<<<< refs/remotes/origin/develop
   --font-family-sans-serif: "Segoe UI", sans-serif;
+=======
+  --font-family-sans-serif: "Nunito", sans-serif;
+>>>>>>> Update Layout
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -62,11 +67,21 @@ main,
 nav,
 section {
   display: block;
+=======
+@font-face {
+  font-family: "font_content";
+  src: url(/fonts/segoeui.woff?a1ff5ea4b5043dee2773c80012448ac8);
+>>>>>>> Add the menu (static)
 }
 
 body {
   margin: 0;
+<<<<<<< refs/remotes/origin/develop
+<<<<<<< refs/remotes/origin/develop
   font-family: "Segoe UI", sans-serif;
+=======
+  font-family: "Nunito", sans-serif;
+>>>>>>> Update Layout
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -5980,7 +5995,11 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
+<<<<<<< refs/remotes/origin/develop
   font-family: "Segoe UI", sans-serif;
+=======
+  font-family: "Nunito", sans-serif;
+>>>>>>> Update Layout
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6105,7 +6124,11 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
+<<<<<<< refs/remotes/origin/develop
   font-family: "Segoe UI", sans-serif;
+=======
+  font-family: "Nunito", sans-serif;
+>>>>>>> Update Layout
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10494,5 +10517,9 @@ a.text-dark:focus {
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+=======
+  padding: 0;
+  font-family: font_content;
+>>>>>>> Add the menu (static)
 }
 

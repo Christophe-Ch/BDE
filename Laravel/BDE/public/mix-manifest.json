@@ -1,5 +1,14 @@
 {
     "/js/app.js": "/js/app.js",
+<<<<<<< refs/remotes/origin/develop
+<<<<<<< refs/remotes/origin/develop
     "/css/app.css": "/css/app.css",
     "/css/list-element.css": "/css/list-element.css"
+=======
+    "/css/app.css": "/css/app.css"
+>>>>>>> Update Layout
+=======
+    "/css/app.css": "/css/app.css",
+    "/css/layout.css": "/css/layout.css"
+>>>>>>> Update Css
 }
