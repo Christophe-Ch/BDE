@@ -48108,10 +48108,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/event.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/event.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\resources\\sass\\event.scss'\n    at runLoaders (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at process.nextTick (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:73:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+
+/***/ }),
+
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
   \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/list-element.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/list-element.scss ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -48130,18 +48152,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/user.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/user.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\resources\\sass\\user.scss'\n    at runLoaders (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at process.nextTick (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:73:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+
+/***/ }),
+
 /***/ 0:
-/*!*********************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/search-bar.scss ***!
-  \*********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/event.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
-module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 
 
 /***/ })
