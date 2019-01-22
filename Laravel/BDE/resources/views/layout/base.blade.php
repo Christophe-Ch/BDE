@@ -58,8 +58,9 @@
                 </ul>
             </div>
         </div>
-        @yield('content')
+        @yield('header')
     </header>
+    @yield('content')
     <footer>
             <div id="content">
                 <div id="logo-bde">

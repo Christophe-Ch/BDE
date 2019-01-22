@@ -1,6 +1,6 @@
 @extends('layout/base')
 
-@section('content')
+@section('header')
 <div id="text_home">
     <h1 id="title_home">It's not too late to participate !</h1>
     <p id="description_home">Venez découvrir tous les éléments proposés par le BDE ...</p>

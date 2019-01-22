@@ -28,7 +28,7 @@
 
     <div id="condition">
         <input type="checkbox" name="checkbox">
-        <p class="title_condition_left">J'accetpe les conditions de règlements</p>
+        <p class="title_condition_left">J'accepte les conditions de règlements</p>
     </div><br>
 
     <input class="btn_left" type="submit" value="S'inscrire">
