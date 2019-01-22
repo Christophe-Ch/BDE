@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/buttons.css">
+<<<<<<< develop
     <link rel="stylesheet" href="@yield('stylesheets')">
+=======
+    <link rel="stylesheet" href="/css/notification.css">
+    @yield('stylesheets')
+>>>>>>> Adding notifications system and page
 </head>
 <body>
     <header>
@@ -28,7 +33,9 @@
                 @if (Auth::check())
                     <div id="menu_profil_content">
                         <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
+                        <div class="{{ Auth::user()->hasNotifications() ? 'has-notifications' : ''}}">
+                            <img id="user_icon" src="/images/user_icon.png" alt="user">
+                        </div>
                         <ul id="submenu_profil">
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>

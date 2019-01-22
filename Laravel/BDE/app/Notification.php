@@ -13,4 +13,6 @@ class Notification extends Model
     }
 
     protected $guarded = [];
+    
+    public $timestamps = false;
 }
