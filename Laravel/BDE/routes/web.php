@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/articles', function() {
+    return view('articles');
+});
