@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#search-bar-container {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+#search-bar {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+#search-bar div {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+#search-bar div img {
+  height: 40px;
+}
+
+#search-bar div input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 2em;
+  padding: 0 7px;
+  outline: none;
+}
+
+#search-bar button {
+  font-family: "Segoe UI";
+  font-size: 1.2em;
+  font-weight: 500;
+  padding-left: 15px;
+  height: 100%;
+  border: none;
+  border-left: 1.4px solid #bebebe;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  width: 124px;
+}
+
