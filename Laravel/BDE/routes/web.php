@@ -29,3 +29,5 @@ Route::group(['middleware' => IpFilter::class], function () {
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
+
+Route::get('ideas', 'IdeasController@index' );
