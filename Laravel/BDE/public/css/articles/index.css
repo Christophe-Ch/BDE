@@ -43,3 +43,9 @@
   height: 30px;
 }
 
+.carousel-container {
+  height: calc(100vh - 380px);
+  display: flex;
+  align-items: center;
+}
+

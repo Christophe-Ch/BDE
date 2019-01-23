@@ -1,0 +1,82 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+    .arrow {
+        height: 100px;
+        cursor: pointer;
+    }
+
+    .content {
+        margin: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+       .infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+
+            h2 {
+                font-size: 3em;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+
+            p {
+                font-family: 'Segoe UI';
+                font-style: italic;
+                font-weight: lighter;
+                font-size: 1.5em;
+                margin-bottom: 30px;
+            }
+
+            .actions {
+                display: flex;
+                align-items: center;
+
+                .price {
+                    font-family: 'Segoe UI';
+                    font-style: italic;
+                    font-size: 1.5em;
+                    margin-right: 20px;
+
+                    span {
+                        font-weight: lighter;
+                        margin-left: 5px;
+                    }
+                }
+
+                form {
+                    margin: 0;
+                    
+                    button {
+                        height: 40px;
+                        width: 150px;
+                        font-style: italic;
+                    }
+                }
+
+                
+            }
+
+        }
+
+        .pic {
+            width: 50%;
+            text-align: center;
+
+            img {
+                height: 90%;
+            } 
+        }
+        
+        
+        
+    }
+
+    
+}

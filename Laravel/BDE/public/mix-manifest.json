@@ -4,6 +4,7 @@
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
 <<<<<<< develop
+<<<<<<< develop
     "/css/notification.css": "/css/notification.css",
 <<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
@@ -23,5 +24,15 @@
     "/css/articles/index.css": "/css/articles/index.css"
 >>>>>>> Adding shop page base
 >>>>>>> Adding shop page base
+<<<<<<< develop
 >>>>>>> Adding shop page base
+=======
+=======
+    "/css/notification.css": "/css/notification.css",
+    "/css/search-bar.css": "/css/search-bar.css",
+    "/css/list-element.css": "/css/list-element.css",
+    "/css/articles/index.css": "/css/articles/index.css",
+    "/css/top-article.css": "/css/top-article.css"
+>>>>>>> Adding top articles carousel base
+>>>>>>> Adding top articles carousel base
 }

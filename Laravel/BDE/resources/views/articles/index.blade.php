@@ -4,11 +4,33 @@
     <link rel="stylesheet" href="/css/search-bar.css">
     <link rel="stylesheet" href="/css/list-element.css">
     <link rel="stylesheet" href="/css/articles/index.css">
-    <link rel="stylesheet" href="/css/articles/index.css">
+    <link rel="stylesheet" href="/css/top-article.css">
 @endsection
 
 @section('header')
-    
+    <div class="carousel-container">
+        @component('layout.component.top-article')
+            @slot('name')
+                {{$top_article0->nom}}
+            @endslot
+
+            @slot('description')
+                {{$top_article0->description}}
+            @endslot
+
+            @slot('price')
+                {{$top_article0->prix}}
+            @endslot
+
+            @slot('id')
+                {{$top_article0->id}}
+            @endslot
+
+            @slot('pic')
+                <img src="/images/bonnet.png" alt="">
+            @endslot
+        @endcomponent
+    </div>
 @endsection
 
 @section('content')
@@ -44,7 +66,7 @@
                                 <img src="/images/check.png" alt="Article commandé">
                             </button>
                         @else
-                            <form method="post" action="/purchase">
+                            <form method="POST" action="/purchase">
                                 @csrf
                                 <button class="button" type="submit">Commander</button>
                             </form>
@@ -60,4 +82,4 @@
     </div>
 @endsection
 
-<script src="myscripts.js"></script>
+<script src="/js/articles.js"></script>
