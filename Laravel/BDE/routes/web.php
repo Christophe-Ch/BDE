@@ -108,3 +108,6 @@ Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
 
 // Legal Notice
 Route::get('legal-notice', 'LegalNoticeController@index');
+
+
+Route::get('/articles', 'ArticlesController@index');

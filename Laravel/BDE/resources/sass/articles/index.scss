@@ -1,0 +1,53 @@
+#list-component-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+
+    #article-element {
+        margin-bottom: 100px;
+        
+        img {
+            background: rgb(189, 187, 187);
+        }
+
+        // button:focus {
+        //     display: none;
+        // }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #price {
+                font-size: 1.8em;
+            }
+
+            form {
+                margin: 0;
+
+               button {
+                    height: 40px;
+                    width: 150px;
+                }
+ 
+            }
+            
+            
+            button {
+                width: 100px;
+                height: 40px;
+
+               img {
+                    background: none;
+                    height: 30px;
+                } 
+            }
+
+            
+        }
+    }
+    
+}

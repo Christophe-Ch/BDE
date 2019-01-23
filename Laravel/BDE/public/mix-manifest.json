@@ -3,11 +3,25 @@
     "/css/app.css": "/css/app.css",
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
+<<<<<<< develop
     "/css/notification.css": "/css/notification.css",
+<<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
     "/css/user.css": "/css/user.css",
     "/css/event.css": "/css/event.css",
     "/css/list-element.css": "/css/list-element.css",
     "/css/search-bar.css": "/css/search-bar.css",
     "/css/administration.css": "/css/administration.css"
+=======
+    "/css/ideas.css": "/css/ideas.css"
+=======
+<<<<<<< develop
+    "/css/notification.css": "/css/notification.css"
+=======
+    "/css/search-bar.css": "/css/search-bar.css",
+    "/css/list-element.css": "/css/list-element.css",
+    "/css/articles/index.css": "/css/articles/index.css"
+>>>>>>> Adding shop page base
+>>>>>>> Adding shop page base
+>>>>>>> Adding shop page base
 }
