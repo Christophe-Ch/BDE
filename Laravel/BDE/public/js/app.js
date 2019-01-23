@@ -48119,17 +48119,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< develop
-/***/ "./resources/sass/search-bar.scss":
-/*!****************************************!*\
-  !*** ./resources/sass/search-bar.scss ***!
-  \****************************************/
-=======
 /***/ "./resources/sass/notification.scss":
 /*!******************************************!*\
   !*** ./resources/sass/notification.scss ***!
   \******************************************/
->>>>>>> Adding notifications system and page
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -48138,35 +48131,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-<<<<<<< develop
-/*!*********************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/search-bar.scss ***!
-  \*********************************************************************************************************************************************************/
-=======
 /*!***********************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ***!
   \***********************************************************************************************************************************************************/
->>>>>>> Adding notifications system and page
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< develop
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
-module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
-=======
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
-<<<<<<< develop
-module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
->>>>>>> Adding routes for notifications
-=======
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
 module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
->>>>>>> Adding notifications system and page
 
 
 /***/ })

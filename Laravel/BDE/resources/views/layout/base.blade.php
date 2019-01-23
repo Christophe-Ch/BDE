@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/buttons.css">
-<<<<<<< develop
-    <link rel="stylesheet" href="@yield('stylesheets')">
-=======
     <link rel="stylesheet" href="/css/notification.css">
     @yield('stylesheets')
->>>>>>> Adding notifications system and page
 </head>
 <body>
     <header>
@@ -39,7 +35,7 @@
                         <ul id="submenu_profil">
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
-                            <li><a href="#">Mes notifs</a></li>
+                            <li><a href="/notifications">Mes notifications</a></li>
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>
