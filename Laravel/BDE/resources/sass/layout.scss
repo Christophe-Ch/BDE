@@ -128,14 +128,14 @@ nav > ul > li > a:focus::after{
     background: #2b425f;
     border-radius: 5px;
 }
-#burger_menu:hover #submenu_burger{
-    display: inline-block;
-    position: absolute;
-    top: 60%;
-    right: 0;
-    width: 250px;
-    padding: 0;
-}
+// #burger_menu:hover #submenu_burger{
+//     display: inline-block;
+//     position: absolute;
+//     top: 60%;
+//     right: 0;
+//     width: 250px;
+//     padding: 0;
+// }
 .btn_logout{
     background: #ffc252;
     color: white;

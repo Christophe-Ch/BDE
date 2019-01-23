@@ -4,6 +4,7 @@
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
 <<<<<<< develop
+<<<<<<< develop
     "/css/notification.css": "/css/notification.css",
 <<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
@@ -11,10 +12,18 @@
 =======
     "/css/ideas.css": "/css/ideas.css"
 =======
+=======
+>>>>>>> Fix Iphone, event, profil
     "/css/user.css": "/css/user.css",
     "/css/list-element.css": "/css/list-element.css",
     "/css/search-bar.css": "/css/search-bar.css",
     "/css/event.css": "/css/event.css"
+<<<<<<< develop
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
+<<<<<<< develop
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+=======
+>>>>>>> Fix Iphone, event, profil
+>>>>>>> Fix Iphone, event, profil
 }

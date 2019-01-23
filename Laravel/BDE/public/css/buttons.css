@@ -1,3 +1,4 @@
+<<<<<<< develop
 <<<<<<<
 .button {
   background: #ffc252;
@@ -6,6 +7,11 @@
 <<<<<<< Updated upstream
 =======
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+.button {
+  background: #ffc252;
+  color: white;
+>>>>>>> Fix Iphone, event, profil
   width: 200px;
   height: 50px;
   border: none;
@@ -15,8 +21,11 @@
 <<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
 =======
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+>>>>>>> Fix Iphone, event, profil
   display: inline-block;
   border-radius: 20px;
   outline: none;
@@ -36,6 +45,7 @@
   background: #00a390;
 }
 
+<<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
@@ -139,3 +149,5 @@
 
 >>>>>>>
 >>>>>>> Revert "Revert "Merge branch 'feature/pages' into develop""
+=======
+>>>>>>> Fix Iphone, event, profil

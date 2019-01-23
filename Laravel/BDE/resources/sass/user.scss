@@ -1,0 +1,95 @@
+.profil{
+    width: 90%;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    color: black;
+
+    #profil_avatar{
+        text-align: center;
+        margin-right: 50px;
+
+        #profil_img{
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+        }
+
+        #profil_img_change{
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    #profil_content{
+        margin-left: 50px;
+        .profil_warp{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 20px 0px;
+        }
+        .profil_title{
+            padding: 0px 10px;
+            font-size: 30pt;
+            margin: 0;
+        }
+        .profil_desc{
+            padding: 0px 10px;
+            font-size: 30pt;
+            font-style: italic;
+            margin: 0;
+        }
+        .profil_desc_input{
+            padding: 10px 10px;
+            font-size: 20pt;
+        }
+    }
+}
+@media only screen and (max-width: 992px){
+    .profil{
+        text-align: center;
+        #profil_content{
+            .profil_title{
+                font-size: 15pt;
+            }
+            .profil_desc{
+                font-size: 10pt;
+            }
+            .profil_desc_input{
+                font-size: 10pt;
+            }
+    }
+}
+}
+
+@media only screen and (max-width: 545px){
+    .profil{
+        flex-direction: column;
+        align-items: center;
+        #profil_avatar{
+            margin: 0;
+            #profil_img{
+                width: 200px;
+                height: 200px;
+                border-radius: 200px;
+            }
+        }
+        #profil_content{
+            margin: 0;
+            .profil_warp{
+                margin: 10px 0px;
+            }
+            .profil_title{
+                font-size: 15pt;
+            }
+            .profil_desc{
+                font-size: 10pt;
+            }
+            .profil_desc_input{
+                font-size: 10pt;
+            }
+        }
+    }
+}

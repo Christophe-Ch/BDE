@@ -31,3 +31,21 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+var burgerMenu = document.getElementById('burger_menu');
+var subMenuBurger = document.getElementById('submenu_burger');
+
+burgerMenu.onclick = function(){
+    subMenuBurger.style = "display: inline-block; position: absolute; top: 60%; right: 0; width: 250px; padding: 0;";
+}
+
+
+var modal = document.getElementById('modal');
+window.onclick = function(event){
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+    if(event.target == subMenuBurger){
+        subMenuBurger.style.display = "none";
+    }
+}
+
