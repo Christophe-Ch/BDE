@@ -210,6 +210,12 @@ nav > ul > li > a:focus::after {
   }
 }
 
+.header_title {
+  font-family: "Baskerville Old Face", sans-serif;
+  font-size: 120pt;
+  text-align: center;
+}
+
 footer {
   background: black;
 }

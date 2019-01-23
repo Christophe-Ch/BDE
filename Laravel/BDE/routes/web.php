@@ -54,6 +54,15 @@ Route::put('/users/{user}', 'AdministrationController@update')->middleware('auth
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
 
+//Evenement
+Route::get('/event', 'EventController@index');
+Route::get('/event/{eventSelec}', 'EventController@index');
+
+//Profil
+Route::get('/profil', 'UserController@index')->name('profil');
+Route::get('/profil/modifier/{user}', 'UserController@getModifier');
+Route::post('/profil/modifier/{user}', 'UserController@postModifier');
+
 // Ideas Box
 Route::get('ideas', 'IdeasController@index');
 Route::get('ideas/search', 'IdeasController@searchIdea');

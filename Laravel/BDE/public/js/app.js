@@ -48148,6 +48148,7 @@ __webpack_require__.r(__webpack_exports__);
 
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
@@ -48177,6 +48178,8 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 
 /***/ }),
 
+=======
+>>>>>>> Add controller and routes
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
@@ -48241,6 +48244,17 @@ module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projet
 
 /***/ }),
 
+/***/ "./resources/sass/search-bar.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/search-bar.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/user.scss":
 /*!**********************************!*\
   !*** ./resources/sass/user.scss ***!
@@ -48257,9 +48271,9 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/event.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48269,12 +48283,16 @@ __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Lara
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+<<<<<<< develop
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
 module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 <<<<<<< develop
 >>>>>>> Auto stash before merge of "feature/pages" and "develop"
 =======
 >>>>>>> Fix Iphone, event, profil
+=======
+module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+>>>>>>> Add controller and routes
 
 
 /***/ })

@@ -162,7 +162,11 @@ nav > ul > li > a:focus::after{
     #menu_profil{display:none;}
     #burger_menu{display: unset;};
 }
-
+.header_title{
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 120pt;
+    text-align: center;
+}
 footer {
     background: black;
 
