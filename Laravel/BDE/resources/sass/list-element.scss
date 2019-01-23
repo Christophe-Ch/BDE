@@ -22,7 +22,7 @@
         }
 
         p {
-            font-size: 1.8em;
+            font-size: 1.3em;
         }
     }
 
@@ -35,5 +35,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+@media only screen and (max-width:992px){
+    .list-element {
+        .content{width: 100%;}
+        img{display: none;}
+    }
+}
+@media only screen and (max-width:545px){
+    .list-element {
+        height: unset;
+        text-align: center;
+        .content{
+            padding: 10px;
+            h2{font-size: 3em;}
+        }
+        img{display: none;}
+        .actions{display: block;}
     }
 }

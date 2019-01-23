@@ -18,7 +18,7 @@ class EventController extends Controller
     function showModal(Manifestation $eventSelec){
         $events = Manifestation::all();
         $nbUser = Participant::where('manifestation_id', $eventSelec->id)->count();
-        $photos = Photo::where('manifestation_id', $eventSelec)->get();
+        $photos = Photo::where('manifestation_id', $eventSelec->id)->get();
         return view('evenement', compact('events', 'eventSelec', 'nbUser', 'photos'));
     }
 

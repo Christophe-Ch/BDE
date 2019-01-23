@@ -39,7 +39,8 @@
         <div class="modal" id="modal" style="display: block">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdawC4Gw3WcN02RDozJqfoprI7pfhG74FfitNGRKHkxha04qoxQg" alt="Photo">
+                        <button id="closeCross" type="button"><img src="/images/fermeture.png" alt="X"></button>
+                        <img class="img_modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdawC4Gw3WcN02RDozJqfoprI7pfhG74FfitNGRKHkxha04qoxQg" alt="Photo">
                         <div class="content">
                             <h2 id="modal_title">{{$eventSelec->nom}}</h2>
                             <div class="infos">

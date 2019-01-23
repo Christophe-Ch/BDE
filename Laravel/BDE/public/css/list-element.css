@@ -24,7 +24,7 @@
 }
 
 .list-element .content p {
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 .list-element img {
@@ -37,5 +37,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .list-element .content {
+    width: 100%;
+  }
+
+  .list-element img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .list-element {
+    height: unset;
+    text-align: center;
+  }
+
+  .list-element .content {
+    padding: 10px;
+  }
+
+  .list-element .content h2 {
+    font-size: 3em;
+  }
+
+  .list-element img {
+    display: none;
+  }
+
+  .list-element .actions {
+    display: block;
+  }
 }
 

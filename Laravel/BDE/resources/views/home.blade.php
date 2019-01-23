@@ -7,7 +7,7 @@
 </div>
 @if (!Auth::check())
     <div id="auth_home">
-        <a href="/login"><input id="input_home_color" type="button" value="Se connecter"></a>
+        <a href="/login"><input class="button" type="button" value="Se connecter"></a>
         <a href="/register"><input id="input_home" type="button" value="S'inscrire"></a>
     </div>
 @endif

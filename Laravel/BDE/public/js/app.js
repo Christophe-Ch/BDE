@@ -47966,6 +47966,11 @@ burgerMenu.onclick = function () {
 };
 
 var modal = document.getElementById('modal');
+var modalCross = document.getElementById('closeCross');
+
+modalCross.onclick = function () {
+  modal.style.display = "none";
+};
 
 window.onclick = function (event) {
   if (event.target == modal) {

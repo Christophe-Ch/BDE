@@ -34,9 +34,7 @@
   border-radius: 30px;
   position: absolute;
   right: 10vw;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 10%;
 }
 
 .modal .modal-content .modal-header {
@@ -46,6 +44,21 @@
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal .modal-content #closeCross {
+  background: none;
+  border: none;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.modal .modal-content #closeCross img {
+  width: 50px;
+  height: 50px;
 }
 
 .modal .modal-content .content {
@@ -63,10 +76,10 @@
 }
 
 .modal .modal-content p {
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
-.modal .modal-content img {
+.modal .modal-content .img_modal {
   width: 40%;
   -o-object-fit: scale-down;
   object-fit: scale-down;
@@ -94,5 +107,37 @@
   height: 275px;
   border-radius: 30px;
   background: gray;
+}
+
+@media only screen and (max-width: 992px) {
+  .modal .modal-content .content {
+    width: 100%;
+  }
+
+  .modal .modal-content .img_modal {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .modal .modal-content .modal-header {
+    height: unset;
+  }
+
+  .modal .modal-content {
+    text-align: center;
+  }
+
+  .modal .modal-content .content {
+    padding: 10px;
+  }
+
+  .modal .modal-content h2 {
+    font-size: 3em;
+  }
+
+  .modal .modal-content .actions {
+    display: block;
+  }
 }
 
