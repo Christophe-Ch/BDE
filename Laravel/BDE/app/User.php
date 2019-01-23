@@ -42,4 +42,14 @@ class User extends Authenticatable
     public function notifications() {
         return $this->hasMany('App\Notification');
     }
+
+    public function hasNotifications() {
+        foreach($this->notifications()->get() as $notification) {
+            if ($notification->lue == false) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

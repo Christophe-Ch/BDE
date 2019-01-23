@@ -1,0 +1,57 @@
+.notification {
+  width: 90%;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.notification .content {
+  width: 65%;
+}
+
+.notification .content h3 {
+  margin-top: 0;
+}
+
+.notification input[type=image] {
+  height: 40px;
+}
+
+.notification p {
+  margin-top: 0;
+}
+
+.notifications-container {
+  height: 60vh;
+  width: 80vw;
+  margin-left: 10vw;
+  overflow-y: auto;
+}
+
+.has-notifications {
+  position: relative;
+  z-index: 1;
+  height: 50px;
+}
+
+.has-notifications:after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  bottom: -7.5px;
+  right: -7.5px;
+  background: red;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.has-notifications img {
+  height: 100%;
+}
+

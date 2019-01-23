@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/buttons.css">
-    <link rel="stylesheet" href="@yield('stylesheets')">
+    <link rel="stylesheet" href="/css/notification.css">
+    @yield('stylesheets')
 </head>
 <body>
     <header>
@@ -28,11 +29,13 @@
                 @if (Auth::check())
                     <div id="menu_profil_content">
                         <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
+                        <div class="{{ Auth::user()->hasNotifications() ? 'has-notifications' : ''}}">
+                            <img id="user_icon" src="/images/user_icon.png" alt="user">
+                        </div>
                         <ul id="submenu_profil">
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
-                            <li><a href="#">Mes notifs</a></li>
+                            <li><a href="/notifications">Mes notifications</a></li>
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>

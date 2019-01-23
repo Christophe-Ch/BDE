@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/articles', function() {
-    return view('articles');
-});
+// Notifications
+Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
+Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
