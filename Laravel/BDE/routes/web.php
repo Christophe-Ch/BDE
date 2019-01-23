@@ -56,12 +56,8 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 
 //Evenement
 Route::get('/event', 'EventController@index');
-Route::get('/event/{eventSelec}', 'EventController@index');
-
-//Profil
-Route::get('/profil', 'UserController@index')->name('profil');
-Route::get('/profil/modifier/{user}', 'UserController@getModifier');
-Route::post('/profil/modifier/{user}', 'UserController@postModifier');
+Route::get('/event/{eventSelec}', 'EventController@showModal');
+Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
 
 // Ideas Box
 Route::get('ideas', 'IdeasController@index');
@@ -76,3 +72,8 @@ Route::delete('ideas/{id}', 'IdeasController@deleteIdea')->middleware('auth');
 // Vote des idées
 Route::post('votes/{id}', 'IdeasController@addVote')->middleware('auth');
 Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
+
+//Profil
+Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth');
+Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
+Route::post('/profil/modifier/{user}', 'UserController@postModifier')->middleware('auth');

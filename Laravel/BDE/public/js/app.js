@@ -48149,6 +48149,7 @@ __webpack_require__.r(__webpack_exports__);
 <<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
@@ -48162,10 +48163,16 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************!*\
   !*** ./resources/sass/event.scss ***!
 >>>>>>> Fix Iphone, event, profil
+=======
+/***/ "./resources/sass/event.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/event.scss ***!
+>>>>>>> Fix bdd and add register in event
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
 // removed by extract-text-webpack-plugin
@@ -48180,6 +48187,12 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 
 =======
 >>>>>>> Add controller and routes
+=======
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+>>>>>>> Fix bdd and add register in event
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
@@ -48271,9 +48284,9 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ***!
-  \***********************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48282,6 +48295,7 @@ __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Lara
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
 <<<<<<< develop
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");

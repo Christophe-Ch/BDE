@@ -27,7 +27,7 @@
                 @slot('title')<a class="title_event" href="/event/{{$event->id}}">{{$event->nom}}</a>@endslot
                 @slot('description'){{$event->description}}@endslot
                 @slot('actions')
-                    <button class="button" id="modalBtn">S'inscrire</button>
+                    <form action="/event/register/{{$event->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
                     <p>{{substr($event->date, 0, 10)}} | {{$event->prix}} €</p>
                 @endslot
             @endcomponent
@@ -48,7 +48,7 @@
                             </div>
                             <p>{{$eventSelec->description}}</p>
                             <div class="actions">
-                                <input class="button" type="button" value="S'inscrire">
+                                <form action="/event/register/{{$eventSelec->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
                                 <p>{{$nbUser}} participants</p>
                             </div>
                         </div>

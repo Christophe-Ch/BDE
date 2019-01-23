@@ -163,10 +163,20 @@ nav > ul > li > a:focus::after{
     #burger_menu{display: unset;};
 }
 .header_title{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
     font-family: "Baskerville Old Face", sans-serif;
     font-size: 120pt;
     text-align: center;
 }
+@media only screen and (max-width:1200px){.header_title{font-size: 100pt;}}
+@media only screen and (max-width:992px){.header_title{font-size: 75pt;}}
+@media only screen and (max-width:745px){.header_title{font-size: 50pt;}}
+@media only screen and (max-width:545px){.header_title{font-size: 30pt;}}
 footer {
     background: black;
 

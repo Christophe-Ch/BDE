@@ -1,5 +1,6 @@
 .list-element {
   background: white;
+  color: black;
   width: 80vw;
   height: 360px;
   display: flex;
@@ -30,5 +31,11 @@
   width: 40%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
+}
+
+.list-element .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 

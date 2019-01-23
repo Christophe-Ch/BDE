@@ -18,6 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/notification.scss', 'public/css')
    .sass('resources/sass/ideas.scss', 'public/css')
    .sass('resources/sass/user.scss', 'public/css')
+   .sass('resources/sass/event.scss', 'public/css')
    .sass('resources/sass/list-element.scss', 'public/css')
    .sass('resources/sass/search-bar.scss', 'public/css')
    .sass('resources/sass/administration.scss', 'public/css');
