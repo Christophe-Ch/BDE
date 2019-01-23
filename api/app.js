@@ -1,58 +1,93 @@
-const bcrypt = require('bcryptjs');
-const bodyParser = require('body-parser');
-const express = require('express');
-const mysql = require('mysql');
+const bcrypt = require('bcryptjs'); // Encryption module
+const express = require('express'); // Server module
+const mysql = require('mysql'); // MySQL module
+const Joi = require('joi'); // Input validation module
 
-const connection = mysql.createConnection({
+// Database connection
+const database = mysql.createConnection({
     host: 'localhost',
-    user: 'api',
-    password: 'api',
-    database : "bde"
+    user: 'root',
+    password: 'root',
+    database: "bde"
 });
 
+// App instantiation
 const app = express();
+app.use(express.json());
 
-var user = express.Router();
+// Auth
+app.post('/api/inscription', (req, res) => {
+    database.query('')
+});
 
-app.post('/api/register', function (req, res) {
-    connection.query('')
-})
+app.post('/api/connection', (req, res) => {
+    // Validation schema
+    const schema = {
+        email: Joi.string().required(),
+        password: Joi.string().required()
+    };
 
-app.post('/api/connect', function (req, res) {
-    var email = req.email;
-    var password = req.password;
-    var token = bcrypt.hash(email);
+    // If body follows schema
+    if (Joi.validate(req.body, schema)) {
+        // Get credentials
+        var email = req.body.email;
+        var password = req.body.password;
 
-    console.log(email + password);
-    
-    connection.query('SELECT `password` FROM users WHERE `email` = ' + email + '\'', function (err, rows, fields) {
-        if (err) throw err;
-        console.log(rows);
-        bcrypt.compare(password, rows, (err, res) => {
-            if (res) {
-                connection.query('UPDATE users SET api_token = ' +  token  + ' WHERE email = ' + email + ' AND password = ' + rows);
+        // Prepare sql statement
+        var sql = 'SELECT * FROM users WHERE email = ' + database.escape(email);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                // Hash and compare passwords
+                bcrypt.compare(password, results[0].password, (err, result) => {
+                    if (result) { // Passwords match
+                        return res.send({
+                            connected: 'true',
+                            token: results[0].api_token
+                        });
+                    }
+                    else {
+                        return res.send({
+                            connected: 'false',
+                            token: null
+                        });
+                    }
+                });
+            }
+            else { // Wrong email
+                return res.send({
+                    connected: 'false',
+                    token: null
+                });
             }
         });
-    });
-    res.send({mail: email,
-            password: password});
-})
+    }
+    else {
+        return res.send({
+            connected: 'false',
+            token: null
+        });
+    }
+});
 
-user.route('/api/user')
-.get(function(req,res){ 
-    connection.query('SELECT * FROM `users`', function (err, rows, fields) {
-        if (err) throw err;
-        res.send({user : rows,
-        method: req.method});
-    })
-})
-.post(function (res, req) {
-    
-})
+// app.get('/api/user')
+// .get(function(req,res){ 
+//     database.query('SELECT * FROM `users`', function (err, rows, fields) {
+//         if (err) throw err;
+//         res.send({user : rows,
+//         method: req.method});
+//     })
+// })
+// .post(function (res, req) {
 
-app.use(user);  
+// })
 
-app.listen(3000, 'localhost', function () {
-  console.log('Example app listening on port 3000!')
+
+// Start server
+app.listen(3000, 'localhost', () => {
+    console.log('Example app listening on port 3000!')
 })
 

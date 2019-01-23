@@ -27,6 +27,7 @@
 
             <div id="menu_profil">
                 @if (Auth::check())
+                    {{ Achat::select('article_id')->groupBy('article_id')->orderByRaw('COUNT(*) DESC')->get() }}
                     <div id="menu_profil_content">
                         <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
                         <div class="{{ Auth::user()->hasNotifications() ? 'has-notifications' : ''}}">
