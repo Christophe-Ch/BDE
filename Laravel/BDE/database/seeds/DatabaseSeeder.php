@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call(IdeeUserTableSeeder::class);
         $this->call(NotificationTableSeeder::class);
         $this->call(RecurrenceTableSeeder::class);
+        $this->call(CategorieTableSeeder::class);
     }
 }
