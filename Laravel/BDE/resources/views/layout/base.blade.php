@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="/">Accueil</a></li>
                     <li><a href="#">Événements</a></li>
-                    <li><a href="#">Boite à idées</a></li>
+                    <li><a href="/ideas">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
                 </ul>
             </nav>

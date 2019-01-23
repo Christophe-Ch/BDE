@@ -1,3 +1,15 @@
+#create_idea {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#create_idea > a {
+    
+    color: black;
+    text-decoration: none;
+}
+
 .list-element {
 
 color: black;
@@ -8,25 +20,25 @@ margin-bottom: 1%;
 margin-left: auto;
 margin-right: auto;
 
-    img {
-        object-fit: cover;
-    }
-
-    p {
-        padding-bottom: 10%;
-    }
-
-    #actions {
-
-        height: 75px;
-
-        #plan_button {
-            position: absolute;
-        }
-    
-        #vote_button {
-            position: absolute;
-            right: 10%;
-        }
-    }
 }
+
+.list-element img {
+    object-fit: cover;
+}
+
+p {
+    padding-bottom: 10%;
+}
+
+.actions {
+
+    position: relative;
+    bottom: 5%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+        
+    
+    

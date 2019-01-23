@@ -11,8 +11,13 @@ class IdeasController extends Controller
 {
     public function index() {
         $ideas = Idee::all();
+        $votes = Vote::all();
 
-        return view('ideas/index', compact('ideas'));
+        return view('ideas/index', compact('ideas', 'votes'));
+    }
+
+    public function create() {
+        return view('ideas/create');
     }
 
     public function addVote($id) {

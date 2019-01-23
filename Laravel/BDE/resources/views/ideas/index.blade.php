@@ -17,6 +17,10 @@
     Rechercher une idée...
     @endslot
 @endcomponent
+<span id="create_idea">
+    <a href="/ideas/create" >+ créer une idée</a>
+</span>
+
 
 @foreach ($ideas as $idea)
     @component('layout.component.list-element')
@@ -35,14 +39,13 @@
         @slot('actions')
             @if (auth::check())
             <a id="plan_button" href="#"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
-            <form id="actions" action="/votes/{{ $idea->id }}" method="post">
-                @if(\App\Vote::select('id')->where('user_id', Auth::user()->id)->where('idee_id', $idea->id)->first() != null)
+            <form id="form" action="/votes/{{ $idea->id }}" method="post">
+                @csrf
+                @if($votes->where('user_id', Auth::user()->id)->where('idee_id', $idea->id)->first() != null)
                     @method('DELETE')
                 @endif
-                @csrf
-                <a id="vote_button">
-                {{ App\Vote::where('idee_id', $idea->id)->count() }}
-                <input id="vote_button" type="image" src="images/icons8-heart-outline-52.png" alt="heart"></a>
+                <label id="vote_label"  for="vote">{{ $votes->where('idee_id', $idea->id)->count() }}</label>
+                <input id="vote_button" type="image" src="/images/icons8-heart-outline-52.png" alt="heart">
             </form>
             @endif
         @endslot

@@ -32,6 +32,7 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 
 // Boîte à idées
 Route::get('ideas', 'IdeasController@index');
+Route::get('ideas/create' , 'IdeasController@create');
 
 
 // Vote des idées
