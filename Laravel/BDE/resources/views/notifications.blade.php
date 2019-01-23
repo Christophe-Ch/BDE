@@ -1,9 +1,5 @@
 @extends('layout/base')
 
-@section('stylesheets')
-<link rel="stylesheet" href="/css/notification.css">
-@endsection
-
 @section('header')
 <div class="notifications-container">
     @foreach ($notifications as $notification)

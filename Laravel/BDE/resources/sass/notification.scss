@@ -1,6 +1,5 @@
 .notification {
-    width: 50vw;
-    height: 150px;
+    width: 90%;
     
     font-size: 1.2em;
   
@@ -33,15 +32,12 @@
 }
 
 .notifications-container {
-    padding: 5%;
-    height: 50vh;
-    width: 60vw;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 60vh;
+    width: 80vw;
 
-    overflow-y: scroll;
+    margin-left: 10vw;
+
+    overflow-y: auto;
 }
 
 .has-notifications {
