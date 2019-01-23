@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
-    "/css/notification.css": "/css/notification.css"
+    "/css/search-bar.css": "/css/search-bar.css",
+    "/css/ideas/index.css": "/css/ideas/index.css"
 }
