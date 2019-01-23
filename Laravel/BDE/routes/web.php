@@ -30,4 +30,10 @@ Route::group(['middleware' => IpFilter::class], function () {
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
 
-Route::get('ideas', 'IdeasController@index' );
+// Boîte à idées
+Route::get('ideas', 'IdeasController@index');
+
+
+// Vote des idées
+Route::post('votes/{id}', 'IdeasController@addVote')->middleware('auth');
+Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');

@@ -34,17 +34,18 @@
         @endslot
         @slot('actions')
             @if (auth::check())
-            <div id="actions">
             <a id="plan_button" href="#"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
-            <a id="vote_button">
+            <form id="actions" action="/votes/{{ $idea->id }}" method="post">
+                @if(\App\Vote::select('id')->where('user_id', Auth::user()->id)->where('idee_id', $idea->id)->first() != null)
+                    @method('DELETE')
+                @endif
+                @csrf
+                <a id="vote_button">
                 {{ App\Vote::where('idee_id', $idea->id)->count() }}
-                <img id="vote" src="images/icons8-heart-outline-52.png" alt="heart"></a>
-            </div>
+                <input id="vote_button" type="image" src="images/icons8-heart-outline-52.png" alt="heart"></a>
+            </form>
             @endif
         @endslot
     @endcomponent
 @endforeach
-    
-
-
 @endsection
