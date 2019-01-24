@@ -13,6 +13,12 @@ class IdeasController extends Controller
         $ideas = Idee::all();
         $votes = Vote::all();
 
+        if(Auth::check()) {
+            $ideas = $ideas->where("centre_id", Auth::user()->centre_id);
+        } else {
+            $ideas = $ideas->where("centre_id", env("centre_id", 1));
+        }
+
         return view('ideas/index', compact('ideas', 'votes'));
     }
 

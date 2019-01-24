@@ -56,15 +56,25 @@ p {
     justify-content: space-between;
 }
 
-#form-create-idea {
-    height: 50vh;
-    width: 45vw;
+#form-idea {
+    height: 50%;
+    width: 100%;
     display: inline-grid;
 }
 
-#form-create-idea textarea {
-    height: 100%;
-    width: 100%;
+#form-idea > input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+#form-idea > textarea {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    height: 25vh;
+    resize: none;
+    font-family: "Baskerville Old Face", sans-serif;
 }
 
 

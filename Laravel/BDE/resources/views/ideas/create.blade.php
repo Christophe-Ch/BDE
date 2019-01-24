@@ -9,17 +9,13 @@
 @endsection
 
 @section('content_form')
-    <form id="form-create-idea" action="/ideas" method="post">
+    <form id="form-idea" action="/ideas" method="post">
         @csrf
-        <div class="row-form">
-        <label for="title">Titre :</label>
-        <input id="form-title" type="text" name="title" required>
-        </div>
-        <div class="row-form">
-        <label for="description">Description :</label>
-        <textarea id="form-description" name="description" maxlength="255">
+        <label for="title" class="title_input_left">Titre :</label>
+        <input class="input_left" type="text" name="title" required>
+        <label for="description" id="description-form" class="title_input_left">Description :</label>
+        <textarea class="input_left" name="description" maxlength="255">
         </textarea>
-        </div>
         <input id="form-submit" class="button" type="submit" value="créer">
     </form>
 @endsection

@@ -1,17 +1,22 @@
 @extends('layout.duo')
 
+@section('css')
+<link rel="stylesheet" href="/css/ideas.css">
+@endsection
+
 @section('title')
-    <h1>Modifier une idée</h1>
+    Modifier une idée
 @endsection
 
 @section('content_form')
-    <form action="/ideas/{{ $edit->id }}" method="post">
+    <form id="form-idea" action="/ideas/{{ $edit->id }}" method="post">
         @csrf
         @method('PUT')
-        <label for="title">Titre :</label>
-        <input id="form-title" type="text" name="title" value="{{ $edit->nom }}" required>
-        <label for="description">Description :</label>
-        <input id="form-description" type="text" name="description" value="{{ $edit->description }}" required>
-        <input id="form-submit" type="submit">
+        <label for="title" class="title_input_left">Titre :</label>
+        <input class="input_left" type="text" name="title" value="{{ $edit->nom }}" required>
+        <label for="description" class="title_input_left">Description :</label>
+        <textarea class="input_left" name="description" maxlength="255">
+            </textarea>
+        <input id="form-submit" class="button" type="submit">
     </form>
 @endsection

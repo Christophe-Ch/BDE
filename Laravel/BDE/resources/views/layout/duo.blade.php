@@ -16,7 +16,7 @@
         @yield('content_form')
     </div>
     <div class="right">
-        <img id="img_right" src="images/Logo_bde2.png" alt="Logo">
+        <img id="img_right" src="/images/Logo_bde2.png" alt="Logo">
     </div>
 </body>
 </html>
