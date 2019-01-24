@@ -33,16 +33,15 @@ const app = new Vue({
 });
 var burgerMenu = document.getElementById('burger_menu');
 var subMenuBurger = document.getElementById('submenu_burger');
-burgerMenu.onclick = function(){
-    subMenuBurger.style = "display: inline-block; position: absolute; top: 60%; right: 0; width: 250px; padding: 0;";
-}
-
-
 var modal = document.getElementById('modal');
 var modalCross = document.getElementById('closeCross');
 
 modalCross.onclick = function(){
     modal.style.display = "none";
+}
+
+burgerMenu.onclick = function(){
+    subMenuBurger.style = "display: inline-block; position: absolute; top: 60%; right: 0; width: 250px; padding: 0;";
 }
 window.onclick = function(event){
     if(event.target == modal){
@@ -52,4 +51,3 @@ window.onclick = function(event){
         subMenuBurger.style.display = "none";
     }
 }
-

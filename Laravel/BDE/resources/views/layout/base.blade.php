@@ -117,5 +117,18 @@
             </div>
         </footer>
         <script src="/js/app.js"></script>
+        <script>
+                var profilModal = document.getElementById('profil_modal');
+                var profilModalBtn = document.getElementById('profil_img_change');
+        
+                profilModalBtn.onclick = function(){
+                    profilModal.style.display = "block";
+                }
+                window.onclick = function(event){
+                    if(event.target == profilModal){
+                        profilModal.style.display = "none";
+                    }
+                }
+            </script>
 </body>
 </html>

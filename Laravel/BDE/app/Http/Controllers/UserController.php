@@ -24,21 +24,15 @@ class UserController extends Controller
         request()->validate([
             'name' => 'required|max:40',
             'prenom' => 'required|max:40',
-            'email' => 'required|email',
-            'centre' => 'required|integer'
+            'email' => 'required|email'
         ]);
 
         $user->name = request('name');
         $user->prenom = request('prenom');
         $user->email = request('email');
-        $user->centre_id = request('centre');
         $user->save();
 
         return redirect()->route('profil');
-    }
-
-    function getModifierAvatar(User $user){
-        return view('profil_modifier_avatar');
     }
 
     function postModifierAvatar(User $user){
@@ -52,6 +46,6 @@ class UserController extends Controller
         $user->photo = $path;
         $user->save();
 
-        return redirect()->route('profil');
+        return back();
     }
 }

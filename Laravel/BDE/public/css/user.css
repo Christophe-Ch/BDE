@@ -7,7 +7,9 @@
 }
 
 .profil #profil_avatar {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-right: 50px;
 }
 
@@ -15,11 +17,12 @@
   width: 250px;
   height: 250px;
   border-radius: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.profil #profil_avatar #profil_img_change a {
-  text-decoration: none;
-  color: black;
+.profil #profil_avatar #profil_img_change {
+  margin: 20px;
 }
 
 .profil #profil_content {
@@ -51,6 +54,45 @@
   font-size: 20pt;
 }
 
+.profil_modal {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.profil_modal .profil_content {
+  background: white;
+  color: black;
+  width: 50vw;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  position: absolute;
+  right: 25vw;
+  top: 10%;
+}
+
+.profil_modal .profil_content form {
+  text-align: center;
+  margin: 25px;
+}
+
+.profil_modal .profil_content form .profil_warp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profil_modal .profil_content form .profil_warp .profil_desc_input {
+  margin-left: 20px;
+}
+
 @media only screen and (max-width: 992px) {
   .profil {
     text-align: center;
@@ -66,6 +108,11 @@
 
   .profil #profil_content .profil_desc_input {
     font-size: 10pt;
+  }
+
+  .profil_modal .profil_content {
+    width: 80vw;
+    right: 10vw;
   }
 }
 
@@ -103,6 +150,20 @@
 
   .profil #profil_content .profil_desc_input {
     font-size: 10pt;
+  }
+
+  .profil_modal .profil_content {
+    width: 80vw;
+    right: 10vw;
+  }
+
+  .profil_modal .profil_content form .profil_warp {
+    display: block;
+  }
+
+  .profil_modal .profil_content form .profil_warp .profil_desc_input {
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 }
 

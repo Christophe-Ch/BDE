@@ -79,5 +79,4 @@ Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
 Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth');
 Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
 Route::post('/profil/modifier/{user}', 'UserController@postModifier')->middleware('auth');
-Route::get('/profil/modifier/{user}/photo', 'UserController@getModifierAvatar')->middleware('auth');
 Route::post('/profil/modifier/{user}/photo', 'UserController@postModifierAvatar')->middleware('auth');

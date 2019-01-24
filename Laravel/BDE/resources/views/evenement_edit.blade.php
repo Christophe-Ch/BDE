@@ -4,6 +4,10 @@
     Modification d'un Evenement
 @endsection
 
+@section('img')
+<img id="img_right" src="/images/Logo_bde2.png" alt="Logo">
+@endsection
+
 @section('content_form')
 @if ($errors->any())
     <div class="alert alert-danger">

@@ -87,8 +87,8 @@
                         <div class="content">
                             <h2 id="modal_title">{{$eventPhoto->nom}}</h2>
                             <div class="infos">
-                                <p>{{substr($eventPhoto->date, 0, 10)}}</p>
-                                @if (Auth::user() && Auth::user()->statut_id == 2)
+                                <p>Evenement du : {{substr($eventPhoto->date, 0, 10)}}</p>
+                                @if (Auth::user() && Auth::user()->statut_id == 3)
                                     <form action="/photoEvent/signaler/{{$photoEvent->id}}" method="post">@csrf<button class="button red" type="submit">Signaler</button></form>
                                 @endif
                             </div>

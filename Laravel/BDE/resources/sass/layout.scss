@@ -64,6 +64,7 @@ nav > ul > li > a:focus::after{
     height: 50px;
     border-radius: 50px;
     // border: 2px solid white;
+    object-fit: cover;
     background-color: #102138;
 }
 #submenu_profil{
@@ -410,6 +411,25 @@ footer {
         top: 50%;
         position: relative;
         transform: translateY(-50%);
+    }
+    #modif_avatar{
+        padding: 0;
+        height: 100vh;
+        align-items: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        #profil_img{
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+            object-fit: cover;
+        }
+        #profil_img_change{
+            margin: 20px;
+        }
     }
 }
 

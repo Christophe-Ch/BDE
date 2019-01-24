@@ -38,7 +38,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    overflow: none;
+    overflow: auto;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -121,8 +121,9 @@
 }
 .modal .modal-content .photo{
     margin:20px;
-    background: gray;
-    border-radius: 50px;
+    object-fit: contain;
+    background: rgb(209, 209, 209);
+    border-radius: 25px;
     width: 360px;
     height: 200px;
     text-align: center;
