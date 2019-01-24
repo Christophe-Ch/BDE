@@ -77,6 +77,18 @@ p {
     font-family: "Baskerville Old Face", sans-serif;
 }
 
+#informations {
+    display: inline-grid;
+    width: 50%;
+}
+
+#information {
+    background-color: red;
+    border-style: solid; 
+    border-radius: 90px;
+    padding: 1%;
+    margin: 1%;
+}
 
 
 

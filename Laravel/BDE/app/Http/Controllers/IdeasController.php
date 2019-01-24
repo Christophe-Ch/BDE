@@ -33,8 +33,14 @@ class IdeasController extends Controller
     }
 
     public function createIdea(Request $request) {
+
+        $request->validate([
+            'nom' => 'required|unique:idees|max:40',
+            'description' => 'required|max:255',
+        ]);
+
         $idea = new Idee;
-        $idea->nom = $request->input('title');
+        $idea->nom = $request->input('nom');
         $idea->description = $request->input('description');
         $idea->user_id = Auth::user()->id;
         $idea->centre_id = 1;
@@ -45,9 +51,14 @@ class IdeasController extends Controller
     }
 
     public function editIdea(Request $request, $id) {
+        $request->validate([
+            'nom' => 'required|unique:idees|max:40',
+            'description' => 'required|max:255',
+        ]);
+
         $idea = Idee::find($id);
 
-        $idea->nom = $request->input('title');
+        $idea->nom = $request->input('nom');
         $idea->description = $request->input('description');
 
         $idea->save();
