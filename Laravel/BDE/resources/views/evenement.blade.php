@@ -36,7 +36,7 @@
                         <a href="{{ route('event.edit',['event' => $event->id]) }}"><button class="button blue btn_admin" type="submit">Modifier</button></a>
                         <form action="{{ route('event.destroy',['event' => $event->id]) }}" method="post">@method('delete')@csrf<button class="button red btn_admin" type="submit">Supprimer</button></form>
                     @endif
-                    <p>{{substr($event->date, 0, 10)}} | {{$event->prix}} €</p>
+                    <p>{{\App\Recurrence::where('id',$event->recurrence)->first()->nom}} | {{substr($event->date, 0, 10)}} | {{$event->prix}} €</p>
                 @endslot
             @endcomponent
         </div>
@@ -52,7 +52,7 @@
                         <div class="content">
                             <h2 id="modal_title">{{$eventSelec->nom}}</h2>
                             <div class="infos">
-                                <p>{{substr($eventSelec->date, 0, 10)}}</p>
+                                <p>{{substr($eventSelec->date, 0, 10)}} | {{\App\Recurrence::where('id',$event->recurrence)->first()->nom}}</p>
                                 <p>{{$eventSelec->prix}} €</p>
                             </div>
                             <p>{{$eventSelec->description}}</p>

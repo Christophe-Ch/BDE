@@ -33,6 +33,13 @@
     <p class="title_input_left">Prix</p>
     <input class="input_left" type="text" name="prix" value="{{$event->prix}}"><br>
 
+    <p class="title_input_left">Recurrence</p>
+    <select name="recurrence" class="input_left" value="{{ old('recurrence') }}">
+        @foreach ($recurrences as $recurrence)
+            <option value="{{$recurrence->id}}">{{$recurrence->nom}}</option>
+        @endforeach
+    </select><br>
+
     <p class="title_input_left">Photo</p>
     <input class="input_left" type="file" name="photo" value="{{$event->photo}}"><br>
 

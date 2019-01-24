@@ -9,6 +9,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 use App\Manifestation;
 use App\Commentaire;
+use App\Recurrence;
 use App\Participant;
 use App\Photo;
 use App\Centre;
@@ -33,7 +34,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('evenement_add');
+        $recurrences = Recurrence::all();
+        return view('evenement_add', compact('recurrences'));
     }
 
     /**
@@ -49,6 +51,7 @@ class EventController extends Controller
             'description' => 'required|max:255',
             'date' => 'required|date',
             'prix' => 'required|integer',
+            'recurrence' => 'required|integer',
             'photo' => 'required|image'
         ]);
         $events = Manifestation::all();
@@ -62,6 +65,7 @@ class EventController extends Controller
             'description' => $request->description,
             'date' => $request->date,
             'prix' => $request->prix,
+            'recurrence' => $request->recurrence,
             'photo' => $path,
             'centre_id' => '1'
         ]);
@@ -91,8 +95,9 @@ class EventController extends Controller
      */
     public function edit($id)
     {
+        $recurrences = Recurrence::all();
         $event = Manifestation::where('id', $id)->first();
-        return view('evenement_edit', compact('id', 'event'));
+        return view('evenement_edit', compact('id', 'event', 'recurrences'));
     }
 
     /**
@@ -122,6 +127,7 @@ class EventController extends Controller
         $event->description = $request->description;
         $event->date = $request->date;
         $event->prix = $request->prix;
+        $event->recurrence = $request->recurrence;
         $event->photo = $path;
         $event->save();
 
