@@ -8,6 +8,9 @@ class Idee extends Model
 {
     //
 
+    const CREATED_AT = null;
+    const UPDATED_AT = null;
+
     public function user() {
         return $this->belongsTo('App\User');
     }

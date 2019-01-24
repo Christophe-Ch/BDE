@@ -20,6 +20,42 @@ class IdeasController extends Controller
         return view('ideas/create');
     }
 
+    public function edit($id) {
+        $edit = Idee::find($id);
+
+        return view('ideas/edit', compact('edit'));
+    }
+
+    public function createIdea(Request $request) {
+        $idea = new Idee;
+        $idea->nom = $request->input('title');
+        $idea->description = $request->input('description');
+        $idea->user_id = Auth::user()->id;
+        $idea->centre_id = 1;
+
+        $idea->save();
+
+        return redirect('/ideas');
+    }
+
+    public function editIdea(Request $request, $id) {
+        $idea = Idee::find($id);
+
+        $idea->nom = $request->input('title');
+        $idea->description = $request->input('description');
+
+        $idea->save();
+
+        return redirect('/ideas');
+    }
+
+    public function deleteIdea($id) {
+        $delete = Idee::find($id);
+        $delete->delete();
+
+        return back();
+    }
+
     public function addVote($id) {
         $vote = new Vote;
         $vote->idee_id = $id;

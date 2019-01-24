@@ -1,21 +1,39 @@
+.header_title {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header_title h1 {
+    text-align: center;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 120pt;
+}
+
 #create_idea {
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
 #create_idea > a {
-    
     color: black;
     text-decoration: none;
+    font-size: 25pt;
+    transition-duration: 0.5s;
+    margin-bottom: 50px;
+}
+
+#create_idea > a:hover {
+    font-size: 35pt;
 }
 
 .list-element {
 
 color: black;
 
-margin-top: 1%;
-margin-bottom: 1%;
+margin-bottom: 100px;
 
 margin-left: auto;
 margin-right: auto;
@@ -28,15 +46,28 @@ margin-right: auto;
 
 p {
     padding-bottom: 10%;
+    word-wrap: break-word;
+    overflow-y: auto;
 }
 
 .actions {
-
-    position: relative;
     bottom: 5%;
     display: inline-flex;
     justify-content: space-between;
 }
+
+#form-create-idea {
+    height: 50vh;
+    width: 45vw;
+    display: inline-grid;
+}
+
+#form-create-idea textarea {
+    height: 100%;
+    width: 100%;
+}
+
+
 
 
         

@@ -32,7 +32,11 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 
 // Boîte à idées
 Route::get('ideas', 'IdeasController@index');
-Route::get('ideas/create' , 'IdeasController@create');
+Route::post('ideas', 'IdeasController@createIdea')->middleware('auth');
+Route::get('ideas/create' , 'IdeasController@create')->middleware('auth');
+Route::get('ideas/{id}/edit', 'IdeasController@edit')->middleware('auth');
+Route::put('ideas/{id}', 'IdeasController@editIdea')->middleware('auth');
+Route::delete('ideas/{id}', 'IdeasController@deleteIdea')->middleware('auth');
 
 
 // Vote des idées

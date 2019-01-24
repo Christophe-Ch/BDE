@@ -54,7 +54,7 @@
                 <ul id="submenu_burger">
                     <li><a href="/">Acceuil</a></li>
                     <li><a href="#">Événements</a></li>
-                    <li><a href="#">Boite à idées</a></li>
+                    <li><a href="/ideas">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
                     <li><a href="#">Mon profil</a></li>
                     <li><a href="#">Mes commandes</a></li>
@@ -75,7 +75,7 @@
                     <nav>
                         <li><a href="#">Boutique</a></li>
                         <li><a href="#">Evènements</a></li>
-                        <li><a href="#">Idées</a></li>
+                        <li><a href="/ideas">Idées</a></li>
                         <li><a href="#">Mon profil</a></li>
                     </nav>
                 </div>
