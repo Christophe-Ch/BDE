@@ -21,11 +21,11 @@ class ArticlesController extends Controller
                     $articles = Article::orderBy('prix', 'DESC')->get();
                     break;
 
-                case "clothes":
+                case "Vêtements":
                     $articles = Article::where('categorie', 1)->get();
                     break;
 
-                case "goodies":
+                case "Goodies":
                     $articles = Article::where('categorie', 2)->get();
                     break;
                 
@@ -39,7 +39,7 @@ class ArticlesController extends Controller
         }
         
         else {
-            $articles = Article::all();
+            $articles = Article::where('centre_id', env('CENTRE_ID', 1))->get();
         }
         
         $top_articles = Article::select('id')->orderBy('achat', 'DESC')->take(3)->get();
@@ -48,6 +48,37 @@ class ArticlesController extends Controller
         $top_article2 = Article::find($top_articles[2]->id);
 
         return view('articles.index', compact('articles', 'top_articles', 'top_article0', 'top_article1', 'top_article2'));
+    }
+
+    public function create() {
+        return view('articles.create');
+    }
+
+    public function store() {
+
+        request()->validate([
+            'nom' => 'required|max:40',
+            'description' => 'required|max:200',
+            'date' => 'required|date',
+            'prix' => 'required|integer',
+            'recurrence' => 'required|integer',
+            'photo' => 'required|image'
+        ]);
+
+        $article = new Article();
+
+        $article->nom = request('name');
+        $article->description = request('description');
+        $article->categorie = request('category');
+        $article->prix = request('price');
+        $article->photo = request('pic');
+        $article->stock = request('stock');
+        $article->centre_id = env('CENTRE_ID', 1);
+
+        $article->save();
+
+        return redirect('/articles');
+
     }
     
 }

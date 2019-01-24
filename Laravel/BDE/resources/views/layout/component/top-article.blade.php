@@ -9,7 +9,7 @@
                     {{$price}}€ 
                     <span>TTC</span> 
                 </div>
-                @if(App\Achat::where('article_id', '=', $id)->where('user_id', '=', Auth::user()->id)->count())
+                @if(Auth::user() && App\Achat::where('article_id', '=', $id)->where('user_id', '=', Auth::user()->id)->count())
                     <button class="button is-valid">
                         <img src="/images/check.png" alt="Article commandé">
                     </button>

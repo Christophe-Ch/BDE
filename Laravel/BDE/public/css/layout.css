@@ -447,6 +447,9 @@ footer #legal span {
 }
 
 .left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: white;
   color: black;
   width: 55%;

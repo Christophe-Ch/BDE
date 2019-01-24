@@ -1,0 +1,39 @@
+label {
+        display: block;
+}
+
+#little-input-container {
+        display: flex;
+        justify-content: center;
+        
+
+        .little-input {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                input {
+                        text-align: center;
+                }
+        }
+}
+
+#title_left {
+        font-family: 'Baskerville Old Face';
+        font-weight: lighter;
+}
+
+#description-input {
+        resize: none;
+        height: 100px;
+        overflow: hidden;
+}
+
+.input_left {
+        outline: none;
+}
+
+li {
+        list-style-type: none;
+        color: #f44336;
+}

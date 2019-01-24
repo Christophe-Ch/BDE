@@ -200,10 +200,28 @@ window.onclick = function (event) {
 
 /***/ }),
 
+<<<<<<< develop
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
   \***********************************/
+=======
+/***/ "./resources/sass/articles/create.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/articles/create.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/articles/index.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/articles/index.scss ***!
+  \********************************************/
+>>>>>>> Adding articles create
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -350,9 +368,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/create.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -364,9 +382,17 @@ __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\notificati
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\index.scss */"./resources/sass/articles/index.scss");
+<<<<<<< develop
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
 >>>>>>> Adding top articles carousel base
+<<<<<<< develop
 >>>>>>> Adding top articles carousel base
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\create.scss */"./resources/sass/articles/create.scss");
+>>>>>>> Adding articles create
+>>>>>>> Adding articles create
 
 
 /***/ })

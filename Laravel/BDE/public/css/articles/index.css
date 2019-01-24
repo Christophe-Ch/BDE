@@ -1,9 +1,7 @@
 #filter {
-  float: right;
   display: flex;
+  flex-direction: row-reverse;
   margin-right: 9%;
-  margin-bottom: 90px;
-  margin-top: 20px;
 }
 
 #filter span {
@@ -52,13 +50,33 @@
   font-size: 1.8em;
 }
 
-#list-component-container #article-element .actions form {
+#list-component-container #article-element .actions #purchase {
   margin: 0;
 }
 
-#list-component-container #article-element .actions form button {
+#list-component-container #article-element .actions #purchase button {
   height: 40px;
   width: 150px;
+}
+
+#list-component-container #article-element .actions #edit {
+  margin: 0;
+}
+
+#list-component-container #article-element .actions #edit button {
+  height: 40px;
+  width: 150px;
+  background: #275086;
+}
+
+#list-component-container #article-element .actions #delete {
+  margin: 0;
+}
+
+#list-component-container #article-element .actions #delete button {
+  height: 40px;
+  width: 150px;
+  background: #f44336;
 }
 
 #list-component-container #article-element .actions button {
@@ -97,5 +115,19 @@
 #top-article1,
 #top-article2 {
   display: none;
+}
+
+#add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+#add a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
 }
 

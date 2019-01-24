@@ -111,3 +111,5 @@ Route::get('legal-notice', 'LegalNoticeController@index');
 
 
 Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles/create', 'ArticlesController@create');
+Route::post('/articles', 'ArticlesController@store');

@@ -21,6 +21,7 @@
 =======
     "/css/search-bar.css": "/css/search-bar.css",
     "/css/list-element.css": "/css/list-element.css",
+<<<<<<< develop
     "/css/articles/index.css": "/css/articles/index.css"
 >>>>>>> Adding shop page base
 >>>>>>> Adding shop page base
@@ -42,5 +43,13 @@
     "/css/top-article.css": "/css/top-article.css",
     "/css/articles/index.css": "/css/articles/index.css"
 >>>>>>> Finishing top articles carousel
+<<<<<<< develop
 >>>>>>> Finishing top articles carousel
+=======
+=======
+    "/css/articles/index.css": "/css/articles/index.css",
+    "/css/top-article.css": "/css/top-article.css",
+    "/css/articles/create.css": "/css/articles/create.css"
+>>>>>>> Adding articles create
+>>>>>>> Adding articles create
 }

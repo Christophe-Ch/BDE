@@ -27,7 +27,7 @@
             @endslot
 
             @slot('src')
-                /images/bonnet.png
+                {{$top_article0->photo}}
             @endslot
 
             @slot('alt')
@@ -59,7 +59,7 @@
             @endslot
 
             @slot('src')
-                /images/pull.png
+                {{$top_article0->photo}}
             @endslot
 
             @slot('alt')
@@ -91,7 +91,7 @@
             @endslot
 
             @slot('src')
-                /images/bonnet.png
+                {{$top_article0->photo}}
             @endslot
 
             @slot('alt')
@@ -113,21 +113,27 @@
         @endslot
     @endcomponent
 
+    
+
     <div id="filter">
-        <span>Trier par :</span>
-        <form action="/articles" method="GET">
+        <form id="filter-form" action="/articles" method="GET">
             <select name="filter" onchange="document.forms['filter-form'].submit()">
                 <option value="chose">- Choisir -</option>
                 <option value="price-asc">Prix croissant</option>
                 <option value="price-desc">Prix décroissant</option>
-                <option value="clothes">Vêtements</option>
-                <option value="goodies">Goodies</option>
+                @foreach (App\Categorie::all() as $categorie)
+                    <option value="{{$categorie->nom}}">{{$categorie->nom}}</option>
+                @endforeach
                 <option value="undefined">Aucun</option>
             </select>
         </form>
+        <span>Trier par :</span>
     </div>
     
-    
+    <div id="add">
+        <img src="/images/add.png" alt="Add">
+        <a href="/articles/create">Ajouter un produit</a>
+    </div>
 
     <div id="list-component-container">
         @foreach ($articles as $article)
@@ -150,16 +156,30 @@
                     @endslot
 
                     @slot('actions')
-                        @if(App\Achat::where('article_id', '=', $article->id)->where('user_id', '=', Auth::user()->id)->count())
+                        @if(Auth::user() && App\Achat::where('article_id', '=', $article->id)->where('user_id', '=', Auth::user()->id)->count())
                             <button class="button is-valid">
                                 <img src="/images/check.png" alt="Article commandé">
                             </button>
                         @else
-                            <form method="POST" action="/purchase">
+                            <form id="purchase" method="POST" action="/purchase">
                                 @csrf
                                 <button class="button" type="submit">Commander</button>
                             </form>
                         @endif
+
+                        @if (Auth::user() && Auth::user()->statut_id == 2)
+                            <form id="edit" method="POST" action="/articles/{{$article->id}}">
+                                @csrf
+                                <button class="button" type="submit">Modifier</button>
+                            </form>
+
+                            <form id="delete" method="POST" action="/purchase">
+                                @csrf
+                                <button class="button" type="submit">Supprimer</button>
+                            </form>
+                        @endif
+
+
                         
                         <div id="price">
                             {{$article->prix}}€

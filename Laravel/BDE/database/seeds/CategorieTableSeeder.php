@@ -12,7 +12,7 @@ class CategorieTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            "nom" => "Vetements"
+            "nom" => "Vêtements"
         ]);
 
         DB::table('categories')->insert([

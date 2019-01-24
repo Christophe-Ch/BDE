@@ -21,7 +21,7 @@ class CreateArticlesTable extends Migration
             $table->integer('prix');
             $table->string('photo', 40);
             $table->integer('stock');
-            $table->integer('achat');
+            $table->integer('achat')->default('0');
             $table->integer('centre_id');
         });
     }
