@@ -45,7 +45,29 @@
 
 .carousel-container {
   height: calc(100vh - 380px);
+}
+
+.carousel-container .circle-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.carousel-container .circle-container .circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+}
+
+.carousel-container .circle-container #filled {
+  background: white;
+}
+
+#top-article1,
+#top-article2 {
+  display: none;
 }
 

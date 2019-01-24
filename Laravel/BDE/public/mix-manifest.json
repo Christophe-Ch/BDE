@@ -31,8 +31,16 @@
     "/css/notification.css": "/css/notification.css",
     "/css/search-bar.css": "/css/search-bar.css",
     "/css/list-element.css": "/css/list-element.css",
+<<<<<<< develop
     "/css/articles/index.css": "/css/articles/index.css",
     "/css/top-article.css": "/css/top-article.css"
 >>>>>>> Adding top articles carousel base
+<<<<<<< develop
 >>>>>>> Adding top articles carousel base
+=======
+=======
+    "/css/top-article.css": "/css/top-article.css",
+    "/css/articles/index.css": "/css/articles/index.css"
+>>>>>>> Finishing top articles carousel
+>>>>>>> Finishing top articles carousel
 }

@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="pic">
-            {{$pic}}
+            <img src="{{$src}}" alt="{{$alt}}">
         </div>
     </div>
     

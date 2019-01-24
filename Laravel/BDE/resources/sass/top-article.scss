@@ -1,7 +1,7 @@
 .carousel {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 30px;
 
     .arrow {
         height: 100px;
@@ -9,7 +9,7 @@
     }
 
     .content {
-        margin: 0 40px;
+        margin: 0 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,7 +21,7 @@
             width: 50%;
 
             h2 {
-                font-size: 3em;
+                font-size: 3.5em;
                 margin-bottom: 20px;
                 margin-top: 0;
             }
@@ -50,6 +50,16 @@
                     }
                 }
 
+                button {
+                    width: 100px;
+                    height: 40px;
+
+                    img {
+                        background: none;
+                        height: 30px;
+                    } 
+                }
+
                 form {
                     margin: 0;
                     
@@ -66,7 +76,7 @@
         }
 
         .pic {
-            width: 50%;
+            
             text-align: center;
 
             img {
@@ -76,7 +86,5 @@
         
         
         
-    }
-
-    
+    } 
 }

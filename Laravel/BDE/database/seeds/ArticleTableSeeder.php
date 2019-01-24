@@ -20,6 +20,7 @@ class ArticleTableSeeder extends Seeder
             "prix" => 25,
             "photo" => "\url",
             "stock" => 100,
+            "achat" => 50,
             "centre_id" => 1
         ]);
     }
