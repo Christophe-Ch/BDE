@@ -113,6 +113,22 @@
         @endslot
     @endcomponent
 
+    <div id="filter">
+        <span>Trier par :</span>
+        <form action="/articles" method="GET">
+            <select name="filter" onchange="document.forms['filter-form'].submit()">
+                <option value="chose">- Choisir -</option>
+                <option value="price-asc">Prix croissant</option>
+                <option value="price-desc">Prix décroissant</option>
+                <option value="clothes">Vêtements</option>
+                <option value="goodies">Goodies</option>
+                <option value="undefined">Aucun</option>
+            </select>
+        </form>
+    </div>
+    
+    
+
     <div id="list-component-container">
         @foreach ($articles as $article)
             <div id="article-element">
