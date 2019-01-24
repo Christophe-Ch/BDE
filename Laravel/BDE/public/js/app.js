@@ -48233,6 +48233,7 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
 /***/ 0:
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/administration.scss ***!
@@ -48250,6 +48251,19 @@ module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projet
 =======
 =======
 >>>>>>> Fix Iphone, event, profil
+=======
+/***/ "./resources/sass/notification.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/notification.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+>>>>>>> Fix Event supp and notif
 /***/ "./resources/sass/search-bar.scss":
 /*!****************************************!*\
   !*** ./resources/sass/search-bar.scss ***!
@@ -48288,9 +48302,9 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48302,6 +48316,7 @@ __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Lara
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
 <<<<<<< develop
+<<<<<<< develop
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
 module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 <<<<<<< develop
@@ -48309,6 +48324,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 =======
 >>>>>>> Fix Iphone, event, profil
 =======
+=======
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+>>>>>>> Fix Event supp and notif
 module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
 >>>>>>> Add controller and routes
 

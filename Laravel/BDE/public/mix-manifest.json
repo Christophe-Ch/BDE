@@ -17,6 +17,7 @@
     "/css/user.css": "/css/user.css",
     "/css/event.css": "/css/event.css",
     "/css/list-element.css": "/css/list-element.css",
+<<<<<<< develop
     "/css/search-bar.css": "/css/search-bar.css",
     "/css/event.css": "/css/event.css"
 <<<<<<< develop
@@ -27,4 +28,8 @@
 =======
 >>>>>>> Fix Iphone, event, profil
 >>>>>>> Fix Iphone, event, profil
+=======
+    "/css/notification.css": "/css/notification.css",
+    "/css/search-bar.css": "/css/search-bar.css"
+>>>>>>> Fix Event supp and notif
 }

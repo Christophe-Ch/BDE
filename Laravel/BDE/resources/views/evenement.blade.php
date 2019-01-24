@@ -91,6 +91,13 @@
                                 @if (Auth::user() && Auth::user()->statut_id == 3)
                                     <form action="/photoEvent/signaler/{{$photoEvent->id}}" method="post">@csrf<button class="button red" type="submit">Signaler</button></form>
                                 @endif
+                                @if (Auth::user() && Auth::user()->statut_id == 2)
+                                    <form action="{{ route('photoEvent.destroy', ['photoEvent' => $photoEvent->id]) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="button red" type="submit">Supprimer</button>
+                                    </form>
+                                @endif
                             </div>
                             
                             <div class="commentaire_list">
@@ -107,8 +114,6 @@
                                                 <h3 class="com_username">{{\App\User::find($commentaire->user_id)->name}} {{\App\User::find($commentaire->user_id)->prenom}}</h3>
                                                 <p class="com_desc">{{$commentaire->contenu}}</p>
                                             </div>
-                                            
-                                            
                                         </div> 
                                     @endforeach
                                 </div>

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/buttons.css">
     <link rel="stylesheet" href="/css/list-element.css">
     <link rel="stylesheet" href="/css/search-bar.css">
+    <link rel="stylesheet" href="/css/notification.css">
     @yield('stylesheets')
 </head>
 <body>

@@ -20,6 +20,7 @@ class CreateManifestationsTable extends Migration
             $table->dateTime('date');
             $table->integer('prix');
             $table->string('photo', 255);
+            $table->string('recurrence', 255);
             $table->integer('centre_id');
         });
     }

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 use App\Manifestation;
+use App\Commentaire;
 use App\Participant;
 use App\Photo;
 use App\Centre;
@@ -143,6 +144,10 @@ class EventController extends Controller
         $photos = Photo::all();
         foreach ($photos as $photo) {
             $photoA = $photo->where('manifestation_id', $id)->first();
+            $commentaires = Commentaire::where('photo_id', $photoA->id)->get();
+            foreach ($commentaires as $commentaire) {
+                $commentaire->delete();
+            }
             File::delete('storage/'.$photoA->url);
             $photoA->delete();
         }

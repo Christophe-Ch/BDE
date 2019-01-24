@@ -1,7 +1,7 @@
 <div class="notification">
     <p>{{ $date }}</p>
     <div class="content">
-        <h3>{{ $title }}</h3>
+        <a href="{{ $linkUrl }}"><h3>{{ $title }}</h3></a>
         <p>{{ $content }}</p>
     </div>
     <form action="/notifications/{{ $id }}" method="post">

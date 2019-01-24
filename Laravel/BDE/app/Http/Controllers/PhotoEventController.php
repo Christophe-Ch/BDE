@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\File;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 use App\Manifestation;
+use App\User;
 use App\Commentaire;
+use App\Notification;
 use App\Participant;
 use App\Photo;
 
@@ -60,7 +62,14 @@ class PhotoEventController extends Controller
      */
     public function destroy($id)
     {
-        
+        $photo = Photo::where('id', $id)->first();
+        $event = $photo->manifestation_id;
+        $photo->delete();
+        $commentaires = Commentaire::where('photo_id', $id)->get();
+        foreach ($commentaires as $commentaire) {
+            $commentaire->delete();
+        }
+        return redirect()->route('event.show', ['event' => $event]);
     }
 
     /**
@@ -71,7 +80,18 @@ class PhotoEventController extends Controller
      */
     public function signal($id)
     {
-        
+        $users = User::where('statut_id', 2)->get();
+        foreach ($users as $user) {
+            Notification::create([
+                'titre' => 'Photo signalé',
+                'message' => 'Une photo à été signalé',
+                'date' => date('Y-m-d'),
+                'url' => '/photoEvent/'.$id,
+                'lue' => 0,
+                'user_id' => $user->id,
+            ]);
+        }
+        return back();
     }
 
     /**
