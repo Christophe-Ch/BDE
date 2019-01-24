@@ -21,6 +21,7 @@ class ManifestationTableSeeder extends Seeder
             "date" => $date,
             "prix" => 0,
             "photo" => "photo.png",
+            "recurrence" => 1,
             "centre_id" => 1
         ]);
     }

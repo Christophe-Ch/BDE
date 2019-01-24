@@ -57,7 +57,8 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 //Evenement
 Route::resource('event', 'EventController');
 Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
-Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'show', 'destroy']);
+Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'destroy'])->middleware('auth');
+Route::resource('photoEvent', 'PhotoEventController')->only(['show']);
 Route::post('/photoEvent/signaler/{photo}', 'PhotoEventController@signal')->middleware('auth');
 Route::post('/photoEvent/comment/{photo}', 'PhotoEventController@comment')->middleware('auth');
 
