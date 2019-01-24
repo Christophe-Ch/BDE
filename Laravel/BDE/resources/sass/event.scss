@@ -38,7 +38,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    overflow: auto;
+    overflow: none;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -130,6 +130,48 @@
 .modal #ajout_photo{
     text-align: center;
     margin: 20px;
+}
+.modal .commentaire_list{
+    text-align: center;
+    width: 100%;
+}
+.modal #input_com{
+    width: 200px;
+    height: 25px;
+    padding: 10px;
+}
+.modal .commentaire_content{
+    display: flex;
+    flex-direction: column;
+    overflow-Y: scroll;
+    height: 200px;
+}
+.modal .commentaire_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.modal .com_avatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+}
+.modal .modal-content .com_desc{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.modal .modal-content .com_text{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+}
+.modal .modal-content .com_username{
+    margin: 0;
 }
 
 @media only screen and (max-width:992px){

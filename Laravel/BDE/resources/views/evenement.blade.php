@@ -62,18 +62,60 @@
                             </div>
                         </div>
                     </div>
-                    <form id="ajout_photo" action="/photo" method="post">
+                    <form id="ajout_photo" action="{{ route('photoEvent.store') }}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <input type="file" name="photo">
+                        <input type="hidden" name="event" value="{{$eventSelec->id}}">
                         <button type="submit" class="button blue">Ajouter</button>
                     </form>
                     
                     <div class="galerie_photo">
                         @foreach ($photos as $photo)
-                            <img class="photo" src="{{$photo->url}}" alt="Photo">
+                            <a href="{{ route('photoEvent.show', ['photoEvent' => $photo->id]) }}"><img class="photo" src="/storage/{{$photo->url}}" alt="Photo"></a>
                         @endforeach
                     </div>
                 </div>
         </div>
     @endisset
-    
+
+    @isset($photoEvent)
+        <div class="modal" id="modal" style="display: block">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="closeCross" type="button"><img src="/images/fermeture.png" alt="X"></button>
+                        <img class="img_modal" src="/storage/{{$photoEvent->url}}" alt="Photo">
+                        <div class="content">
+                            <h2 id="modal_title">{{$eventPhoto->nom}}</h2>
+                            <div class="infos">
+                                <p>{{substr($eventPhoto->date, 0, 10)}}</p>
+                                @if (Auth::user() && Auth::user()->statut_id == 2)
+                                    <form action="/photoEvent/signaler/{{$photoEvent->id}}" method="post">@csrf<button class="button red" type="submit">Signaler</button></form>
+                                @endif
+                            </div>
+                            
+                            <div class="commentaire_list">
+                                <form action="/photoEvent/comment/{{$photoEvent->id}}" method="post">
+                                    @csrf
+                                    <input id="input_com" type="text" name="commentaire" placeholder="Ajouter un commentaire ici ...">
+                                    <button class="button blue" type="submit">Ajouter</button>
+                                </form>
+                                <div class="commentaire_content">
+                                    @foreach ($commentaires as $commentaire)
+                                        <div class="commentaire_element">
+                                            <img class="com_avatar" src="/storage/{{\App\User::find($commentaire->user_id)->photo}}" alt="">
+                                            <div class="com_text">
+                                                <h3 class="com_username">{{\App\User::find($commentaire->user_id)->name}} {{\App\User::find($commentaire->user_id)->prenom}}</h3>
+                                                <p class="com_desc">{{$commentaire->contenu}}</p>
+                                            </div>
+                                            
+                                            
+                                        </div> 
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    @endisset
 @endsection

@@ -140,6 +140,12 @@ class EventController extends Controller
         foreach ($participants as $participant) {
             $participant->where('manifestation_id', $id)->delete();
         }
+        $photos = Photo::all();
+        foreach ($photos as $photo) {
+            $photoA = $photo->where('manifestation_id', $id)->first();
+            File::delete('storage/'.$photoA->url);
+            $photoA->delete();
+        }
         $event = Manifestation::where('id', $id)->first();
         File::delete('storage/'.$event->photo);
         $event->delete();

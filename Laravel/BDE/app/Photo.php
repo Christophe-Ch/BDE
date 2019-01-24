@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Photo extends Model
 {
-    //
+    protected $fillable=['url', 'manifestation_id', 'user_id'];
+    public $timestamps=false;
 
     public function manifestation() {
         return $this->belongsTo('App\Manifestation');

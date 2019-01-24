@@ -59,6 +59,7 @@ Route::resource('event', 'EventController');
 Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
 Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'show', 'destroy']);
 Route::post('/photoEvent/signaler/{photo}', 'PhotoEventController@signal')->middleware('auth');
+Route::post('/photoEvent/comment/{photo}', 'PhotoEventController@comment')->middleware('auth');
 
 // Ideas Box
 Route::get('ideas', 'IdeasController@index');
