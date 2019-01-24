@@ -201,20 +201,264 @@ app.post('/api/profile', (req, res) => {
     }
 });
 
+// Users
+app.get('/api/users', (req, res) => {
+    // Validation schema
+    let schema = {
+        token: Joi.string().required()
+    };
 
+    let validate = Joi.validate(req.body, schema);
 
-// app.get('/api/user')
-// .get(function(req,res){ 
-//     database.query('SELECT * FROM `users`', function (err, rows, fields) {
-//         if (err) throw err;
-//         res.send({user : rows,
-//         method: req.method});
-//     })
-// })
-// .post(function (res, req) {
+    if (!validate.error) {
+        // Get token
+        let api_token = req.body.token;
 
-// })
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
 
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                if (results[0].statut_id == 2) { // If user has BDE status
+                    sql = "SELECT * FROM users";
+
+                    database.query(sql, (error, results, fields) => { // Get all users
+                        if (error) throw error;
+
+                        return res.send({
+                            users: results
+                        });
+                    });
+                }
+                else {
+                    return res.send({
+                        users: null,
+                        message: "Not authorized"
+                    });
+                }
+            }
+            else {
+                return res.send({
+                    users: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else { // Wrong token
+        return res.send({
+            users: null,
+            message: validate.error
+        });
+    }
+});
+
+app.get('/api/users/:id', (req, res) => {
+    // Validation schemas
+    let bodySchema = {
+        token: Joi.string().required()
+    };
+
+    let paramsSchema = {
+        id: Joi.number().integer().required()
+    };
+
+    let validateBody = Joi.validate(req.body, bodySchema);
+    let validateParams = Joi.validate(req.params, paramsSchema);
+
+    if (!validateBody.error && !validateParams.error) {
+        // Get token
+        let api_token = req.body.token;
+        let id = req.params.id;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                if (results[0].statut_id == 2) { // If user has BDE status
+                    sql = "SELECT * FROM users WHERE id = " + database.escape(id);
+
+                    database.query(sql, (error, results, fields) => { // Get all users
+                        if (error) throw error;
+
+                        if (results && results.length) {
+                            return res.send({
+                                user: results[0]
+                            });
+                        }
+                        else {
+                            return res.send({
+                                users: null,
+                                message: "User not found"
+                            });
+                        }
+                    });
+                }
+                else {
+                    return res.send({
+                        users: null,
+                        message: "Not authorized"
+                    });
+                }
+            }
+            else {
+                return res.send({
+                    users: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else { // Wrong token or id
+        return res.send({
+            users: null,
+            bodyMessage: validateBody.error,
+            paramsMessage: validateParams.error
+        });
+    }
+});
+
+app.put('/api/users/:id', (req, res) => {
+    // Validation schemas
+    let bodySchema = {
+        token: Joi.string().required(),
+        last_name: Joi.string(),
+        first_name: Joi.string(),
+        email: Joi.string().email()
+    };
+
+    let paramsSchema = {
+        id: Joi.number().integer().required()
+    };
+
+    let validateBody = Joi.validate(req.body, bodySchema);
+    let validateParams = Joi.validate(req.params, paramsSchema);
+
+    if (!validateBody.error && !validateParams.error) {
+        // Get token
+        let api_token = req.body.token;
+        let id = req.params.id;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                if (results[0].statut_id == 2) { // If user has BDE status
+                    request.put(
+                        laravel + 'api/users/' + id, // route
+                        { json: req.body }, // request body
+                        function (error, response, body) {
+                            if (!error && response.statusCode == 200) { // if request succeed
+                                delete body.id;
+                                return res.send({
+                                    result: true,
+                                    user: body
+                                });
+                            }
+                            else {
+                                return res.send({
+                                    result: false,
+                                    message: body
+                                });
+                            }
+                        }
+                    );
+                }
+                else {
+                    return res.send({
+                        users: null,
+                        message: "Not authorized"
+                    });
+                }
+            }
+            else {
+                return res.send({
+                    users: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else { // Wrong token or id
+        return res.send({
+            users: null,
+            bodyMessage: validateBody.error,
+            paramsMessage: validateParams.error
+        });
+    }
+});
+
+app.delete('/api/users/:id', (req, res) => {
+    // Validation schemas
+    let bodySchema = {
+        token: Joi.string().required()
+    };
+
+    let paramsSchema = {
+        id: Joi.number().integer().required()
+    };
+
+    let validateBody = Joi.validate(req.body, bodySchema);
+    let validateParams = Joi.validate(req.params, paramsSchema);
+
+    if (!validateBody.error && !validateParams.error) {
+        // Get token
+        let api_token = req.body.token;
+        let id = req.params.id;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                if (results[0].statut_id == 2) { // If user has BDE status
+                    sql = "DELETE FROM users WHERE id = " + database.escape(id);
+
+                    database.query(sql, (error, results, fields) => { // Get all users
+                        if (error) throw error;
+
+                        return res.send({
+                            message: "User deleted"
+                        });
+                    });
+                }
+                else {
+                    return res.send({
+                        users: null,
+                        message: "Not authorized"
+                    });
+                }
+            }
+            else {
+                return res.send({
+                    users: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else { // Wrong token or id
+        return res.send({
+            users: null,
+            bodyMessage: validateBody.error,
+            paramsMessage: validateParams.error
+        });
+    }
+});
 
 // Start server
 app.listen(3000, 'localhost', () => {

@@ -20,8 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 // API
-Route::post('/api/register', 'ApiController@register')->middleware(IpFilter::class);
-Route::post('/api/profile', 'ApiController@update')->middleware(IpFilter::class);
+Route::group(['middleware' => IpFilter::class], function () {
+    Route::post('/api/register', 'ApiController@register');
+    Route::post('/api/profile', 'ApiController@updateSelf');
+    Route::put('/api/users/{id}', 'ApiController@updateUser');
+});
 
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
