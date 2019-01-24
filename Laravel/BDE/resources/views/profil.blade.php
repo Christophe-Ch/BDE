@@ -11,8 +11,8 @@
 @section('content')
 <div class="profil">
     <div id="profil_avatar">
-        <img id="profil_img" src="/images/{{Auth::user()->photo}}" alt="Profil image">
-        <p id="profil_img_change"><a href="/profil/modifier/photo">Modifier</a></p>
+        <img id="profil_img" src="/storage/{{Auth::user()->photo}}" alt="Profil image">
+        <p id="profil_img_change"><a href="/profil/modifier/{{Auth::user()->id}}/photo">Modifier</a></p>
     </div>
 
     <div id="profil_content">

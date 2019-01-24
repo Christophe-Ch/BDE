@@ -1,4 +1,4 @@
-@extends('layout/base')
+@extends('layout.base')
 
 @section('header')
 <div id="text_home">

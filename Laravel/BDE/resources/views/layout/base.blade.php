@@ -33,8 +33,10 @@
             <div id="menu_profil">
                 @if (Auth::check())
                     <div id="menu_profil_content">
-                        <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
+                        <p id="user_name"><a href="/profil">{{ Auth::user()->name }}</a></p>
+                        <div class="{{ Auth::user()->hasNotifications() ? 'has-notifications' : ''}}">
+                            <img id="user_icon" src="/storage/{{Auth::user()->photo}}" alt="user">
+                        </div>
                         <ul id="submenu_profil">
                             <li><a href="/profil">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
@@ -48,7 +50,6 @@
                 @else
                     <div id="menu_profil_content">
                         <p id="user_name"><a href="/login">Se connecter</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
                     </div>
                 @endif
             </div>

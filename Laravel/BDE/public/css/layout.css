@@ -72,6 +72,8 @@ nav > ul > li > a:focus::after {
 #user_icon {
   width: 50px;
   height: 50px;
+  border-radius: 50px;
+  background-color: #102138;
 }
 
 #submenu_profil {

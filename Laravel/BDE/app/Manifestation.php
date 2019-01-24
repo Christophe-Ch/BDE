@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Manifestation extends Model
 {
-    //
+    protected $fillable=['nom', 'description', 'prix', 'photo', 'centre_id', 'date'];
+    public $timestamps = false;
 
     public function centre() {
         return $this->belongsTo('App\Centre');

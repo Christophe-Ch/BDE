@@ -16,7 +16,7 @@ class CreateManifestationsTable extends Migration
         Schema::create('manifestations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom', 40);
-            $table->string('description', 40);
+            $table->string('description', 255);
             $table->dateTime('date');
             $table->integer('prix');
             $table->string('photo', 255);

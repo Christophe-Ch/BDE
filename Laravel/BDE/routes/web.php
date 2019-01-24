@@ -55,9 +55,10 @@ Route::get('/notifications', 'NotificationsController@index')->middleware('auth'
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
 
 //Evenement
-Route::get('/event', 'EventController@index');
-Route::get('/event/{eventSelec}', 'EventController@showModal');
+Route::resource('event', 'EventController');
 Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
+Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'show', 'destroy']);
+Route::post('/photoEvent/signaler/{photo}', 'PhotoEventController@signal')->middleware('auth');
 
 // Ideas Box
 Route::get('ideas', 'IdeasController@index');
@@ -77,3 +78,5 @@ Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
 Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth');
 Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
 Route::post('/profil/modifier/{user}', 'UserController@postModifier')->middleware('auth');
+Route::get('/profil/modifier/{user}/photo', 'UserController@getModifierAvatar')->middleware('auth');
+Route::post('/profil/modifier/{user}/photo', 'UserController@postModifierAvatar')->middleware('auth');
