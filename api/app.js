@@ -31,14 +31,13 @@ app.post('/api/inscription', async (req, res) => {
 
     let validate = Joi.validate(req.body, schema);
 
-    return res.send(validate);
-
     if (!validate.error) {
         // Send request to Laravel
         request.post(
             laravel + 'api/register', // route
             { json: req.body }, // request body
             function (error, response, body) {
+                res.status(response.statusCode);
                 if (!error && response.statusCode == 201) { // if request succeed
                     delete body.id;
                     return res.send({
@@ -56,6 +55,7 @@ app.post('/api/inscription', async (req, res) => {
         );
     }
     else {
+        res.status(400);
         return res.send({
             registered: false,
             message: validate.error
@@ -88,12 +88,14 @@ app.post('/api/connection', (req, res) => {
                 // Hash and compare passwords
                 bcrypt.compare(password, results[0].password, (err, result) => {
                     if (result) { // Passwords match
+
                         return res.send({
                             connected: true,
                             token: results[0].api_token
                         });
                     }
                     else {
+                        res.status(400);
                         return res.send({
                             connected: false,
                             token: null
@@ -102,6 +104,7 @@ app.post('/api/connection', (req, res) => {
                 });
             }
             else { // Wrong email
+                res.status(400);
                 return res.send({
                     connected: false,
                     message: validate.error
@@ -110,6 +113,7 @@ app.post('/api/connection', (req, res) => {
         });
     }
     else {
+        res.status(400);
         return res.send({
             connected: 'false',
             token: null
@@ -140,11 +144,13 @@ app.get('/api/profile', (req, res) => {
             if (results && results.length) {
                 delete results[0].id;
                 delete results[0].password;
+
                 return res.send({
                     user: results[0]
                 });
             }
             else { // Wrong token
+                res.status(400);
                 return res.send({
                     user: null,
                     message: "Token doesn't exist"
@@ -153,6 +159,7 @@ app.get('/api/profile', (req, res) => {
         });
     }
     else {
+        res.status(400);
         return res.send({
             user: null,
             message: validate.error
@@ -177,6 +184,7 @@ app.post('/api/profile', (req, res) => {
             laravel + 'api/profile', // route
             { json: req.body }, // request body
             function (error, response, body) {
+                res.status(response.statusCode);
                 if (!error && response.statusCode == 200) { // if request succeed
                     delete body.id;
                     return res.send({
@@ -194,6 +202,7 @@ app.post('/api/profile', (req, res) => {
         );
     }
     else {
+        res.status(400);
         return res.send({
             result: false,
             message: validate.error
@@ -228,12 +237,14 @@ app.get('/api/users', (req, res) => {
                     database.query(sql, (error, results, fields) => { // Get all users
                         if (error) throw error;
 
+
                         return res.send({
                             users: results
                         });
                     });
                 }
                 else {
+                    res.status(400);
                     return res.send({
                         users: null,
                         message: "Not authorized"
@@ -289,11 +300,13 @@ app.get('/api/users/:id', (req, res) => {
                         if (error) throw error;
 
                         if (results && results.length) {
+
                             return res.send({
                                 user: results[0]
                             });
                         }
                         else {
+                            res.status(404);
                             return res.send({
                                 users: null,
                                 message: "User not found"
@@ -302,6 +315,7 @@ app.get('/api/users/:id', (req, res) => {
                     });
                 }
                 else {
+                    res.status(400);
                     return res.send({
                         users: null,
                         message: "Not authorized"
@@ -309,6 +323,7 @@ app.get('/api/users/:id', (req, res) => {
                 }
             }
             else {
+                res.status(400);
                 return res.send({
                     users: null,
                     message: "Token doesn't exist"
@@ -317,6 +332,7 @@ app.get('/api/users/:id', (req, res) => {
         });
     }
     else { // Wrong token or id
+        res.status(400);
         return res.send({
             users: null,
             bodyMessage: validateBody.error,
@@ -331,7 +347,9 @@ app.put('/api/users/:id', (req, res) => {
         token: Joi.string().required(),
         last_name: Joi.string(),
         first_name: Joi.string(),
-        email: Joi.string().email()
+        email: Joi.string().email(),
+        password: Joi.string().regex(/.*[0-9]+.*/).regex(/.*[A-Z]+.*/),
+        password_confirmation: Joi.string().valid(Joi.ref('password')),
     };
 
     let paramsSchema = {
@@ -359,6 +377,7 @@ app.put('/api/users/:id', (req, res) => {
                         laravel + 'api/users/' + id, // route
                         { json: req.body }, // request body
                         function (error, response, body) {
+                            res.status(response.statusCode);
                             if (!error && response.statusCode == 200) { // if request succeed
                                 delete body.id;
                                 return res.send({
@@ -376,6 +395,7 @@ app.put('/api/users/:id', (req, res) => {
                     );
                 }
                 else {
+                    res.status(400);
                     return res.send({
                         users: null,
                         message: "Not authorized"
@@ -383,6 +403,7 @@ app.put('/api/users/:id', (req, res) => {
                 }
             }
             else {
+                res.status(400);
                 return res.send({
                     users: null,
                     message: "Token doesn't exist"
@@ -391,6 +412,7 @@ app.put('/api/users/:id', (req, res) => {
         });
     }
     else { // Wrong token or id
+        res.status(400);
         return res.send({
             users: null,
             bodyMessage: validateBody.error,
@@ -431,12 +453,14 @@ app.delete('/api/users/:id', (req, res) => {
                     database.query(sql, (error, results, fields) => { // Get all users
                         if (error) throw error;
 
+
                         return res.send({
                             message: "User deleted"
                         });
                     });
                 }
                 else {
+                    res.status(400);
                     return res.send({
                         users: null,
                         message: "Not authorized"
@@ -444,6 +468,7 @@ app.delete('/api/users/:id', (req, res) => {
                 }
             }
             else {
+                res.status(400);
                 return res.send({
                     users: null,
                     message: "Token doesn't exist"
@@ -456,6 +481,156 @@ app.delete('/api/users/:id', (req, res) => {
             users: null,
             bodyMessage: validateBody.error,
             paramsMessage: validateParams.error
+        });
+    }
+});
+
+// Shop
+app.get('/api/articles', (req, res) => {
+    // Validation schema
+    let schema = {
+        token: Joi.string().required()
+    };
+
+    let validate = Joi.validate(req.body, schema);
+
+    if (!validate.error) {
+        // Get token
+        let api_token = req.body.token;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                sql = 'SELECT * FROM articles WHERE centre_id = ' + results[0].centre_id;
+
+                database.query(sql, (error, results, fields) => {
+                    if (error) throw error;
+
+                    res.status(200);
+                    return res.send({
+                        articles: results
+                    });
+                });
+            }
+            else { // Wrong token
+                res.status(400);
+                return res.send({
+                    user: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else {
+        res.status(400);
+        return res.send({
+            user: null,
+            message: validate.error
+        });
+    }
+});
+
+// Events
+app.get('/api/events', (req, res) => {
+    // Validation schema
+    let schema = {
+        token: Joi.string().required()
+    };
+
+    let validate = Joi.validate(req.body, schema);
+
+    if (!validate.error) {
+        // Get token
+        let api_token = req.body.token;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                sql = 'SELECT * FROM manifestations WHERE centre_id = ' + results[0].centre_id;
+
+                database.query(sql, (error, results, fields) => {
+                    if (error) throw error;
+
+                    res.status(200);
+                    return res.send({
+                        articles: results
+                    });
+                });
+            }
+            else { // Wrong token
+                res.status(400);
+                return res.send({
+                    user: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else {
+        res.status(400);
+        return res.send({
+            user: null,
+            message: validate.error
+        });
+    }
+});
+
+// Ideas
+app.get('/api/ideas', (req, res) => {
+    // Validation schema
+    let schema = {
+        token: Joi.string().required()
+    };
+
+    let validate = Joi.validate(req.body, schema);
+
+    if (!validate.error) {
+        // Get token
+        let api_token = req.body.token;
+
+        // Prepare sql statement
+        let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
+
+        // Query
+        database.query(sql, (error, results, fields) => {
+            if (error) throw error;
+
+            if (results && results.length) {
+                sql = 'SELECT * FROM idees WHERE centre_id = ' + results[0].centre_id;
+
+                database.query(sql, (error, results, fields) => {
+                    if (error) throw error;
+
+                    res.status(200);
+                    return res.send({
+                        articles: results
+                    });
+                });
+            }
+            else { // Wrong token
+                res.status(400);
+                return res.send({
+                    user: null,
+                    message: "Token doesn't exist"
+                });
+            }
+        });
+    }
+    else {
+        res.status(400);
+        return res.send({
+            user: null,
+            message: validate.error
         });
     }
 });

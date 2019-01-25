@@ -47,6 +47,10 @@ class ApiController extends Controller
                 $user->email = request('email');
             }
 
+            if(request()->has('password')) {
+                $user->password = bcrypt(request('password'));
+            }
+
             $user->save();
 
             return $user;
@@ -71,6 +75,10 @@ class ApiController extends Controller
 
             if(request()->has('email') && !User::where('email', request('email'))->count()) {
                 $user->email = request('email');
+            }
+
+            if(request()->has('password')) {
+                $user->password = bcrypt(request('password'));
             }
 
             $user->save();
