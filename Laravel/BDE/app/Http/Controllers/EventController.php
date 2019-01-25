@@ -34,6 +34,7 @@ class EventController extends Controller
      */
     public function create()
     {
+        if(Auth::user()->statut_id != 2) return back();
         $recurrences = Recurrence::all();
         return view('evenement_add', compact('recurrences'));
     }
@@ -46,6 +47,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        if(Auth::user()->statut_id != 2) return back();
         $request->validate([
             'nom' => 'required|max:40',
             'description' => 'required|max:255',
@@ -95,6 +97,7 @@ class EventController extends Controller
      */
     public function edit($id)
     {
+        if(Auth::user()->statut_id != 2) return back();
         $recurrences = Recurrence::all();
         $event = Manifestation::where('id', $id)->first();
         return view('evenement_edit', compact('id', 'event', 'recurrences'));
@@ -109,6 +112,7 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(Auth::user()->statut_id != 2) return back();
         $request->validate([
             'photo' => 'required|image'
         ]);
@@ -142,6 +146,8 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::user()->statut_id != 2) return back();
+        
         $events = Manifestation::all();
         $participants = Participant::all();
         foreach ($participants as $participant) {

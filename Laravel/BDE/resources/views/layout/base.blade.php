@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/search-bar.css">
     <link rel="stylesheet" href="/css/notification.css">
     @yield('stylesheets')
+    <script src="/js/app.js"></script>
 </head>
 <body>
     <header>
@@ -44,6 +45,9 @@
                             <li><a href="/notifications">Mes notifications</a></li>
                             @if(Auth::user()->statut_id == 2)
                                 <li><a href="/administration">Administration</a></li>
+                            @endif
+                            @if (Auth::user()->statut_id == 3)
+                                <li><a href="/download">Télécharger les photos</a></li>
                             @endif
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
@@ -119,17 +123,17 @@
         </footer>
         <script src="/js/app.js"></script>
         <script>
-                var profilModal = document.getElementById('profil_modal');
-                var profilModalBtn = document.getElementById('profil_img_change');
-        
-                profilModalBtn.onclick = function(){
-                    profilModal.style.display = "block";
+            var profilModal = document.getElementById('profil_modal');
+            var profilModalBtn = document.getElementById('profil_img_change');
+    
+            profilModalBtn.onclick = function(){
+                profilModal.style.display = "block";
+            }
+            window.onclick = function(event){
+                if(event.target == profilModal){
+                    profilModal.style.display = "none";
                 }
-                window.onclick = function(event){
-                    if(event.target == profilModal){
-                        profilModal.style.display = "none";
-                    }
-                }
-            </script>
+            }
+        </script>
 </body>
 </html>

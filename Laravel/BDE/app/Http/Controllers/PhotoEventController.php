@@ -62,6 +62,7 @@ class PhotoEventController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::user()->statut_id != 2) return back();
         $photo = Photo::where('id', $id)->first();
         $event = $photo->manifestation_id;
         $photo->delete();

@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< develop
+<<<<<<< develop
     "content-hash": "0b9eb5c50fb7a987659b0cc6f4d5082e",
 =======
     "content-hash": "872a790730051a4831a55fc54e0a71f2",
@@ -98,15 +99,56 @@
                     "providers": [
                         "Barryvdh\\Cors\\ServiceProvider"
                     ]
+=======
+    "content-hash": "01503c64fc1daa89c70a281ef35e98f1",
+    "packages": [
+        {
+            "name": "chumper/zipper",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chumper/Zipper.git",
+                "reference": "6a1733c34d67c3952b8439afb36ad4ea5c3ceacb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chumper/Zipper/zipball/6a1733c34d67c3952b8439afb36ad4ea5c3ceacb",
+                "reference": "6a1733c34d67c3952b8439afb36ad4ea5c3ceacb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.0",
+                "illuminate/support": "^5.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Chumper\\Zipper\\ZipperServiceProvider"
+                    ],
+                    "aliases": {
+                        "Zipper": "Chumper\\Zipper\\Zipper"
+                    }
+>>>>>>> Add download images
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< develop
                     "Barryvdh\\Cors\\": "src/"
+=======
+                    "Chumper\\Zipper\\": "src/Chumper/Zipper"
+>>>>>>> Add download images
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
+<<<<<<< develop
                 "MIT"
             ],
             "authors": [
@@ -123,6 +165,26 @@
                 "laravel"
             ],
             "time": "2018-09-06T13:20:53+00:00"
+=======
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Plaschke",
+                    "email": "github@nilsplaschke.de",
+                    "homepage": "http://nilsplaschke.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a little neat helper for the ZipArchive methods with handy functions",
+            "homepage": "http://github.com/Chumper/zipper",
+            "keywords": [
+                "archive",
+                "laravel",
+                "zip"
+            ],
+            "time": "2017-07-17T08:05:10+00:00"
+>>>>>>> Add download images
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

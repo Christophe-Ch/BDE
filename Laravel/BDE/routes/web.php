@@ -81,3 +81,4 @@ Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth'
 Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
 Route::post('/profil/modifier/{user}', 'UserController@postModifier')->middleware('auth');
 Route::post('/profil/modifier/{user}/photo', 'UserController@postModifierAvatar')->middleware('auth');
+Route::get('/download', 'DownloadController@downloadImages')->middleware('auth');

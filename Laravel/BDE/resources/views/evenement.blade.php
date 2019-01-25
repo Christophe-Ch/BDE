@@ -14,10 +14,12 @@
             Rechercher un produit...
         @endslot
     @endcomponent
-    <div class="evenement_add">
-        <img src="/images/add.png" alt="+">
-        <a href="{{ route('event.create') }}"><h1>Ajout d'un événement</h1></a>
-    </div>
+    @if(Auth::user() && Auth::user()->statut_id == 2)
+        <div class="evenement_add">
+            <img src="/images/add.png" alt="+">
+            <a href="{{ route('event.create') }}"><h1>Ajout d'un événement</h1></a>
+        </div>
+    @endif
     <div class="evenement_list">
         @foreach ($events as $event)
         <div class="evenement_element">
@@ -31,7 +33,11 @@
                 @slot('title')<a class="title_event" href="{{ route('event.show',['event' => $event->id])}}">{{$event->nom}}</a>@endslot
                 @slot('description'){{$event->description}}@endslot
                 @slot('actions')
+                @if (\App\Participant::where('manifestation_id',$event->id)->first() && \App\Participant::where('user_id',Auth::user()->id)->first())
+                    <button class="button is-valid" disabled="disabled">Inscrit</button>
+                @else
                     <form action="/event/register/{{$event->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
+                @endif
                     @if(Auth::user() && Auth::user()->statut_id == 2)
                         <a href="{{ route('event.edit',['event' => $event->id]) }}"><button class="button blue btn_admin" type="submit">Modifier</button></a>
                         <form action="{{ route('event.destroy',['event' => $event->id]) }}" method="post">@method('delete')@csrf<button class="button red btn_admin" type="submit">Supprimer</button></form>
