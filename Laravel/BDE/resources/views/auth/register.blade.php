@@ -21,6 +21,9 @@
     <p class="title_input_left">Nom</p>
     <input class="input_left" type="text" name="name"><br>
 
+    <p class="title_input_left">Prenom</p>
+    <input class="input_left" type="text" name="prenom"><br>
+
     <p class="title_input_left">E-mail</p>
     <input class="input_left" type="email" name="email"><br>
 

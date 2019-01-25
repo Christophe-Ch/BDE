@@ -48276,17 +48276,6 @@ module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projet
 
 /***/ }),
 
-/***/ "./resources/sass/search-bar.scss":
-/*!****************************************!*\
-  !*** ./resources/sass/search-bar.scss ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/sass/user.scss":
 /*!**********************************!*\
   !*** ./resources/sass/user.scss ***!

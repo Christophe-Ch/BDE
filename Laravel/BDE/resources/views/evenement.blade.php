@@ -33,8 +33,8 @@
                 @slot('title')<a class="title_event" href="{{ route('event.show',['event' => $event->id])}}">{{$event->nom}}</a>@endslot
                 @slot('description'){{$event->description}}@endslot
                 @slot('actions')
-                @if (!\App\Participant::where('manifestation_id',$event->id)->where('user_id',Auth::user()->id)->get()->isEmpty())
-                    <button class="button is-valid" disabled="disabled">Inscrit</button>
+                @if (Auth::user() && !\App\Participant::where('manifestation_id',$event->id)->where('user_id',Auth::user()->id)->get()->isEmpty())
+                    <form action="/event/unregister/{{$event->id}}" method="post">@csrf<button class="button is-valid" type="submit">Se désinscrire</button></form>
                 @else
                     <form action="/event/register/{{$event->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
                 @endif
@@ -54,19 +54,19 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button id="closeCross" type="button"><img src="/images/fermeture.png" alt="X"></button>
-                        <img class="img_modal" src="/storage/{{$event->photo}}" alt="Photo">
+                        <img class="img_modal" src="/storage/{{$eventSelec->photo}}" alt="Photo">
                         <div class="content">
                             <h2 id="modal_title">{{$eventSelec->nom}}</h2>
                             <div class="infos">
-                                <p>{{substr($eventSelec->date, 0, 10)}} | {{\App\Recurrence::where('id',$event->recurrence)->first()->nom}}</p>
+                                <p>{{substr($eventSelec->date, 0, 10)}} | {{\App\Recurrence::where('id',$eventSelec->recurrence)->first()->nom}}</p>
                                 <p>{{$eventSelec->prix}} €</p>
                             </div>
                             <p>{{$eventSelec->description}}</p>
                             <div class="actions">
-                                @if (!\App\Participant::where('manifestation_id',$event->id)->where('user_id',Auth::user()->id)->get()->isEmpty())
-                                    <button class="button is-valid" disabled="disabled">Inscrit</button>
+                                @if (Auth::user() && !\App\Participant::where('manifestation_id',$eventSelec->id)->where('user_id',Auth::user()->id)->get()->isEmpty())
+                                    <form action="/event/unregister/{{$eventSelec->id}}" method="post">@csrf<button class="button is-valid" type="submit">Se désinscrire</button></form>
                                 @else
-                                    <form action="/event/register/{{$event->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
+                                    <form action="/event/register/{{$eventSelec->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
                                 @endif
                                 <p>{{$nbUser}} participants</p>
                             </div>
@@ -124,6 +124,16 @@
                                                 <h3 class="com_username">{{\App\User::find($commentaire->user_id)->name}} {{\App\User::find($commentaire->user_id)->prenom}}</h3>
                                                 <p class="com_desc">{{$commentaire->contenu}}</p>
                                             </div>
+                                            @if (Auth::user() && Auth::user()->statut_id == 2)
+                                                <form action="/photoEvent/comment/destroy/{{$commentaire->id}}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="button red" type="submit">Supprimer</button>
+                                                </form>
+                                            @endif
+                                            @if (Auth::user() && Auth::user()->statut_id == 3)
+                                                <form action="/photoEvent/comment/signaler/{{$commentaire->id}}" method="post">@csrf<button class="button red" type="submit">Signaler</button></form>
+                                            @endif
                                         </div> 
                                     @endforeach
                                 </div>

@@ -179,4 +179,10 @@ class EventController extends Controller
         ]);
         return back();
     }
+
+    public function unRegisterEvent(Manifestation $eventSelec){
+        $events = Manifestation::all();
+        Participant::where('manifestation_id',$eventSelec->id)->where('user_id',Auth::user()->id)->delete();
+        return redirect()->route('event.index');
+    }
 }
