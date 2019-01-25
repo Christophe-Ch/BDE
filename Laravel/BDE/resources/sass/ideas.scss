@@ -34,26 +34,31 @@
 color: black;
 
 margin-bottom: 100px;
-
 margin-left: auto;
 margin-right: auto;
 
 }
 
-.list-element img {
-    object-fit: cover;
+.list-element .content{
+    width:100%;
 }
 
-p {
-    padding-bottom: 10%;
-    word-wrap: break-word;
-    overflow-y: auto;
+.list-element img {
+    display: none;
+}
+
+.content > p {
+    float:left;
+    word-break: break-all;
+    overflow: auto;
+    width:100%;
 }
 
 .actions {
     bottom: 5%;
     display: inline-flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #form-idea {
@@ -84,14 +89,55 @@ p {
 
 #information {
     background-color: red;
-    border-style: solid; 
+    border-style: solid;
     border-radius: 90px;
     padding: 1%;
     margin: 1%;
 }
 
+@media only screen and (max-width: 812px){
+
+.actions > a > input {
+    height: 45px;
+    width: 74px;
+    font-size: 14px;
+}
+
+.button {
+    height: 45px;
+    width: 74px;
+    font-size: 14px;
+}
+
+#vote_button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    width: 45px;
+    padding-bottom: 250px;
+}
+
+#vote_label {
+    align-items: center;
+}
+
+#form {
+    align-items: center;
+}
+
+.content > p {
+    float:left;
+    font-size: 14px;
+    word-break: break-all;
+    overflow: auto;
+    width:100%;
+}
+
+}
 
 
-        
-    
-    
+
+
+
+

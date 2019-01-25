@@ -27,7 +27,6 @@
 @foreach ($ideas as $idea)
     @component('layout.component.list-element')
         @slot('url')
-            images/ImageNotFound.png
         @endslot
         @slot('alt')
             {{ $idea->id }}
@@ -67,7 +66,7 @@
                     @else
                         <input id="vote_button" type="image" src="/images/icons8-heart-outline-52.png" alt="heart">
                     @endif
-                    
+
                 </form>
             </div>
             @endif

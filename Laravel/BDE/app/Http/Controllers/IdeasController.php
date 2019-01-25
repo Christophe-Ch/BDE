@@ -12,13 +12,11 @@ class IdeasController extends Controller
     public function index() {
         $ideas = Idee::all();
         $votes = Vote::all();
-
         if(Auth::check()) {
             $ideas = $ideas->where("centre_id", Auth::user()->centre_id);
         } else {
             $ideas = $ideas->where("centre_id", env("centre_id", 1));
         }
-
         return view('ideas/index', compact('ideas', 'votes'));
     }
 
@@ -28,7 +26,6 @@ class IdeasController extends Controller
 
     public function edit($id) {
         $edit = Idee::find($id);
-
         return view('ideas/edit', compact('edit'));
     }
 
@@ -38,15 +35,12 @@ class IdeasController extends Controller
             'nom' => 'required|unique:idees|max:40',
             'description' => 'required|max:255',
         ]);
-
         $idea = new Idee;
         $idea->nom = $request->input('nom');
         $idea->description = $request->input('description');
         $idea->user_id = Auth::user()->id;
         $idea->centre_id = 1;
-
         $idea->save();
-
         return redirect('/ideas');
     }
 
@@ -57,19 +51,15 @@ class IdeasController extends Controller
         ]);
 
         $idea = Idee::find($id);
-
         $idea->nom = $request->input('nom');
         $idea->description = $request->input('description');
-
         $idea->save();
-
         return redirect('/ideas');
     }
 
     public function deleteIdea($id) {
         $delete = Idee::find($id);
         $delete->delete();
-
         return back();
     }
 
@@ -78,7 +68,6 @@ class IdeasController extends Controller
         $vote->idee_id = $id;
         $vote->user_id = Auth::user()->id;
         $vote->save();
-
         return back();
     }
 
