@@ -117,6 +117,7 @@ Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 Route::put('/articles/{article}', 'ArticlesController@update');
 Route::delete('/articles/{article}', 'ArticlesController@destroy');
 
+Route::get('/purchase', 'PurchaseController@index')->middleware('auth');
 Route::post('/purchase', 'PurchaseController@store')->middleware('auth');
 
 

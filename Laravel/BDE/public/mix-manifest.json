@@ -50,6 +50,7 @@
     "/css/articles/index.css": "/css/articles/index.css",
     "/css/top-article.css": "/css/top-article.css",
 <<<<<<< develop
+<<<<<<< develop
     "/css/articles/create.css": "/css/articles/create.css"
 >>>>>>> Adding articles create
 <<<<<<< develop
@@ -58,5 +59,13 @@
 =======
     "/css/articles/form.css": "/css/articles/form.css"
 >>>>>>> Finishing shop
+<<<<<<< develop
 >>>>>>> Finishing shop
+=======
+=======
+    "/css/articles/form.css": "/css/articles/form.css",
+    "/css/purchase-element.css": "/css/purchase-element.css",
+    "/css/purchase.css": "/css/purchase.css"
+>>>>>>> Adding purchase component
+>>>>>>> Adding purchase component
 }

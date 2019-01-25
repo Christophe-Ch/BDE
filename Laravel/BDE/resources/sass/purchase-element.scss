@@ -1,0 +1,50 @@
+#purchase-element {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    font-family: 'Segoe UI';
+    font-size: 20pt;
+    border-bottom: 1px solid white;
+
+
+    img {
+        height: 180px;
+    }
+
+    h3 {
+        font-weight: 400;
+    }
+
+    #stock {
+        display: flex;
+        align-items: center;
+
+        #stock-id {
+            border: 2px solid #ffc252;
+            border-radius: 5px;
+            padding: 5px 25px;
+            margin: 0 10px;
+        }
+
+        input {
+            height: 50px;
+            background: none;
+            font-family: 'Segoe UI'; 
+            color: white;
+            font-size: 20pt;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    form {
+        height: 50px;
+        
+        #delete {
+            height: 50px;
+        }
+    }
+    
+}

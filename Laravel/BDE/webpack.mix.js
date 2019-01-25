@@ -24,6 +24,8 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/legal-notice.scss', 'public/css')
    .sass('resources/sass/top-article.scss', 'public/css')
    .sass('resources/sass/administration.scss', 'public/css')
-   .sass('resources/sass/articles/index.scss', 'public/css/articles');
-   .sass('resources/sass/articles/create.scss', 'public/css/articles');
-   .sass('resources/sass/articles/form.scss', 'public/css/articles');
+   .sass('resources/sass/articles/index.scss', 'public/css/articles')
+   .sass('resources/sass/articles/create.scss', 'public/css/articles')
+   .sass('resources/sass/articles/form.scss', 'public/css/articles')
+   .sass('resources/sass/purchase-element.scss', 'public/css')
+   .sass('resources/sass/purchase.scss', 'public/css');

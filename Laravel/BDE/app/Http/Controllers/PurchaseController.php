@@ -9,7 +9,7 @@ use App\Achat;
 class PurchaseController extends Controller
 {
     public function index() {
-        
+        return view('purchase');
     }
 
     public function store() {
@@ -20,6 +20,8 @@ class PurchaseController extends Controller
         $achat->quantite = 1;
 
         $achat->save();
+
+        return redirect('/articles');
     }
 
     public function update() {

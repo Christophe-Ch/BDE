@@ -308,6 +308,28 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
+/***/ "./resources/sass/purchase-element.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/purchase-element.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/purchase.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/purchase.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/search-bar.scss":
 /*!****************************************!*\
   !*** ./resources/sass/search-bar.scss ***!
@@ -375,9 +397,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -398,6 +420,7 @@ module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resource
 =======
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
 <<<<<<< develop
+<<<<<<< develop
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\create.scss */"./resources/sass/articles/create.scss");
 >>>>>>> Adding articles create
 <<<<<<< develop
@@ -406,7 +429,15 @@ module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resource
 =======
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
 >>>>>>> Finishing shop
+<<<<<<< develop
 >>>>>>> Finishing shop
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase-element.scss */"./resources/sass/purchase-element.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+>>>>>>> Adding purchase component
+>>>>>>> Adding purchase component
 
 
 /***/ })
