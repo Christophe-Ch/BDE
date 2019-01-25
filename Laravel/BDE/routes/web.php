@@ -11,11 +11,20 @@
 |
 */
 
+use App\Http\Middleware\IpFilter;
+
 Route::get('/', function () {
     return view('home');
 });
 
 Auth::routes();
+
+// API
+Route::group(['middleware' => IpFilter::class], function () {
+    Route::post('/api/register', 'ApiController@register');
+    Route::put('/api/profile', 'ApiController@updateSelf');
+    Route::put('/api/users/{id}', 'ApiController@updateUser');
+});
 
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');

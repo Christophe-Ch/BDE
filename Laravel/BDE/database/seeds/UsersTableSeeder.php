@@ -18,7 +18,8 @@ class UsersTableSeeder extends Seeder
             "email" => "Admin@bde.fr",
             "password" => "$2y$10$7fhO/cPdBUnGEiGpRnNiEenUB4SNVTsZAQxzOJjSc/Q6IZEUnnWQG",
             "centre_id" => "1",
-            "statut_id" => "1"
+            "statut_id" => "1",
+            "api_token" => str_random(100)
         ]);
     }
 }

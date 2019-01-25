@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('photo', 255)->nullable();
             $table->integer('centre_id')->nullable();
             $table->integer('statut_id')->nullable();
-            $table->rememberToken();
+            $table->string('api_token', 100);
         });
     }
 
