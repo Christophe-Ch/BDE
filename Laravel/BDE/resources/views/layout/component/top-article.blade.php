@@ -17,6 +17,7 @@
                     <form method="POST" action="/purchase">
                         @csrf
                         <button class="button" type="submit">Commander</button>
+                        <input type="hidden" name="id" value="{{$id}}">
                     </form>
                 @endif
             </div>

@@ -60,13 +60,17 @@
 }
 
 #list-component-container #article-element .actions #edit {
-  margin: 0;
-}
-
-#list-component-container #article-element .actions #edit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 150px;
   background: #275086;
+}
+
+#list-component-container #article-element .actions #edit a {
+  color: white;
+  text-decoration: none;
 }
 
 #list-component-container #article-element .actions #delete {

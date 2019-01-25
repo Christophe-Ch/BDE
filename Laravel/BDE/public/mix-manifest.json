@@ -49,7 +49,14 @@
 =======
     "/css/articles/index.css": "/css/articles/index.css",
     "/css/top-article.css": "/css/top-article.css",
+<<<<<<< develop
     "/css/articles/create.css": "/css/articles/create.css"
 >>>>>>> Adding articles create
+<<<<<<< develop
 >>>>>>> Adding articles create
+=======
+=======
+    "/css/articles/form.css": "/css/articles/form.css"
+>>>>>>> Finishing shop
+>>>>>>> Finishing shop
 }

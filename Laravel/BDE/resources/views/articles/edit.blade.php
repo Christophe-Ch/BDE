@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-    Ajout d'un article
+    Modification d'un article
 @endsection
 
 @section('content_form')
@@ -19,37 +19,38 @@
         </div>
     @endif
 
-    <form action="/articles" method="POST" enctype="multipart/form-data">
+    <form action="/articles/{{$article->id}}" method="POST" enctype="multipart/form-data">
+        @method('PUT')
         @csrf
         <label for="name" class="title_input_left">Nom</label>
-        <input class="input_left" type="text" name="name" value="{{old('name')}}">
+        <input class="input_left" type="text" name="name" value="{{$article->nom}}">
 
         <div id="little-input-container">
             <div class="little-input">
                 <label for="price" class="title_input_left">Prix</label>
-                <input class="input_left"type="text" name="price" value="{{old('price')}}">
+                <input class="input_left"type="text" name="price" value="{{$article->prix}}">
             </div>
             <div class="little-input">
                 <label for="stock" class="title_input_left">Stock</label>
-                <input class="input_left"type="text" name="stock" value="{{old('stock')}}">
+                <input class="input_left"type="text" name="stock" value="{{$article->stock}}">
             </div>
         </div>
 
         <label for="category" class="title_input_left">Catégorie</label>
         <select name="category" class="input_left">
             @foreach ($categories as $category)
-                <option class="input_left" value="{{$category->id}}">{{$category->nom}}</option>
+                <option class="input_left" value="{{$category->id}}" {{ $category->id == $article->categorie ? 'selected' : ''}}>{{$category->nom}}</option>
             @endforeach
         </select>
 
         <label for="description" class="title_input_left">Description</label>
-        <textarea class="input_left" id="description-input" name="description" value="{{old('description')}}"></textarea>
+        <textarea class="input_left" id="description-input" name="description" value="{{$article->description}}">{{$article->description}}</textarea>
 
         <label for="pic" class="title_input_left">Photo</label>
-        <input class="input_left" type="file" name="pic" value="{{ old('pic') }}"><br>
+        <input class="input_left" type="file" name="pic" value="{{$article->photo}}"><br>
 
         <div>
-            <input class="btn_left" type="submit" value="Ajouter">
+            <input class="btn_left" type="submit" value="Modifier">
         </div>
     </form>
     

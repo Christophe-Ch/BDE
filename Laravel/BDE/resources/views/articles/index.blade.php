@@ -140,7 +140,7 @@
             <div id="article-element">
                 @component('layout.component.list-element')
                     @slot('url')
-                        {{$article->photo}}
+                        /storage/{{$article->photo}}
                     @endslot
 
                     @slot('alt')
@@ -164,16 +164,18 @@
                             <form id="purchase" method="POST" action="/purchase">
                                 @csrf
                                 <button class="button" type="submit">Commander</button>
+                                <input type="hidden" name="id" value="{{$article->id}}">
                             </form>
                         @endif
 
                         @if (Auth::user() && Auth::user()->statut_id == 2)
-                            <form id="edit" method="POST" action="/articles/{{$article->id}}">
-                                @csrf
-                                <button class="button" type="submit">Modifier</button>
-                            </form>
+                        <div class="button" id="edit">
+                            <a  href="/articles/{{$article->id}}/edit">Modifier</a>
+                        </div>
+                            
 
-                            <form id="delete" method="POST" action="/purchase">
+                        <form id="delete" method="POST" action="/articles/{{$article->id}}">
+                            @method('DELETE')
                                 @csrf
                                 <button class="button" type="submit">Supprimer</button>
                             </form>

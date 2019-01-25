@@ -201,6 +201,7 @@ window.onclick = function (event) {
 /***/ }),
 
 <<<<<<< develop
+<<<<<<< develop
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
@@ -210,6 +211,12 @@ window.onclick = function (event) {
 /*!*********************************************!*\
   !*** ./resources/sass/articles/create.scss ***!
   \*********************************************/
+=======
+/***/ "./resources/sass/articles/form.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/articles/form.scss ***!
+  \*******************************************/
+>>>>>>> Finishing shop
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -368,9 +375,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/create.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -390,9 +397,16 @@ module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resource
 =======
 =======
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+<<<<<<< develop
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\create.scss */"./resources/sass/articles/create.scss");
 >>>>>>> Adding articles create
+<<<<<<< develop
 >>>>>>> Adding articles create
+=======
+=======
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+>>>>>>> Finishing shop
+>>>>>>> Finishing shop
 
 
 /***/ })

@@ -4,7 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< develop
     "content-hash": "d811ffc498474407883cc0b4ee2367fc",
+=======
+<<<<<<< develop
+    "content-hash": "f91d3ade7781563a3afcd2f78efb47ac",
+=======
+    "content-hash": "872a790730051a4831a55fc54e0a71f2",
+>>>>>>> Finishing shop
+>>>>>>> Finishing shop
     "packages": [
         {
             "name": "asm89/stack-cors",

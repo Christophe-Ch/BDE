@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManagerStatic as Image;
 use App\Article;
 use App\Achat;
+use App\Categorie;
 
 class ArticlesController extends Controller
 {
@@ -51,19 +56,31 @@ class ArticlesController extends Controller
     }
 
     public function create() {
-        return view('articles.create');
+        if(Auth::user() && Auth::user()->statut_id != 2)
+            return back();
+
+        $categories = Categorie::all();
+
+        return view('articles.create', compact('categories'));
     }
 
-    public function store() {
+    public function store(Request $request) {
+
+        if(Auth::user() && Auth::user()->statut_id != 2)
+            return back();
 
         request()->validate([
-            'nom' => 'required|max:40',
+            'name' => 'required|max:40',
+            'price' => 'required|integer',
+            'stock' => 'required|integer',
+            'category' => 'required|integer',
             'description' => 'required|max:200',
-            'date' => 'required|date',
-            'prix' => 'required|integer',
-            'recurrence' => 'required|integer',
-            'photo' => 'required|image'
+            'pic' => 'required|image'
         ]);
+
+        $extension =  request()->file('pic')->extension();
+        $path = request('name') .'.'. $extension;
+        Image::make(request()->file('pic'))->save(public_path('storage/'.$path));
 
         $article = new Article();
 
@@ -71,7 +88,7 @@ class ArticlesController extends Controller
         $article->description = request('description');
         $article->categorie = request('category');
         $article->prix = request('price');
-        $article->photo = request('pic');
+        $article->photo = $path;
         $article->stock = request('stock');
         $article->centre_id = env('CENTRE_ID', 1);
 
@@ -79,6 +96,51 @@ class ArticlesController extends Controller
 
         return redirect('/articles');
 
+    }
+
+    public function edit(Article $article) {
+        if(Auth::user() && Auth::user()->statut_id != 2)
+            return back();
+        
+        $categories = Categorie::all();
+        return view('articles.edit', compact('article', 'categories'));
+    }
+
+    public function update(Article $article) {
+        if(Auth::user() && Auth::user()->statut_id != 2)
+            return back();
+
+        request()->validate([
+            'name' => 'required|max:40',
+            'price' => 'required|integer',
+            'stock' => 'required|integer',
+            'category' => 'required|integer',
+            'description' => 'required|max:200',
+            'pic' => 'required|image'
+        ]);
+
+        
+
+        $article->nom = request('name');
+        $article->description = request('description');
+        $article->categorie = request('category');
+        $article->prix = request('price');
+        // $article->photo = request('pic');
+        $article->stock = request('stock');
+        $article->centre_id = env('CENTRE_ID', 1);
+
+        $article->save();
+
+        return redirect('/articles');
+    }
+
+    public function destroy(Article $article) {
+        if(Auth::user() && Auth::user()->statut_id != 2)
+            return back();
+
+        $article->delete();
+
+        return redirect('/articles');
     }
     
 }
