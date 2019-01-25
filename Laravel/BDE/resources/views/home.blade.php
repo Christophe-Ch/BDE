@@ -11,6 +11,7 @@
         <a href="/register"><input id="input_home" type="button" value="S'inscrire"></a>
     </div>
 @endif
+
 <div id="img_home">
     <img src="images/Logo_bde2.png" alt="Logo">
 </div>
