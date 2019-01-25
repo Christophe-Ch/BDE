@@ -22,7 +22,7 @@ Auth::routes();
 // API
 Route::group(['middleware' => IpFilter::class], function () {
     Route::post('/api/register', 'ApiController@register');
-    Route::post('/api/profile', 'ApiController@updateSelf');
+    Route::put('/api/profile', 'ApiController@updateSelf');
     Route::put('/api/users/{id}', 'ApiController@updateUser');
 });
 

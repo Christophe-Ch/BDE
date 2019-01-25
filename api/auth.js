@@ -12,6 +12,8 @@ const database = mysql.createConnection({
     database: "bde"
 });
 
+const laravel = 'http://127.0.0.1:8000/';
+
 
 router.post('/inscription', async (req, res) => {
     // Validation schema
@@ -27,7 +29,7 @@ router.post('/inscription', async (req, res) => {
 
     if (!validate.error) {
         // Send request to Laravel
-        request.post(
+        request.put(
             laravel + 'api/register', // route
             { json: req.body }, // request body
             function (error, response, body) {
