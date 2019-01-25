@@ -24,7 +24,8 @@ class EventController extends Controller
     public function index()
     {
         $events = Manifestation::all();
-        return view('evenement', compact('events'));
+        $participants = Participant::all();
+        return view('evenement', compact('events','participants'));
     }
 
     /**
@@ -83,10 +84,11 @@ class EventController extends Controller
     public function show($id)
     {
         $events = Manifestation::all();
+        $participants = Participant::all();
         $nbUser = Participant::where('manifestation_id', $id)->count();
         $photos = Photo::where('manifestation_id', $id)->get();
         $eventSelec = Manifestation::where('id', $id)->first();
-        return view('evenement', compact('events', 'eventSelec', 'nbUser', 'photos'));
+        return view('evenement', compact('events', 'eventSelec', 'nbUser', 'photos', 'participants'));
     }
 
     /**
@@ -147,7 +149,7 @@ class EventController extends Controller
     public function destroy($id)
     {
         if(Auth::user()->statut_id != 2) return back();
-        
+
         $events = Manifestation::all();
         $participants = Participant::all();
         foreach ($participants as $participant) {
