@@ -38,10 +38,10 @@
             {{ $idea->description }}
         @endslot
         @slot('actions')
-            @if (auth::check())
+            @auth
 
             @if(auth::user()->statut_id == 2)
-            <a id="plan_button" href="#"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
+            <a id="plan_button" class="button_tel" href="#"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
             @else
             <a href="#"></a>
             @endif
@@ -51,7 +51,7 @@
             <form action="/ideas/{{ $idea->id }}" method="post">
                 @csrf
                 @method('DELETE')
-                <input class="button red" type="submit" value="Supprimer" >
+                <input class="button red button_tel" type="submit" value="Supprimer" >
             </form>
 
             @endif
@@ -59,17 +59,17 @@
             <div>
                 <form id="form" action="/votes/{{ $idea->id }}" method="post">
                     @csrf
-                    <label id="vote_label"  for="vote">{{ $votes->where('idee_id', $idea->id)->count() }}</label>
                     @if($votes->where('user_id', Auth::user()->id)->where('idee_id', $idea->id)->first() != null)
                         @method('DELETE')
-                        <input id="vote_button" type="image" src="/images/icons8-heart-outline-52_like.png" alt="heart">
+                <input id="vote_{{ $idea->id }}" class="vote_button_tel" type="image" src="/images/icons8-heart-outline-52_like.png" alt="heart">
                     @else
-                        <input id="vote_button" type="image" src="/images/icons8-heart-outline-52.png" alt="heart">
+                        <input id="vote_{{$idea->id}}" class="vote_button_tel" type="image" src="/images/icons8-heart-outline-52.png" alt="heart">
                     @endif
+                    <label id="vote_label"  for="vote">{{ $votes->where('idee_id', $idea->id)->count() }}</label>
 
                 </form>
             </div>
-            @endif
+            @endauth
         @endslot
     @endcomponent
 @endforeach

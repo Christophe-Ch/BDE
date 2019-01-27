@@ -68,11 +68,12 @@ class IdeasController extends Controller
         $vote->idee_id = $id;
         $vote->user_id = Auth::user()->id;
         $vote->save();
-        return back();
+        return redirect('/ideas#vote_' . $id);
     }
 
     public function deleteVote($id) {
         Vote::where('user_id', Auth::user()->id)->where('idee_id', $id)->delete();
-        return back();
+
+        return redirect('/ideas#vote_' . $id);
     }
 }

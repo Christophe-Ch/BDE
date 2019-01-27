@@ -57,7 +57,7 @@ margin-right: auto;
 .actions {
     bottom: 5%;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -97,33 +97,29 @@ margin-right: auto;
 
 @media only screen and (max-width: 812px){
 
+#form {
+    display: inline-flex;
+    align-items: center;
+}
+
 .actions > a > input {
     height: 45px;
     width: 74px;
     font-size: 14px;
 }
 
-.button {
+.button_tel {
     height: 45px;
     width: 74px;
     font-size: 14px;
 }
 
-#vote_button {
+.vote_button_tel {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     height: 45px;
     width: 45px;
-    padding-bottom: 250px;
-}
-
-#vote_label {
-    align-items: center;
-}
-
-#form {
-    align-items: center;
 }
 
 .content > p {
