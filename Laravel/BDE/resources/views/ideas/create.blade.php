@@ -23,6 +23,6 @@
         <label for="description" id="description-form" class="title_input_left">Description :</label>
         <textarea class="input_left" name="description" maxlength="255">
         </textarea>
-        <input id="form-submit" class="button" type="submit" value="créer">
+        <input id="form-submit" class="button btn_left" type="submit" value="créer">
     </form>
 @endsection

@@ -25,6 +25,6 @@
         <textarea class="input_left" name="description" maxlength="255">
             {{ $edit->description}}
             </textarea>
-        <input id="form-submit" class="button" type="submit">
+        <input id="form-submit" class="button btn_left" type="submit">
     </form>
 @endsection
