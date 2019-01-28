@@ -47,7 +47,7 @@
             @endif
 
             @if (auth::user()->id == $idea->user_id)
-            <a id="plan_button" href="/ideas/{{ $idea->id }}/edit"><input id="input_home_color" class="button blue" type="button" value="modifier"></a>
+            <a id="plan_button" href="/ideas/{{ $idea->id }}/edit"><input id="input_home_color" class="button blue" type="button" value="Modifier"></a>
             <form action="/ideas/{{ $idea->id }}" method="post">
                 @csrf
                 @method('DELETE')

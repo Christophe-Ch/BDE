@@ -47,6 +47,10 @@ margin-right: auto;
     display: none;
 }
 
+.list-element > .content > h2 {
+    font-size: 30px;
+}
+
 .content > p {
     float:left;
     word-break: break-all;
@@ -95,7 +99,18 @@ margin-right: auto;
     margin: 1%;
 }
 
+#form {
+    display: inline-flex;
+    align-items: center;
+}
+
 @media only screen and (max-width: 812px){
+
+.header_title h1 {
+    text-align: center;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 60pt;
+}
 
 #form {
     display: inline-flex;

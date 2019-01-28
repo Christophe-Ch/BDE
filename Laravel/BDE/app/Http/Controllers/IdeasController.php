@@ -32,7 +32,7 @@ class IdeasController extends Controller
     public function createIdea(Request $request) {
 
         $request->validate([
-            'nom' => 'required|unique:idees|max:40',
+            'nom' => 'required|max:40',
             'description' => 'required|max:255',
         ]);
         $idea = new Idee;
@@ -46,7 +46,7 @@ class IdeasController extends Controller
 
     public function editIdea(Request $request, $id) {
         $request->validate([
-            'nom' => 'required|unique:idees|max:40',
+            'nom' => 'required|max:40',
             'description' => 'required|max:255',
         ]);
 
