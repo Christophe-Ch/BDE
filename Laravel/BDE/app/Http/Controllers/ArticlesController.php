@@ -119,13 +119,16 @@ class ArticlesController extends Controller
             'pic' => 'required|image'
         ]);
 
-        
+        $extension =  request()->file('pic')->extension();
+        $path = request('name') .'.'. $extension;
+        Image::make(request()->file('pic'))->save(public_path('storage/'.$path));
+
 
         $article->nom = request('name');
         $article->description = request('description');
         $article->categorie = request('category');
         $article->prix = request('price');
-        // $article->photo = request('pic');
+        $article->photo = $path;
         $article->stock = request('stock');
         $article->centre_id = env('CENTRE_ID', 1);
 

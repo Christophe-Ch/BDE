@@ -119,5 +119,6 @@ Route::delete('/articles/{article}', 'ArticlesController@destroy');
 
 Route::get('/purchase', 'PurchaseController@index')->middleware('auth');
 Route::post('/purchase', 'PurchaseController@store')->middleware('auth');
+Route::delete('/purchase/{purchase}', 'PurchaseController@destroy')->middleware('auth');
 
 

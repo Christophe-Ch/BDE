@@ -47,7 +47,7 @@
                         </div>
                         <ul id="submenu_profil">
                             <li><a href="/profil">Mon profil</a></li>
-                            <li><a href="#">Mon panier</a></li>
+                            <li><a href="/purchase">Mon panier</a></li>
                             <li><a href="/notifications">Mes notifications</a></li>
                             @if(Auth::user()->statut_id == 2)
                                 <li><a href="/administration">Administration</a></li>

@@ -5,11 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Achat;
+use App\Article;
 
 class PurchaseController extends Controller
 {
     public function index() {
-        return view('purchase');
+        $achats = Achat::where('user_id', Auth::user()->id)->get();
+
+        $articles = [];
+
+        foreach($achats as $achat) {
+            $article = Article::find($achat->article_id);
+
+            array_push($articles, $article);
+        }
+
+
+        return view('purchase', compact('articles', 'achats'));
     }
 
     public function store() {
@@ -28,7 +40,13 @@ class PurchaseController extends Controller
         
     }
 
-    public function destroy() {
+    public function destroy(Achat $purchase) {
+        if(Auth::user()->statut_id != 2)
+            return back();
         
+        $purchase->delete();
+
+        return redirect('/purchase');
+
     }
 }

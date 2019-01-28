@@ -11,6 +11,7 @@ header{
     height: 150px;
     object-fit: contain;
 }
+
 nav{
 }
 nav > ul{
@@ -153,6 +154,9 @@ nav > ul > li > a:focus::after{
     cursor: pointer;
     transition-duration: 0.5s;
 }
+
+
+
 @media only screen and (max-width:1200px){
     #menu-bar{align-items: center;}
     #logo-menu{width: 100px;object-fit: contain;}

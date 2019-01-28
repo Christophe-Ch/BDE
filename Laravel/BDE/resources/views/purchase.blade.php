@@ -7,31 +7,35 @@
 
 @section('header')
     <div id="purchase-element-container">
-        @component('layout.component.purchase-element')
-            @slot('src')
-                /images/bonnet.png
-            @endslot
+        @foreach ($articles as $index => $article)
+            @component('layout.component.purchase-element')
+                @slot('src')
+                    {{-- /storage/{{$article->photo}} --}}
+                    /storage/Bonnet.png
+                @endslot
 
-            @slot('alt')
-                Bonnet
-            @endslot
+                @slot('alt')
+                    {{$article->nom}}
+                @endslot
 
-            @slot('title')
-                Bonnet d'hiver
-            @endslot
+                @slot('title')
+                    {{$article->nom}}
+                @endslot
 
-            @slot('stock')
-                1
-            @endslot
+                @slot('quantity')
+                    {{$achats[$index]->quantite}}
+                @endslot
 
-            @slot('price')
-                20
-            @endslot
+                @slot('price')
+                    {{$article->prix}}
+                @endslot
 
-            @slot('id')
-                1
-            @endslot
-        @endcomponent
+                @slot('id')
+                    {{$achats[$index]->id}}
+                @endslot
+            @endcomponent
+        @endforeach
+        
     </div>
     
 @endsection
