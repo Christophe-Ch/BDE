@@ -21,11 +21,11 @@ router.get('/', (req, res) => {
         token: Joi.string().required()
     };
 
-    let validate = Joi.validate(req.body, schema);
+    let validate = Joi.validate(req.query, schema);
 
     if (!validate.error) {
         // Get token
-        let api_token = req.body.token;
+        let api_token = req.query.token;
 
         // Prepare sql statement
         let sql = 'SELECT * FROM users WHERE api_token = ' + database.escape(api_token);
@@ -40,7 +40,6 @@ router.get('/', (req, res) => {
 
                     database.query(sql, (error, results, fields) => { // Get all users
                         if (error) throw error;
-
 
                         return res.send({
                             users: results

@@ -45,6 +45,9 @@ Route::group(['middleware' => IpFilter::class], function () {
     Route::put('/api/users/{id}', 'ApiController@updateUser');
 });
 
+// Administration
+Route::get('/administration', 'AdministrationController@index')->middleware('auth');
+
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');

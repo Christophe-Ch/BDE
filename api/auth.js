@@ -3,6 +3,7 @@ const router = express.Router();
 const mysql = require('mysql'); // MySQL module
 const Joi = require('joi'); // Input validation module
 const bcrypt = require('bcryptjs'); // Encryption module
+const request = require('request'); // Request module
 
 // Database connection
 const database = mysql.createConnection({
@@ -29,7 +30,7 @@ router.post('/inscription', async (req, res) => {
 
     if (!validate.error) {
         // Send request to Laravel
-        request.put(
+        request.post(
             laravel + 'api/register', // route
             { json: req.body }, // request body
             function (error, response, body) {

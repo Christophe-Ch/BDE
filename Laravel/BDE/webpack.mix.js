@@ -16,4 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/layout.scss', 'public/css')
    .sass('resources/sass/buttons.scss', 'public/css')
    .sass('resources/sass/notification.scss', 'public/css')
+<<<<<<< develop
    .sass('resources/sass/ideas.scss', 'public/css');
+=======
+   .sass('resources/sass/administration.scss', 'public/css');
+>>>>>>> Adding administration interface
