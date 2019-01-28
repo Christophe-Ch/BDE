@@ -9,9 +9,15 @@ use App\Vote;
 
 class IdeasController extends Controller
 {
+    /**
+     *
+     * display the ideas
+     *
+     */
     public function index() {
         $ideas = Idee::all();
         $votes = Vote::all();
+
         if(Auth::check()) {
             $ideas = $ideas->where("centre_id", Auth::user()->centre_id);
         } else {
@@ -20,15 +26,33 @@ class IdeasController extends Controller
         return view('ideas/index', compact('ideas', 'votes'));
     }
 
+    /**
+     *
+     * display form to create an idea
+     *
+     */
     public function create() {
         return view('ideas/create');
     }
 
+    /**
+     *
+     * display form to edit an idea
+     *
+     * @param $id
+     *
+     */
     public function edit($id) {
         $edit = Idee::find($id);
         return view('ideas/edit', compact('edit'));
     }
 
+
+    /**
+     *
+     * display ideas searched by user
+     *
+     */
     public function searchIdea(Request $request) {
         $votes = Vote::all();
 
@@ -48,6 +72,13 @@ class IdeasController extends Controller
         }
     }
 
+    /**
+     *
+     * create an idea
+     *
+     * @param Request
+     *
+     */
     public function createIdea(Request $request) {
 
         $request->validate([
@@ -63,6 +94,14 @@ class IdeasController extends Controller
         return redirect('/ideas');
     }
 
+    /**
+     *
+     * edit an idea
+     *
+     * @param Request
+     * @param $id
+     *
+     */
     public function editIdea(Request $request, $id) {
         $request->validate([
             'nom' => 'required|max:40',
@@ -76,12 +115,27 @@ class IdeasController extends Controller
         return redirect('/ideas');
     }
 
+
+    /**
+     *
+     * delete an idea
+     *
+     * @param $id
+     *
+     */
     public function deleteIdea($id) {
         $delete = Idee::find($id);
         $delete->delete();
         return back();
     }
 
+    /**
+     *
+     * vote for an idea
+     *
+     * @param $id
+     *
+     */
     public function addVote($id) {
         $vote = new Vote;
         $vote->idee_id = $id;
@@ -90,6 +144,13 @@ class IdeasController extends Controller
         return redirect('/ideas#vote_' . $id);
     }
 
+    /**
+     *
+     * downvote for an idea
+     *
+     * @param $id
+     *
+     */
     public function deleteVote($id) {
         Vote::where('user_id', Auth::user()->id)->where('idee_id', $id)->delete();
 
