@@ -11,16 +11,28 @@ use App\Centre;
 
 class UserController extends Controller
 {
-    function index(){
+    /**
+     * Return profil view
+     * 
+     */
+    public function index(){
         return view('profil');
     }
 
-    function getModifier(User $user){
-        $centres = Centre::all();
-        return view('profil_modifier', compact('centres'));
+    /**
+     * Return view to modify profil
+     * 
+     */
+    public function getModifier(){
+        return view('profil_modifier');
     }
 
-    function postModifier(User $user){
+    /**
+     * Update the profil and redirect to profil view
+     * 
+     * @param  \App\User  $user
+     */
+    public function postModifier(User $user){
         request()->validate([
             'name' => 'required|max:40',
             'prenom' => 'required|max:40',
@@ -35,10 +47,17 @@ class UserController extends Controller
         return redirect()->route('profil');
     }
 
-    function postModifierAvatar(User $user){
+
+    /**
+     * Update the profil avatar
+     * 
+     * @param  \App\User  $user
+     */
+    public function postModifierAvatar(User $user){
         request()->validate([
             'photo' => 'required|image'
         ]);
+        
         $extension =  request()->file('photo')->extension();
         $path = $user->id .'.'. $extension;
         Image::make(request()->file('photo'))->save(public_path('storage/'.$path));

@@ -58,10 +58,14 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 Route::resource('event', 'EventController');
 Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
 Route::post('/event/unregister/{eventSelec}', 'EventController@unRegisterEvent')->middleware('auth');
+Route::post('/event/signal/{eventSelec}', 'EventController@signalEvent')->middleware('auth');
+Route::post('/event/downloadParticipant/{idEvent}', 'DownloadController@downloadParticipants')->middleware('auth');
 
 Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'destroy'])->middleware('auth');
 Route::resource('photoEvent', 'PhotoEventController')->only(['show']);
 Route::post('/photoEvent/signaler/{photo}', 'PhotoEventController@signal')->middleware('auth');
+Route::post('/photoEvent/like/{photo}', 'PhotoEventController@like')->middleware('auth');
+Route::post('/photoEvent/unlike/{photo}', 'PhotoEventController@unLike')->middleware('auth');
 Route::post('/photoEvent/comment/{photo}', 'PhotoEventController@comment')->middleware('auth');
 Route::post('/photoEvent/comment/signaler/{comment}', 'PhotoEventController@signalerComment')->middleware('auth');
 Route::delete('/photoEvent/comment/destroy/{comment}', 'PhotoEventController@destroyComment')->middleware('auth');

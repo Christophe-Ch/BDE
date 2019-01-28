@@ -22,6 +22,7 @@ class CreateManifestationsTable extends Migration
             $table->string('photo', 255);
             $table->string('recurrence', 255);
             $table->integer('centre_id');
+            $table->integer('report')->default(0);
         });
     }
 

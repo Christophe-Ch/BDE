@@ -17,7 +17,7 @@ use App\Centre;
 class EventController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all event.
      *
      * @return \Illuminate\Http\Response
      */
@@ -29,7 +29,7 @@ class EventController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new event.
      *
      * @return \Illuminate\Http\Response
      */
@@ -41,7 +41,7 @@ class EventController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created event.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -76,7 +76,7 @@ class EventController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display a specific event.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -92,7 +92,7 @@ class EventController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing a specific event.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -106,7 +106,7 @@ class EventController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified event.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -141,7 +141,7 @@ class EventController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specific event.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -162,6 +162,10 @@ class EventController extends Controller
             foreach ($commentaires as $commentaire) {
                 $commentaire->delete();
             }
+            $photoLikes = Like::where('photo_Id', $photoA->id)->get();
+            foreach ($photoLikes as $photoLike) {
+                $photoLike->delete();
+            }
             File::delete('storage/'.$photoA->url);
             $photoA->delete();
         }
@@ -171,6 +175,26 @@ class EventController extends Controller
         return redirect()->route('event.index');
     }
 
+    /**
+     * Search and return specific event.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     */
+    public function searchIdea(Request $request) {
+        $events = Manifestation::all();
+        if($request->input('search') != null) {
+            $events = Manifestation::where("nom", 'LIKE', '%' . $request->input('search') . '%')->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            return view('event.index', compact('events'));
+        } else {
+            return redirect()->route('event.index');
+        }
+    }
+
+    /**
+     * Register a user to an event.
+     * 
+     * @param \App\Manifestation $eventSelec
+     */
     public function registerEvent(Manifestation $eventSelec){
         $events = Manifestation::all();
         Participant::create([
@@ -180,9 +204,27 @@ class EventController extends Controller
         return back();
     }
 
+    /**
+     * Unregister a user to an event.
+     * 
+     * @param \App\Manifestation $eventSelec
+     */
     public function unRegisterEvent(Manifestation $eventSelec){
         $events = Manifestation::all();
         Participant::where('manifestation_id',$eventSelec->id)->where('user_id',Auth::user()->id)->delete();
+        return redirect()->route('event.index');
+    }
+
+    /**
+     * Signal an event.
+     * 
+     * @param \App\Manifestation $eventSelec
+     */
+    public function signalEvent(Manifestation $eventSelec){
+        if(Auth::user()->statut_id != 3) return back();
+        $events = Manifestation::all();
+        $eventSelec->report = 1;
+        $eventSelec->save();
         return redirect()->route('event.index');
     }
 }

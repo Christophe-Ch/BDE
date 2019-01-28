@@ -9,6 +9,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 use App\Manifestation;
 use App\User;
+use App\Like;
 use App\Commentaire;
 use App\Notification;
 use App\Participant;
@@ -17,14 +18,14 @@ use App\Photo;
 class PhotoEventController extends Controller
 {
     /**
-     * Store a newly created resource in storage.
+     * Store a new photo for a event.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        if (Auth::user() && !Participant::where('manifestation_id',$eventSelec->id)->where('user_id',Auth::user()->id)->get()->isEmpty()){
+        if (Auth::user() && !Participant::where('manifestation_id',$request->event)->where('user_id',Auth::user()->id)->get()->isEmpty()){
             $request->validate([
                 'event' => 'required',
                 'photo' => 'required|image'
@@ -44,7 +45,7 @@ class PhotoEventController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display a specific photo.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -59,7 +60,7 @@ class PhotoEventController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove a specific photo.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -74,11 +75,15 @@ class PhotoEventController extends Controller
         foreach ($commentaires as $commentaire) {
             $commentaire->delete();
         }
+        $photoLikes = Like::where('photo_Id', $id)->get();
+        foreach ($photoLikes as $photoLike) {
+            $photoLike->delete();
+        }
         return redirect()->route('event.show', ['event' => $event]);
     }
 
     /**
-     * Signal the photos.
+     * Signal a photo.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -86,6 +91,9 @@ class PhotoEventController extends Controller
     public function signal($id)
     {
         $users = User::where('statut_id', 2)->get();
+        $photo = Photo::find($id)->first();
+        $photo->report = 1;
+        $photo->save();
         foreach ($users as $user) {
             Notification::create([
                 'titre' => 'Photo signalé',
@@ -100,7 +108,35 @@ class PhotoEventController extends Controller
     }
 
     /**
-     * Add comment to the photos.
+     * Add a like to a photo.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function like($id)
+    {
+        $photoLike = new Like();
+        $photoLike->photo_id = $id;
+        $photoLike->user_id = Auth::user()->id;
+        $photoLike->save();
+        
+        return back();
+    }
+
+    /**
+     * Remove a like to a photo.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function unLike($id)
+    {
+        $photoLikes = Like::where('photo_Id', $id)->where('user_id', Auth::user()->id)->delete();
+        return back();
+    }
+
+    /**
+     * Add comment to a photo.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -119,8 +155,9 @@ class PhotoEventController extends Controller
         
         return back();
     }
+
     /**
-     * Add comment to the photos.
+     * Signal a comment.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -130,6 +167,8 @@ class PhotoEventController extends Controller
         if(Auth::user()->statut_id != 3) return back();
         $users = User::where('statut_id', 2)->get();
         $commentaire = Commentaire::find($id)->first();
+        $commentaire->report = 1;
+        $commentaire->save();
         $userSelec = User::find($commentaire->user_id)->first();
         foreach ($users as $user) {
             Notification::create([
@@ -144,7 +183,7 @@ class PhotoEventController extends Controller
         return back();
     }
     /**
-     * Add comment to the photos.
+     * Remove a comment.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

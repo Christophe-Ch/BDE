@@ -71,6 +71,7 @@
                     <li><a href="/profil">Mon profil</a></li>
                     <li><a href="#">Mes commandes</a></li>
                     <li><a href="#">Mes notifs</a></li>
+                    <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                 </ul>
             </div>
         </div>

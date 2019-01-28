@@ -174,6 +174,20 @@
 .modal .modal-content .com_username{
     margin: 0;
 }
+.modal .modal-content .modal_like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content .like_button{
+    background: none;
+    border: none;
+    padding: 0;
+}
+.modal .modal-content .like_button img{
+    width: 50px;
+    height: 50px;
+}
 
 @media only screen and (max-width:992px){
     .modal .modal-content .content {width: 100%;}

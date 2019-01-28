@@ -18,6 +18,7 @@ class CreatePhotosTable extends Migration
             $table->string('url', 255);
             $table->integer('manifestation_id');
             $table->integer('user_id');
+            $table->integer('report')->default(0);
         });
     }
 
