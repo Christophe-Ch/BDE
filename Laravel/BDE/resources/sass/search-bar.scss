@@ -21,7 +21,7 @@ body{
         width: 90%;
         display: flex;
         align-items: center;
-        
+
         img {
             height: 40px;
         }
@@ -39,7 +39,7 @@ body{
         }
     }
 
-    
+
 
     button {
         font-family: 'Segoe UI';
@@ -54,5 +54,13 @@ body{
         cursor: pointer;
         width: 124px;
     }
+}
+
+@media only screen and (max-width: 812px) {
+
+    #search-bar > div > input {
+                font-size: 5px;
+        }
+
 }
 

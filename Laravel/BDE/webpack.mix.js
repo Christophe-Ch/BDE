@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/layout.scss', 'public/css')
    .sass('resources/sass/buttons.scss', 'public/css')
-   .sass('resources/sass/notification.scss', 'public/css');
+   .sass('resources/sass/notification.scss', 'public/css')
+   .sass('resources/sass/ideas.scss', 'public/css');

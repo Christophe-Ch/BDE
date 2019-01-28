@@ -29,3 +29,17 @@ Route::group(['middleware' => IpFilter::class], function () {
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
+
+// Ideas Box
+Route::get('ideas', 'IdeasController@index');
+Route::get('ideas/search', 'IdeasController@searchIdea');
+Route::post('ideas', 'IdeasController@createIdea')->middleware('auth');
+Route::get('ideas/create' , 'IdeasController@create')->middleware('auth');
+Route::get('ideas/{id}/edit', 'IdeasController@edit')->middleware('auth');
+Route::put('ideas/{id}', 'IdeasController@editIdea')->middleware('auth');
+Route::delete('ideas/{id}', 'IdeasController@deleteIdea')->middleware('auth');
+
+
+// Vote des idées
+Route::post('votes/{id}', 'IdeasController@addVote')->middleware('auth');
+Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
