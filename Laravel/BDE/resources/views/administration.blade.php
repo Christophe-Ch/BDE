@@ -3,12 +3,15 @@
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="/css/administration.css">
+    <link rel="stylesheet" type="text/css" href="/css/ideas.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 @endsection
 
 @section('header')
-    <h1 class="header_title">ADMINISTRATION</h1>
+    <span class="header_title">
+        <h1>Administration</h1>
+    </span>
 @endsection
 
 @section('content')
@@ -62,7 +65,7 @@
             </table>
         </div>
         
-        <div class="panel">*
+        <div class="panel">
             <h1>Idées</h1>
     
             <table id="ideas" class="display nowrap" width="100%">

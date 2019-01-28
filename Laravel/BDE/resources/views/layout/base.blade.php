@@ -40,6 +40,9 @@
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
                             <li><a href="/notifications">Mes notifications</a></li>
+                            @if(Auth::user()->statut_id == 2)
+                                <li><a href="/administration">Administration</a></li>
+                            @endif
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>

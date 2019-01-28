@@ -47,6 +47,8 @@ Route::group(['middleware' => IpFilter::class], function () {
 
 // Administration
 Route::get('/administration', 'AdministrationController@index')->middleware('auth');
+Route::get('/users/{user}/edit', 'AdministrationController@edit')->middleware('auth');
+Route::put('/users/{user}', 'AdministrationController@update')->middleware('auth');
 
 // Notifications
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
