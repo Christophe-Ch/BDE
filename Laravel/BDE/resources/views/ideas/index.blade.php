@@ -14,6 +14,9 @@
 
 @section('content')
 @component('layout.component.search-bar')
+@slot('url')
+    /ideas/search
+    @endslot
     @slot('placeholder')
     Rechercher une idée...
     @endslot
