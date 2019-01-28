@@ -169,8 +169,8 @@
                         @endif
 
                         @if (Auth::user() && Auth::user()->statut_id == 2)
-                        <div class="button" id="edit">
-                            <a  href="/articles/{{$article->id}}/edit">Modifier</a>
+                        <div id="edit">
+                            <a class="button" href="/articles/{{$article->id}}/edit">Modifier</a>
                         </div>
                             
 

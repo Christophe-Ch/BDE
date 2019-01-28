@@ -15,8 +15,47 @@ header {
     #purchase-element-container {
         width: 80vw;
         margin: 0 10vw;
-        height: 60vh;
+        height: 50vh;
         overflow: auto;
+    }
+    
+    #price-container {
+        text-align: right;
+        margin-bottom: 40px;
+        
+        p {
+            font-size: 20pt;
+            font-family: 'Segoe UI';
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    #payment {
+        text-align: right;
+
+        span {
+            font-size: 20pt;
+            font-family: 'Segoe UI';
+        }
+
+        a {
+            width: 120px;
+            font-size: 20pt;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+            text-decoration: none;
+        }
+    }
+
+    #purchase-container {
+        width: calc(80vw * 0.9);
+        margin: 0 auto;
     }
 }
 

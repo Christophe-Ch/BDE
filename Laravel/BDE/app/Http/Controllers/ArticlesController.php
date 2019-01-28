@@ -35,11 +35,11 @@ class ArticlesController extends Controller
                     break;
                 
                 case "undefined":
-                    $articles = Article::all();
+                    $articles = Article::where('centre_id', env('CENTRE_ID', 1))->get();
                     break;
 
                 default:
-                    $articles = Article::all();
+                    $articles = Article::where('centre_id', env('CENTRE_ID', 1))->get();
             }
         }
         
@@ -47,7 +47,7 @@ class ArticlesController extends Controller
             $articles = Article::where('centre_id', env('CENTRE_ID', 1))->get();
         }
         
-        $top_articles = Article::select('id')->orderBy('achat', 'DESC')->take(3)->get();
+        $top_articles = Article::select('id')->where('centre_id', env('CENTRE_ID', 1))->orderBy('achat', 'DESC')->take(3)->get();
         $top_article0 = Article::find($top_articles[0]->id);
         $top_article1 = Article::find($top_articles[1]->id);
         $top_article2 = Article::find($top_articles[2]->id);

@@ -59,16 +59,13 @@
   width: 150px;
 }
 
-#list-component-container #article-element .actions #edit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#list-component-container #article-element .actions #edit a {
   height: 40px;
   width: 150px;
   background: #275086;
-}
-
-#list-component-container #article-element .actions #edit a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   text-decoration: none;
 }

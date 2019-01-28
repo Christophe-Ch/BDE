@@ -21,7 +21,7 @@ class ArticleTableSeeder extends Seeder
                 "prix" => 25,
                 "photo" => "\url",
                 "stock" => 100,
-                "achat" => 50,
+                "achat" => 0,
                 "centre_id" => 1  
             ],
 
@@ -32,7 +32,7 @@ class ArticleTableSeeder extends Seeder
                 "prix" => 30,
                 "photo" => "\url",
                 "stock" => 100,
-                "achat" => 150,
+                "achat" => 0,
                 "centre_id" => 1 
             ],
 
@@ -43,7 +43,7 @@ class ArticleTableSeeder extends Seeder
                 "prix" => 10,
                 "photo" => "\url",
                 "stock" => 100,
-                "achat" => 20,
+                "achat" => 0,
                 "centre_id" => 1 
             ]
             
