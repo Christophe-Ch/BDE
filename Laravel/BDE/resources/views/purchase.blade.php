@@ -7,34 +7,40 @@
 
 @section('header')
     <div id="purchase-element-container">
-        @foreach ($articles as $index => $article)
-            @component('layout.component.purchase-element')
-                @slot('src')
-                    {{-- /storage/{{$article->photo}} --}}
-                    /storage/Bonnet.png
-                @endslot
+        @if (count($articles))
+            @foreach ($articles as $index => $article)
+                @component('layout.component.purchase-element')
+                    @slot('src')
+                        {{-- /storage/{{$article->photo}} --}}
+                        /storage/Bonnet.png
+                    @endslot
 
-                @slot('alt')
-                    {{$article->nom}}
-                @endslot
+                    @slot('alt')
+                        {{$article->nom}}
+                    @endslot
 
-                @slot('title')
-                    {{$article->nom}}
-                @endslot
+                    @slot('title')
+                        {{$article->nom}}
+                    @endslot
 
-                @slot('quantity')
-                    {{$achats[$index]->quantite}}
-                @endslot
+                    @slot('quantity')
+                        {{$achats[$index]->quantite}}
+                    @endslot
 
-                @slot('price')
-                    {{$article->prix}}
-                @endslot
+                    @slot('price')
+                        {{$article->prix}}
+                    @endslot
 
-                @slot('id')
-                    {{$achats[$index]->id}}
-                @endslot
-            @endcomponent
-        @endforeach
+                    @slot('id')
+                        {{$achats[$index]->id}}
+                    @endslot
+                @endcomponent
+            @endforeach
+            
+        @else
+            <h2>Vous n'avez commandé aucun article.</h2>
+        @endif
+        
         
     </div>
     

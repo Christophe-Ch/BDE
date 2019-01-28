@@ -36,8 +36,28 @@ class PurchaseController extends Controller
         return redirect('/articles');
     }
 
-    public function update() {
+    public function update(Achat $purchase) {
+        if(Auth::user()->statut_id != 2)
+            return back();
         
+
+        if(request()->has('quantity')) {
+            if(request('quantity') == '+') {
+                $purchase->quantite++;
+                $purchase->save();
+            }
+
+            elseif (request('quantity') == '-') {
+                $purchase->quantite--;
+                $purchase->save();
+
+                if($purchase->quantite == 0)
+                    $purchase->delete();
+
+            }
+        }
+
+        return redirect('/purchase');
     }
 
     public function destroy(Achat $purchase) {

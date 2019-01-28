@@ -6,20 +6,20 @@
     
     <div id="right">
         <div id="quantity">
-            <form action="/purchase/{{$id}}" name="quantity">
+            <form action="/purchase/{{$id}}" method="POST">
                 @csrf
                 @method('PUT')
-                <input type="submit" value="-">
+                <input type="submit" value="-" name="quantity">
             </form>
             <div id="quantity-id">{{$quantity}}</div>
-            <form action="/purchase/{{$id}}" name="quantity">
+            <form action="/purchase/{{$id}}" method="POST">
                 @csrf
                 @method('PUT')
-                <input type="submit" value="+">
+                <input type="submit" value="+" name="quantity">
             </form>
             
         </div>
-        <div>
+        <div id="price">
             {{$price}}€
         </div>
         <form action="/purchase/{{$id}}" method="POST">
