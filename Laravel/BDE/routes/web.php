@@ -12,9 +12,28 @@
 */
 
 use App\Http\Middleware\IpFilter;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('home');
+});
+
+// Mail
+Route::post('mail', function (Request $request) {
+    $request->validate([
+        'nom' => 'required',
+        'email' => 'required|email',
+        'message' => 'required'
+    ]);
+
+    $data = array('title' => 'Message de la part de ' . request('nom'), 'subtitle' => 'Message', "description" => request('message'), "url" => "mailto:" . request('email'), 'linkText' => "Contacter");
+
+    Mail::send('layout.mail', $data, function($message) {
+        $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Message depuis l\'interface');
+        $message->from(env('MAIL_USERNAME', 'bde@bde.fr'), 'BDE');
+    });
+
+    return back();
 });
 
 Auth::routes();
