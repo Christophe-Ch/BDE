@@ -4,6 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 
+/**
+ * Rejects requests which don't come from the API
+ */
 class IpFilter
 {
     /**
