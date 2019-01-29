@@ -32,8 +32,6 @@
                     <li><a href="/">Accueil</a></li>
                     <li><a href="/event">Événements</a></li>
                     <li><a href="/ideas">Boite à idées</a></li>
-                    <li><a href="#">Boutique</a></li>
-                    <li><a href="#">Boite à idées</a></li>
                     <li><a href="/articles">Boutique</a></li>
                 </ul>
             </nav>

@@ -108,6 +108,9 @@
 
 @section('content')
     @component('layout.component.search-bar')
+        @slot('url')
+            /articles/search
+        @endslot
         @slot('placeholder')
             Rechercher un produit...
         @endslot
@@ -163,7 +166,8 @@
                         @else
                             <form id="purchase" method="POST" action="/purchase">
                                 @csrf
-                                <button class="button" type="submit">Commander</button>
+                                <button class="button" type="submit" {{$article->stock <= 0 ? 'disabled' : ''}}>Commander</button>
+                                
                                 <input type="hidden" name="id" value="{{$article->id}}">
                             </form>
                         @endif

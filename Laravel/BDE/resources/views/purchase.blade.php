@@ -49,7 +49,7 @@
                 </div>
             </div>
         @else
-            <h2>Vous n'avez commandé aucun article.</h2>
+            <h2 id="no-purchase">Vous n'avez commandé aucun article.</h2>
         @endif
     
 @endsection

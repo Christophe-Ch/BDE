@@ -3,9 +3,8 @@
     "/css/app.css": "/css/app.css",
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
-<<<<<<< develop
-<<<<<<< develop
     "/css/notification.css": "/css/notification.css",
+<<<<<<< develop
 <<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
     "/css/user.css": "/css/user.css",
@@ -68,4 +67,14 @@
     "/css/purchase.css": "/css/purchase.css"
 >>>>>>> Adding purchase component
 >>>>>>> Adding purchase component
+=======
+    "/css/ideas.css": "/css/ideas.css",
+    "/css/search-bar.css": "/css/search-bar.css",
+    "/css/list-element.css": "/css/list-element.css",
+    "/css/articles/index.css": "/css/articles/index.css",
+    "/css/top-article.css": "/css/top-article.css",
+    "/css/articles/form.css": "/css/articles/form.css",
+    "/css/purchase-element.css": "/css/purchase-element.css",
+    "/css/purchase.css": "/css/purchase.css"
+>>>>>>> Fixing stock issues
 }

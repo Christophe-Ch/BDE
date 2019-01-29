@@ -1,5 +1,20 @@
-.notification {
+header ::-webkit-scrollbar {
+  width: 8px;
+}
+
+header ::-webkit-scrollbar-track {
+  background: #1c4b5e;
+  border-radius: 10px;
+}
+
+header ::-webkit-scrollbar-thumb {
+  background: #102138;
+  border-radius: 10px;
+}
+
+header .notification {
   width: 90%;
+  height: 42%;
   font-size: 1.2em;
   display: flex;
   justify-content: space-between;
@@ -10,36 +25,36 @@
   color: white;
 }
 
-.notification .content {
+header .notification .content {
   width: 65%;
 }
 
-.notification .content h3 {
+header .notification .content h3 {
   margin-top: 0;
 }
 
-.notification input[type=image] {
+header .notification input[type=image] {
   height: 40px;
 }
 
-.notification p {
+header .notification p {
   margin-top: 0;
 }
 
-.notifications-container {
+header .notifications-container {
   height: 60vh;
   width: 80vw;
   margin-left: 10vw;
   overflow-y: auto;
 }
 
-.has-notifications {
+header .has-notifications {
   position: relative;
   z-index: 1;
   height: 50px;
 }
 
-.has-notifications:after {
+header .has-notifications:after {
   content: "";
   height: 15px;
   width: 15px;
@@ -51,7 +66,7 @@
   border-radius: 50%;
 }
 
-.has-notifications img {
+header .has-notifications img {
   height: 100%;
 }
 

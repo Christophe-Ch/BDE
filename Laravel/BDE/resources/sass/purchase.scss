@@ -4,7 +4,8 @@ header {
     }
     
     ::-webkit-scrollbar-track {
-        background: transparent; 
+        background: #1c4b5e; 
+        border-radius: 10px;
     }
     
     ::-webkit-scrollbar-thumb {
@@ -56,6 +57,10 @@ header {
     #purchase-container {
         width: calc(80vw * 0.9);
         margin: 0 auto;
+    }
+
+    #no-purchase {
+        margin-left: 10vw;
     }
 }
 

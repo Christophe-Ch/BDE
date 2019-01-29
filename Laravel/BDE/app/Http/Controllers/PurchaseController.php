@@ -27,9 +27,14 @@ class PurchaseController extends Controller
     }
 
     public function store() {
-        $achat = new Achat();
 
-        
+        $article = Article::find(request('id'));
+
+        if($article->stock <= 0) {
+            return back();
+        }
+
+        $achat = new Achat();
 
         $achat->article_id = request('id');
         $achat->user_id = Auth::user()->id;
@@ -37,7 +42,6 @@ class PurchaseController extends Controller
 
         $achat->save();
 
-        $article = Article::find($achat->article_id);
         $article->stock--;
         $article->save();
 
@@ -76,8 +80,16 @@ class PurchaseController extends Controller
     public function destroy(Achat $purchase) {
         if(Auth::user()->statut_id != 2)
             return back();
+
+        $article = Article::find($purchase->article_id);
+        $quantity = $purchase->quantite;
+
+        $article->stock += $quantity;
+
+        $article->save();
         
         $purchase->delete();
+        
 
         return redirect('/purchase');
 
