@@ -60,6 +60,25 @@
     transition-duration: 0.5s;
 }
 
+.shop {
+    background: #ffc252;
+    color: white;
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    display: inline-block;
+    border-radius: 50px;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+.shop:hover{
+    color: black;
+    box-shadow: 0px 0px 10px 5px #ffc252;
+}
+
 .hovered:hover{
     color: black;
     box-shadow: 0px 0px 10px 5px #ffc252;
@@ -110,5 +129,5 @@
     #purchase-container #checked img{height: 10vh;}
     #purchase-container #checked h1{font-size: 15pt;}
     #purchase-container p{font-size: 12pt; width: 100vw;margin-bottom: 5vh;}
-    #purchase-container a{text-align:center; width: 200px; font-size: 1em;margin-top: 0; display:inline-flex;}
+    #purchase-container a{text-align:center; width: 200px; font-size: 1em;margin-top: 0; display:inline-flex; height:50px;}
 }

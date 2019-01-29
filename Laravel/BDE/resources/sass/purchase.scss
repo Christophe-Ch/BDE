@@ -66,11 +66,11 @@ header {
 
 @media only screen and (max-width: 992px) {
     header #purchase-element-container{overflow-x:hidden;}
-    #purchase-element{flex-direction: column;height:auto;}
-    #left img{display:none;}
-    #right{flex-direction: column;}
-    #left h3{width:100%;}
-    #right #left-side{margin-bottom:10%;}
+    .purchase-element{flex-direction: column;height:auto;}
+    .purchase-left img{display:none;}
+    .purchase-right{flex-direction: column;}
+    .purchase-left h3{width:100%;}
+    .purchase-right .left-side{margin-bottom:10%;}
     #price-container{display: none;}
     #purchase-container #payment{text-align:center;}
     #purchase-container #payment span{display: block; margin-bottom: 5%;}

@@ -19,7 +19,7 @@
 
         <form action="/payment/cash">
             <div>
-                <input type="checkbox" name="condition">
+                <input id="condition" type="checkbox" name="condition">
                 <label for="condition">J'accepte les <a target="blank" href="/legal-notice">conditions de vente</a></label>
             </div>
             

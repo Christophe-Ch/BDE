@@ -1,32 +1,32 @@
-<div id="purchase-element">
-    <div id="left">
+<div class="purchase-element">
+    <div class="purchase-left">
         <img src="{{$src}}" alt="{{$alt}}">
         <h3>{{$title}}</h3>
     </div>
     
-    <div id="right">
-        <div id="left-side">
-            <div id="quantity">
+    <div class="purchase-right">
+        <div class="left-side">
+            <div class="quantity">
                 <form action="/purchase/{{$id}}" method="POST">
                     @csrf
                     @method('PUT')
                     <input type="submit" value="-" name="quantity">
                 </form>
-                <div id="quantity-id">{{$quantity}}</div>
+                <div class="quantity-id">{{$quantity}}</div>
                 <form action="/purchase/{{$id}}" method="POST">
                     @csrf
                     @method('PUT')
                     <input type="submit" value="+" name="quantity">
                 </form>
             </div>
-            <div id="price">
+            <div class="price">
                 {{$price}}€
             </div>
         </div>
         <form action="/purchase/{{$id}}" method="POST">
             @csrf
             @method('DELETE')
-            <input id="delete" type="image" src="/images/fermeture.png">
+            <input class="delete" type="image" src="/images/fermeture.png" alt="close">
         </form>
     </div>
     

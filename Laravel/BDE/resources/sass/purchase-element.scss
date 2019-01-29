@@ -1,4 +1,4 @@
-#purchase-element {
+.purchase-element {
     display: flex;
     align-items: center;
     width: 90%;
@@ -11,7 +11,7 @@
     height: 42%;
     padding-bottom: 10px;
 
-    #left, #right {
+    .purchase-left, .purchase-right {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -28,13 +28,13 @@
         width: 50%;
     }
 
-    #quantity {
+    .quantity {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 160px;
 
-        #quantity-id {
+        .quantity-id {
             border: 2px solid #ffc252;
             border-radius: 5px;
             padding: 5px 25px;
@@ -53,12 +53,12 @@
         }
     }
 
-    #left-side {
+    .left-side {
         display: flex;
         align-items: center;
     }
 
-    #price {
+    .price {
         text-align: center;
         width: 100px;
         font-weight: bold;
@@ -67,7 +67,7 @@
     form {
         height: 50px;
         
-        #delete {
+        .delete {
             height: 50px;
             outline: none;
         }

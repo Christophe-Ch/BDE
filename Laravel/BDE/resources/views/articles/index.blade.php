@@ -36,7 +36,7 @@
             @endslot
         @endcomponent
         <div class="circle-container">
-            <div class="circle" id="filled"></div>
+            <div class="circle filled"></div>
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
@@ -69,7 +69,7 @@
         @endcomponent
         <div class="circle-container">
             <div class="circle"></div>
-            <div class="circle" id="filled"></div>
+            <div class="circle filled"></div>
             <div class="circle"></div>
         </div>
     </div>
@@ -102,7 +102,7 @@
         <div class="circle-container">
             <div class="circle"></div>
             <div class="circle"></div>
-            <div class="circle" id="filled"></div>
+            <div class="circle filled"></div>
         </div>
     </div>
 @endsection
@@ -165,7 +165,7 @@
                                 <img src="/images/check.png" alt="Article commandé">
                             </button>
                         @else
-                            <form id="purchase" method="POST" action="/purchase">
+                            <form class="purchase" method="POST" action="/purchase">
                                 @csrf
                                 <button class="button" type="submit" {{$article->stock <= 0 ? 'disabled' : ''}}>Commander</button>
                                 
@@ -174,12 +174,12 @@
                         @endif
 
                         @if (Auth::user() && Auth::user()->statut_id == 2)
-                        <div id="edit">
+                        <div class="edit">
                             <a class="button" href="/articles/{{$article->id}}/edit">Modifier</a>
                         </div>
                             
 
-                        <form id="delete" method="POST" action="/articles/{{$article->id}}">
+                        <form class="delete" method="POST" action="/articles/{{$article->id}}">
                             @method('DELETE')
                                 @csrf
                                 <button class="button" type="submit">Supprimer</button>
@@ -188,7 +188,7 @@
 
 
                         
-                        <div id="price">
+                        <div class="price">
                             {{$article->prix}}€
                         </div>
                     @endslot

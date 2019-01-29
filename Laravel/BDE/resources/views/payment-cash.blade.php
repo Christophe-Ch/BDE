@@ -12,6 +12,6 @@
             <h1>Votre commande a bien été enregistrée</h1>
         </div>
         <p>Vous allez recevoir la date et le lieu de la transaction par mail.</p>
-        <a href="/articles" class="hovered">Retourner à la boutique</a>
+        <a href="/articles" class="shop">Retourner à la boutique</a>
     </div>
 @endsection

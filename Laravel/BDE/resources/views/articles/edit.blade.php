@@ -23,22 +23,22 @@
         @method('PUT')
         @csrf
         <label for="name" class="title_input_left">Nom</label>
-        <input class="input_left" type="text" name="name" value="{{$article->nom}}">
+        <input class="input_left" type="text" id="name" name="name" value="{{$article->nom}}">
 
         <div id="little-input-container">
             <div class="little-input">
                 <label for="price" class="title_input_left">Prix</label>
-                <input class="input_left"type="text" name="price" value="{{$article->prix}}">
+                <input id="price" class="input_left" type="text" name="price" value="{{$article->prix}}">
             </div>
             <div class="little-input">
                 <label for="stock" class="title_input_left">Stock</label>
-                <input class="input_left"type="text" name="stock" value="{{$article->stock}}">
+                <input id="stock" class="input_left" type="text" name="stock" value="{{$article->stock}}">
             </div>
         </div>
 
         <label for="category" class="title_input_left">Catégorie</label>
         <div class="input_left" id="select">
-            <select name="category">
+            <select id="category" name="category">
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}" {{ $category->id == $article->categorie ? 'selected' : ''}}>{{$category->nom}}</option>
                 @endforeach
@@ -46,11 +46,11 @@
         </div>
         
 
-        <label for="description" class="title_input_left">Description</label>
-        <textarea class="input_left" id="description-input" name="description" value="{{$article->description}}">{{$article->description}}</textarea>
+        <label for="description-input" class="title_input_left">Description</label>
+        <textarea class="input_left" id="description-input" name="description">{{$article->description}}</textarea>
 
         <label for="pic" class="title_input_left">Photo</label>
-        <input class="input_left" type="file" name="pic" value="{{$article->photo}}"><br>
+        <input id="pic" class="input_left" type="file" name="pic"><br>
 
         <div>
             <input class="btn_left" type="submit" value="Modifier">
