@@ -154,13 +154,19 @@ class ArticlesController extends Controller
 
         if($request->input('search') != null) {
             if(Auth::check()) {
-                $ideas = Idee::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", Auth::user()->centre_id)->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+                $articles = Article::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", Auth::user()->centre_id)->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
             } else {
-                $ideas = Idee::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", env("centre_id", 1))->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+                $articles = Idee::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", env("centre_id", 1))->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
             }
-            return view('ideas/index', compact('ideas', 'votes'));
+
+            $top_articles = Article::select('id')->where('centre_id', env('CENTRE_ID', 1))->orderBy('achat', 'DESC')->take(3)->get();
+            $top_article0 = Article::find($top_articles[0]->id);
+            $top_article1 = Article::find($top_articles[1]->id);
+            $top_article2 = Article::find($top_articles[2]->id);
+
+            return view('articles.index', compact('articles', 'top_article0', 'top_article1', 'top_article2'));
         } else {
-            return redirect('ideas');
+            return redirect('/articles');
         }
     }
     

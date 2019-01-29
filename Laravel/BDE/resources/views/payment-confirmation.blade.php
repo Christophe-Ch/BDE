@@ -20,7 +20,7 @@
         <form action="/payment/cash">
             <div>
                 <input type="checkbox" name="condition">
-                <label for="condition">J'accepte les conditions de vente</label>
+                <label for="condition">J'accepte les <a target="blank" href="/legal-notice">conditions de vente</a></label>
             </div>
             
             <input class="hovered" type="submit" value="Valider">

@@ -67,6 +67,11 @@ h1 {
   width: 150px;
 }
 
+#list-component-container .article-element .actions #purchase button:disabled {
+  background: #bdbbbb;
+  cursor: default;
+}
+
 #list-component-container .article-element .actions #edit a {
   height: 40px;
   width: 150px;
