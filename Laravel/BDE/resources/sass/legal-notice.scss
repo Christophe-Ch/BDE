@@ -60,3 +60,17 @@ p {
     justify-content: center;
     width: 100%;
 }
+
+@media only screen and (max-width: 812px){
+
+    .header_title h1 {
+        text-align: center;
+        font-family: "Baskerville Old Face", sans-serif;
+        font-size: 45pt;
+    }
+
+    .information {
+        font-size: 10px;
+    }
+
+}
