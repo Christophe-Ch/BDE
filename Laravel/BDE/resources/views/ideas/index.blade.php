@@ -7,9 +7,9 @@
 @endsection
 
 @section('header')
-    <span class="header_title">
+    <div class="header_title">
         <h1>Idees</h1>
-    </span>
+    </div>
 @endsection
 
 @section('content')
@@ -22,14 +22,15 @@
     @endslot
 @endcomponent
 
-<span id="create_idea">
+<div id="create_idea">
     <a href="/ideas/create" >+ créer une idée</a>
-</span>
+</div>
 
 
 @foreach ($ideas as $idea)
     @component('layout.component.list-element')
         @slot('url')
+        #
         @endslot
         @slot('alt')
             {{ $idea->id }}
@@ -50,7 +51,7 @@
             @endif
 
             @if (auth::user()->id == $idea->user_id)
-            <a id="plan_button" href="/ideas/{{ $idea->id }}/edit"><input id="input_home_color" class="button blue" type="button" value="Modifier"></a>
+            <form id="plan_button" action="/ideas/{{ $idea->id }}/edit" method="GET">@csrf<input id="input_home_color" class="button blue" type="submit" value="Modifier"></form>
             <form action="/ideas/{{ $idea->id }}" method="post">
                 @csrf
                 @method('DELETE')
@@ -68,7 +69,7 @@
                     @else
                         <input id="vote_{{$idea->id}}" class="vote_button_tel" type="image" src="/images/icons8-heart-outline-52.png" alt="heart">
                     @endif
-                    <label id="vote_label"  for="vote">{{ $votes->where('idee_id', $idea->id)->count() }}</label>
+                    <label id="vote_label"  for="vote_{{$idea->id}}">{{ $votes->where('idee_id', $idea->id)->count() }}</label>
 
                 </form>
             </div>
