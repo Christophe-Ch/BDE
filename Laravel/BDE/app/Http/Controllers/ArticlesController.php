@@ -13,10 +13,12 @@ use App\Categorie;
 
 class ArticlesController extends Controller
 {
+
+    // Display shop page
     public function index() {
         $articles = null;
 
-        if(request()->has('filter')) {
+        if(request()->has('filter')) { //if a filter is set
             switch(request('filter')) {
                 case "price-asc":
                     $articles = Article::orderBy('prix', 'ASC')->get();
@@ -47,6 +49,7 @@ class ArticlesController extends Controller
             $articles = Article::where('centre_id', env('CENTRE_ID', 1))->get();
         }
         
+        // articles most purchased
         $top_articles = Article::select('id')->where('centre_id', env('CENTRE_ID', 1))->orderBy('achat', 'DESC')->take(3)->get();
         $top_article0 = Article::find($top_articles[0]->id);
         $top_article1 = Article::find($top_articles[1]->id);
@@ -55,7 +58,9 @@ class ArticlesController extends Controller
         return view('articles.index', compact('articles', 'top_articles', 'top_article0', 'top_article1', 'top_article2'));
     }
 
+    // Display a form for creating a new article
     public function create() {
+        // if connected user is not a BDE member
         if(Auth::user() && Auth::user()->statut_id != 2)
             return back();
 
@@ -64,11 +69,13 @@ class ArticlesController extends Controller
         return view('articles.create', compact('categories'));
     }
 
+    // Create a new article
     public function store(Request $request) {
 
         if(Auth::user() && Auth::user()->statut_id != 2)
             return back();
 
+        // Check if form fields are correct
         request()->validate([
             'name' => 'required|max:40',
             'price' => 'required|integer',
@@ -78,6 +85,7 @@ class ArticlesController extends Controller
             'pic' => 'required|image'
         ]);
 
+        // Store article's image
         $extension =  request()->file('pic')->extension();
         $path = request('name') .'.'. $extension;
         Image::make(request()->file('pic'))->save(public_path('storage/'.$path));
@@ -98,6 +106,8 @@ class ArticlesController extends Controller
 
     }
 
+
+    // Display a form for editing an article
     public function edit(Article $article) {
         if(Auth::user() && Auth::user()->statut_id != 2)
             return back();
@@ -106,6 +116,7 @@ class ArticlesController extends Controller
         return view('articles.edit', compact('article', 'categories'));
     }
 
+    // Update an article
     public function update(Article $article) {
         if(Auth::user() && Auth::user()->statut_id != 2)
             return back();
@@ -137,6 +148,7 @@ class ArticlesController extends Controller
         return redirect('/articles');
     }
 
+    // Delete an article
     public function destroy(Article $article) {
         if(Auth::user() && Auth::user()->statut_id != 2)
             return back();
@@ -146,6 +158,7 @@ class ArticlesController extends Controller
         return redirect('/articles');
     }
 
+    // Display articles requested by the user in the searchbar
     public function search(Request $request) {
 
         $request->validate([

@@ -147,6 +147,9 @@ h1 {
     align-items: center;
     margin-bottom: 70px;
 
+    img {
+        height: 60px;
+    }
     
     a {
         margin-left: 20px;
@@ -162,7 +165,7 @@ h1 {
     #add img{height:50px;}
     #add a{font-size: 1.5em;}
     #list-component-container .article-element .list-element{flex-direction: column;}
-    .list-element img{width: 100%;}
+    .list-element img{width: 100%; display:block}
     .list-element {height: auto;}
     .list-element .content h2{font-size: 2.5em;}
     .list-element .content{width:auto;}

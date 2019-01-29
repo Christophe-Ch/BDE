@@ -10,12 +10,15 @@ use Mail;
 
 class PurchaseController extends Controller
 {
+
+    // Display purchase page
     public function index() {
         $achats = Achat::where('user_id', Auth::user()->id)->get();
 
         $articles = [];
         $price = 0;
 
+        // Search articles corresponding to purchases and calculate total price
         foreach($achats as $achat) {
             $article = Article::find($achat->article_id);
             $price += $article->prix * $achat->quantite;
@@ -27,6 +30,7 @@ class PurchaseController extends Controller
         return view('purchase', compact('articles', 'achats', 'price'));
     }
 
+    // Add an article to purchase
     public function store() {
 
         $article = Article::find(request('id'));
@@ -49,6 +53,7 @@ class PurchaseController extends Controller
         return redirect('/articles');
     }
 
+    // Change a purchase quantity
     public function update(Achat $purchase) {
         if(Auth::user()->statut_id != 2)
             return back();
@@ -68,7 +73,7 @@ class PurchaseController extends Controller
                 $article->stock++;
                 $purchase->save();
                 $article->save();
-
+ 
                 if($purchase->quantite == 0)
                     $purchase->delete();
 
@@ -78,6 +83,7 @@ class PurchaseController extends Controller
         return redirect('/purchase');
     }
 
+    // Delete a purchase
     public function destroy(Achat $purchase) {
         if(Auth::user()->statut_id != 2)
             return back();
@@ -96,10 +102,12 @@ class PurchaseController extends Controller
 
     }
 
+    // Display confirmation page when the user wants to pay
     public function payment() {
         return view('payment-confirmation');
     }
 
+    // Validate a purchase
     public function paymentCash() {
         if(Achat::where('user_id', Auth::user()->id)->count() == 0) 
             return back();
@@ -121,6 +129,7 @@ class PurchaseController extends Controller
 
         $data = array('title' => 'Une commande a été effectuée' , 'subtitle' => 'Commande de ' . Auth::user()->prenom, "description" => $message, "list" => $achats, "url" => "mailto:" . Auth::user()->email, 'linkText' => "Contacter");
 
+        // Send an email to the BDE
         Mail::send('layout.mail', $data, function($message) {
             $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Commande effectuée');
             $message->from(env('MAIL_USERNAME', 'bde@bde.fr'), 'BDE');

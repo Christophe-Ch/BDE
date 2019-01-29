@@ -178,6 +178,28 @@ window.onclick = function (event) {
 
 /***/ }),
 
+/***/ "./resources/sass/articles/form.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/articles/form.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/articles/index.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/articles/index.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/buttons.scss":
 /*!*************************************!*\
   !*** ./resources/sass/buttons.scss ***!
@@ -200,59 +222,6 @@ window.onclick = function (event) {
 
 /***/ }),
 
-<<<<<<< develop
-<<<<<<< develop
-/***/ "./resources/sass/ideas.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/ideas.scss ***!
-  \***********************************/
-=======
-/***/ "./resources/sass/articles/create.scss":
-/*!*********************************************!*\
-  !*** ./resources/sass/articles/create.scss ***!
-  \*********************************************/
-=======
-/***/ "./resources/sass/articles/form.scss":
-/*!*******************************************!*\
-  !*** ./resources/sass/articles/form.scss ***!
-  \*******************************************/
->>>>>>> Finishing shop
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/articles/index.scss":
-/*!********************************************!*\
-  !*** ./resources/sass/articles/index.scss ***!
-  \********************************************/
->>>>>>> Adding articles create
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/layout.scss":
-/*!************************************!*\
-  !*** ./resources/sass/layout.scss ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-<<<<<<< develop
-/***/ "./resources/sass/list-element.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/list-element.scss ***!
-  \******************************************/
-=======
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
@@ -268,7 +237,6 @@ window.onclick = function (event) {
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
   \************************************/
->>>>>>> Fixing stock issues
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -276,6 +244,7 @@ window.onclick = function (event) {
 
 /***/ }),
 
+<<<<<<< develop
 <<<<<<< develop
 <<<<<<< develop
 =======
@@ -283,10 +252,11 @@ window.onclick = function (event) {
 /*!******************************************!*\
   !*** ./resources/sass/notification.scss ***!
 =======
+=======
+>>>>>>> Fixing display bugs and adding comments
 /***/ "./resources/sass/list-element.scss":
 /*!******************************************!*\
   !*** ./resources/sass/list-element.scss ***!
->>>>>>> Adding top articles carousel base
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -370,11 +340,10 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
-<<<<<<< develop
-/***/ "./resources/sass/user.scss":
-/*!**********************************!*\
-  !*** ./resources/sass/user.scss ***!
-  \**********************************/
+/***/ "./resources/sass/top-article.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/top-article.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -382,6 +351,7 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
+<<<<<<< develop
 /***/ 0:
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/administration.scss ***!
@@ -418,6 +388,12 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /*!*****************************************!*\
   !*** ./resources/sass/top-article.scss ***!
   \*****************************************/
+=======
+/***/ "./resources/sass/user.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/user.scss ***!
+  \**********************************/
+>>>>>>> Fixing display bugs and adding comments
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -426,9 +402,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ./resources/sass/payment.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/top-article.scss ./resources/sass/administration.scss ./resources/sass/articles/index.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ./resources/sass/payment.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -438,8 +414,10 @@ __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\layout.scs
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
-__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+<<<<<<< develop
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\index.scss */"./resources/sass/articles/index.scss");
 <<<<<<< develop
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
@@ -476,6 +454,16 @@ __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.s
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\payment.scss */"./resources/sass/payment.scss");
 >>>>>>> Adding payment confirmation views
 >>>>>>> Adding payment confirmation views
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\index.scss */"./resources/sass/articles/index.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase-element.scss */"./resources/sass/purchase-element.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\payment.scss */"./resources/sass/payment.scss");
+>>>>>>> Fixing display bugs and adding comments
 
 
 /***/ })

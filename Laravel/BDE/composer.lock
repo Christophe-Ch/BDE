@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< develop
+<<<<<<< develop
     "content-hash": "d811ffc498474407883cc0b4ee2367fc",
 =======
 <<<<<<< develop
@@ -13,6 +14,9 @@
     "content-hash": "872a790730051a4831a55fc54e0a71f2",
 >>>>>>> Finishing shop
 >>>>>>> Finishing shop
+=======
+    "content-hash": "f91d3ade7781563a3afcd2f78efb47ac",
+>>>>>>> Fixing display bugs and adding comments
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -891,16 +895,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.22",
+            "version": "v5.7.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "64a7749bd9e8df68addce1d01a54bcf606141f29"
+                "reference": "0012324a3d31af793c5c71d05dcd0e348c424b69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/64a7749bd9e8df68addce1d01a54bcf606141f29",
-                "reference": "64a7749bd9e8df68addce1d01a54bcf606141f29",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0012324a3d31af793c5c71d05dcd0e348c424b69",
+                "reference": "0012324a3d31af793c5c71d05dcd0e348c424b69",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1037,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-01-22T15:08:35+00:00"
+            "time": "2019-01-29T14:33:25+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
@@ -3493,7 +3497,6 @@
         },
         {
             "name": "vlucas/phpdotenv",
-<<<<<<< develop
             "version": "v2.6.1",
             "source": {
                 "type": "git",
@@ -3504,18 +3507,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
                 "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
-=======
-            "version": "v2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "f3aae2877ecf916ee802b7a5b249d36658171df6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/f3aae2877ecf916ee802b7a5b249d36658171df6",
-                "reference": "f3aae2877ecf916ee802b7a5b249d36658171df6",
->>>>>>> Sending mail when articles purchased
                 "shasum": ""
             },
             "require": {
@@ -3553,11 +3544,7 @@
                 "env",
                 "environment"
             ],
-<<<<<<< develop
             "time": "2019-01-29T11:11:52+00:00"
-=======
-            "time": "2019-01-28T20:57:27+00:00"
->>>>>>> Sending mail when articles purchased
         },
         {
             "name": "zendframework/zend-diactoros",

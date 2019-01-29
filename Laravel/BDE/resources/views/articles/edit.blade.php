@@ -37,11 +37,14 @@
         </div>
 
         <label for="category" class="title_input_left">Catégorie</label>
-        <select name="category" class="input_left">
-            @foreach ($categories as $category)
-                <option class="input_left" value="{{$category->id}}" {{ $category->id == $article->categorie ? 'selected' : ''}}>{{$category->nom}}</option>
-            @endforeach
-        </select>
+        <div class="input_left" id="select">
+            <select name="category">
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}" {{ $category->id == $article->categorie ? 'selected' : ''}}>{{$category->nom}}</option>
+                @endforeach
+            </select>
+        </div>
+        
 
         <label for="description" class="title_input_left">Description</label>
         <textarea class="input_left" id="description-input" name="description" value="{{$article->description}}">{{$article->description}}</textarea>

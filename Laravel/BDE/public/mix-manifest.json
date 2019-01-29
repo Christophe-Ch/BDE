@@ -4,82 +4,16 @@
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
     "/css/notification.css": "/css/notification.css",
-<<<<<<< develop
-<<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
     "/css/user.css": "/css/user.css",
     "/css/event.css": "/css/event.css",
     "/css/list-element.css": "/css/list-element.css",
     "/css/search-bar.css": "/css/search-bar.css",
-    "/css/administration.css": "/css/administration.css"
-=======
-    "/css/ideas.css": "/css/ideas.css"
-=======
-<<<<<<< develop
-    "/css/notification.css": "/css/notification.css"
-=======
-    "/css/search-bar.css": "/css/search-bar.css",
-    "/css/list-element.css": "/css/list-element.css",
-<<<<<<< develop
-    "/css/articles/index.css": "/css/articles/index.css"
->>>>>>> Adding shop page base
->>>>>>> Adding shop page base
-<<<<<<< develop
->>>>>>> Adding shop page base
-=======
-=======
-    "/css/notification.css": "/css/notification.css",
-    "/css/search-bar.css": "/css/search-bar.css",
-    "/css/list-element.css": "/css/list-element.css",
-<<<<<<< develop
-    "/css/articles/index.css": "/css/articles/index.css",
-    "/css/top-article.css": "/css/top-article.css"
->>>>>>> Adding top articles carousel base
-<<<<<<< develop
->>>>>>> Adding top articles carousel base
-=======
-=======
     "/css/top-article.css": "/css/top-article.css",
-    "/css/articles/index.css": "/css/articles/index.css"
->>>>>>> Finishing top articles carousel
-<<<<<<< develop
->>>>>>> Finishing top articles carousel
-=======
-=======
+    "/css/administration.css": "/css/administration.css",
     "/css/articles/index.css": "/css/articles/index.css",
-    "/css/top-article.css": "/css/top-article.css",
-<<<<<<< develop
-<<<<<<< develop
-    "/css/articles/create.css": "/css/articles/create.css"
->>>>>>> Adding articles create
-<<<<<<< develop
->>>>>>> Adding articles create
-=======
-=======
-    "/css/articles/form.css": "/css/articles/form.css"
->>>>>>> Finishing shop
-<<<<<<< develop
->>>>>>> Finishing shop
-=======
-=======
     "/css/articles/form.css": "/css/articles/form.css",
     "/css/purchase-element.css": "/css/purchase-element.css",
-    "/css/purchase.css": "/css/purchase.css"
->>>>>>> Adding purchase component
->>>>>>> Adding purchase component
-=======
-    "/css/ideas.css": "/css/ideas.css",
-    "/css/search-bar.css": "/css/search-bar.css",
-    "/css/list-element.css": "/css/list-element.css",
-    "/css/articles/index.css": "/css/articles/index.css",
-    "/css/top-article.css": "/css/top-article.css",
-    "/css/articles/form.css": "/css/articles/form.css",
-    "/css/purchase-element.css": "/css/purchase-element.css",
-<<<<<<< develop
-    "/css/purchase.css": "/css/purchase.css"
->>>>>>> Fixing stock issues
-=======
     "/css/purchase.css": "/css/purchase.css",
     "/css/payment.css": "/css/payment.css"
->>>>>>> Adding payment confirmation views
 }

@@ -138,6 +138,10 @@ h1 {
   margin-bottom: 70px;
 }
 
+#add img {
+  height: 60px;
+}
+
 #add a {
   margin-left: 20px;
   text-decoration: none;
@@ -168,6 +172,7 @@ h1 {
 
   .list-element img {
     width: 100%;
+    display: block;
   }
 
   .list-element {

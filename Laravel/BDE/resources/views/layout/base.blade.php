@@ -90,10 +90,13 @@
                 <div id="links">
                     <p>Liens rapides</p>
                     <nav>
-                        <li><a href="/articles">Boutique</a></li>
+                        <ul id="nav-footer">
+                            <li><a href="/articles">Boutique</a></li>
                             <li><a href="/event">Evènements</a></li>
                             <li><a href="/ideas">Idées</a></li>
                             <li><a href="#">Mon profil</a></li>
+                        </ul>
+                        
                     </nav>
                 </div>
 
