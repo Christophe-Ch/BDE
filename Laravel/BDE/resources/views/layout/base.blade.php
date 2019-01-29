@@ -40,6 +40,9 @@
                             <li><a href="#">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
                             <li><a href="/notifications">Mes notifications</a></li>
+                            @if(Auth::user()->statut_id == 2)
+                                <li><a href="/administration">Administration</a></li>
+                            @endif
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
                     </div>
@@ -72,7 +75,7 @@
     <footer>
             <div id="content">
                 <div id="logo-bde">
-                    <img src="images/Logo_bde.png" alt="Logo">
+                    <img src="/images/Logo_bde.png" alt="Logo">
                 </div>
                 <div id="links">
                     <p>Liens rapides</p>
@@ -101,9 +104,9 @@
             <div id="social">
                 <p>Retrouvez-nous sur :</p>
                 <div id="social-logos">
-                    <a id="facebook" href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a id="twitter" href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                    <a id="youtube" href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                    <a id="facebook" href="#"><img src="/images/facebook.png" alt="Facebook"></a>
+                    <a id="twitter" href="#"><img src="/images/twitter.png" alt="Twitter"></a>
+                    <a id="youtube" href="#"><img src="/images/youtube.png" alt="YouTube"></a>
                 </div>
             </div>
 

@@ -13,6 +13,12 @@ const shop = require('./shop.js');
 const events = require('./events.js');
 const ideas = require('./ideas.js');
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.use('/api/', auth);
 app.use('/api/', profile);
 app.use('/api/users/', users);

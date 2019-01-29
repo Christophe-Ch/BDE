@@ -7,9 +7,12 @@ use App\User;
 
 class ApiController extends Controller
 {
+    /**
+     * Register a new user
+     */
     function register() {
-        if(!User::where('email', request('email'))->count()) {
-            do { 
+        if(!User::where('email', request('email'))->count()) { // If email address is free
+            do { // Generate token
                 $api_token = str_random(100); 
             } while(User::where('api_token', $api_token)->count());
 
@@ -31,10 +34,13 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * Update profile
+     */
     function updateSelf() {
-        $user = User::where('api_token', request('token'))->first();
+        $user = User::where('api_token', request('token'))->first(); // Get user with token
 
-        if($user) {
+        if($user) { // If user exists
             if(request()->has('first_name')) {
                 $user->prenom = request('first_name');
             }
@@ -60,6 +66,9 @@ class ApiController extends Controller
         }
     }
 
+    /**
+     * Update user
+     */
     function updateUser($id) {
         
         $user = User::find($id);

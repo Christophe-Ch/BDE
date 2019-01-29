@@ -4,5 +4,6 @@
     "/css/layout.css": "/css/layout.css",
     "/css/buttons.css": "/css/buttons.css",
     "/css/notification.css": "/css/notification.css",
-    "/css/ideas.css": "/css/ideas.css"
+    "/css/ideas.css": "/css/ideas.css",
+    "/css/administration.css": "/css/administration.css"
 }
