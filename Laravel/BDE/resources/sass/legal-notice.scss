@@ -21,7 +21,7 @@ h3 {
     text-align: center;
 }
 
-li {
+strong {
     color: black;
     font-family: "Baskerville Old Face", sans-serif;
     text-align: center;
@@ -31,4 +31,32 @@ p {
     color: black;
     font-family: "Baskerville Old Face", sans-serif;
     text-align: center;
+}
+
+.body {
+    display: flex;
+    align-content: center;
+}
+
+.legal-notice {
+    width: 100%;
+    padding: 5%;
+    border-right: 1px solid black;
+}
+
+#cgv {
+    width: 100%;
+    padding: 5%;
+    border-left: 1px solid black;
+}
+
+.information {
+    color: black;
+    font-family: "Baskerville Old Face", sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }

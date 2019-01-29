@@ -95,7 +95,7 @@ class EventController extends Controller
                 $date = date('Y-m-d', strtotime('+1 month', strtotime($date)));
             }
         }
-        
+
 
         if ($request->ideeId != null) {
             Idee::find($request->ideeId)->delete();
@@ -212,7 +212,7 @@ class EventController extends Controller
 
     /**
      * Register a user to an event.
-     * 
+     *
      * @param \App\Manifestation $eventSelec
      */
     public function registerEvent(Manifestation $eventSelec){
@@ -227,7 +227,7 @@ class EventController extends Controller
 
     /**
      * Unregister a user to an event.
-     * 
+     *
      * @param \App\Manifestation $eventSelec
      */
     public function unRegisterEvent(Manifestation $eventSelec){
@@ -239,7 +239,7 @@ class EventController extends Controller
 
     /**
      * Signal an event.
-     * 
+     *
      * @param \App\Manifestation $eventSelec
      */
     public function signalEvent(Manifestation $eventSelec){
