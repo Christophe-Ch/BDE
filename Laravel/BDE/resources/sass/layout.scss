@@ -11,6 +11,7 @@ header{
     height: 150px;
     object-fit: contain;
 }
+
 nav{
 }
 nav > ul{
@@ -153,6 +154,9 @@ nav > ul > li > a:focus::after{
     cursor: pointer;
     transition-duration: 0.5s;
 }
+
+
+
 @media only screen and (max-width:1200px){
     #menu-bar{align-items: center;}
     #logo-menu{width: 100px;object-fit: contain;}
@@ -191,22 +195,24 @@ footer {
 
         #links {
             text-align: center;
-            ul{
+            #nav-footer{
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                text-align: left;
                 flex-direction: column;
-                padding: 0;
+                list-style-type: none;
+                padding-left: 0;
+                
 
                 li {
-                    list-style-type: none;
                     font-family: 'Segoe UI';
+                    padding-left: 0;
                     font-style: italic;
                     font-weight: lighter;
                     margin-bottom: 20px;
-                    font-size: 1.3em;
+                    
 
                     a {
+                        font-size: 1.3em;
                         color: white;
                         text-decoration: none;
                     }                    
@@ -345,12 +351,15 @@ footer {
 
 @media only screen and (max-width: 768px){
     #content {flex-direction: column;text-align:center;align-items: center;}
-    #links nav {display:flex;justify-content: space-around; width: 100vw;}
+    footer #content #links nav #nav-footer {display:flex;flex-direction:row; justify-content: space-around; width: 100vw;}
     footer #content #logo-bde img {width:80px;}
     footer {font-size: 0.8em;}
 }
 
 .left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background: white;
     color: black;
     width: 55%;
@@ -361,7 +370,7 @@ footer {
     #title_left{
         font-size: 60pt;
         margin: 0;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .title_input_left{
         margin: 0;

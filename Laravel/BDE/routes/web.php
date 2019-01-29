@@ -14,6 +14,7 @@
 use App\Http\Middleware\IpFilter;
 use Illuminate\Http\Request;
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -29,7 +30,7 @@ Route::post('mail', function (Request $request) {
     $data = array('title' => 'Message de la part de ' . request('nom'), 'subtitle' => 'Message', "description" => request('message'), "url" => "mailto:" . request('email'), 'linkText' => "Contacter");
 
     Mail::send('layout.mail', $data, function($message) {
-        $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Message depuis l\'interface');
+        $message->to(env('ADMIN_MAIL', 'cbenard2013@gmail.com'), 'Administrator')->subject('Message depuis l\'interface');
         $message->from(env('MAIL_USERNAME', 'bde@bde.fr'), 'BDE');
     });
 
@@ -71,20 +72,6 @@ Route::post('/photoEvent/comment/{photo}', 'PhotoEventController@comment')->midd
 Route::post('/photoEvent/comment/signaler/{comment}', 'PhotoEventController@signalerComment')->middleware('auth');
 Route::delete('/photoEvent/comment/destroy/{comment}', 'PhotoEventController@destroyComment')->middleware('auth');
 
-// Ideas Box
-Route::get('ideas', 'IdeasController@index');
-Route::get('ideas/search', 'IdeasController@searchIdea');
-Route::post('ideas', 'IdeasController@createIdea')->middleware('auth');
-Route::get('ideas/create' , 'IdeasController@create')->middleware('auth');
-Route::get('ideas/{id}/edit', 'IdeasController@edit')->middleware('auth');
-Route::put('ideas/{id}', 'IdeasController@editIdea')->middleware('auth');
-Route::delete('ideas/{id}', 'IdeasController@deleteIdea')->middleware('auth');
-
-
-// Vote des idées
-Route::post('votes/{id}', 'IdeasController@addVote')->middleware('auth');
-Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
-
 //Profil
 Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth');
 Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
@@ -108,3 +95,23 @@ Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
 
 // Legal Notice
 Route::get('legal-notice', 'LegalNoticeController@index');
+
+
+// Articles
+Route::get('/articles', 'ArticlesController@index');
+Route::get('/articles/create', 'ArticlesController@create');
+Route::post('/articles', 'ArticlesController@store');
+Route::get('/articles/{article}/edit', 'ArticlesController@edit');
+Route::put('/articles/{article}', 'ArticlesController@update');
+Route::delete('/articles/{article}', 'ArticlesController@destroy');
+Route::get('/articles/search', 'ArticlesController@search');
+
+// Purchase
+Route::get('/purchase', 'PurchaseController@index')->middleware('auth');
+Route::post('/purchase', 'PurchaseController@store')->middleware('auth');
+Route::delete('/purchase/{purchase}', 'PurchaseController@destroy')->middleware('auth');
+Route::put('/purchase/{purchase}', 'PurchaseController@update')->middleware('auth');
+
+// Payment
+Route::get('/payment', 'PurchaseController@payment')->middleware('auth');
+Route::get('/payment/cash', 'PurchaseController@paymentCash')->middleware('auth');

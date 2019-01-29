@@ -178,6 +178,28 @@ window.onclick = function (event) {
 
 /***/ }),
 
+/***/ "./resources/sass/articles/form.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/articles/form.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/articles/index.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/articles/index.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/buttons.scss":
 /*!*************************************!*\
   !*** ./resources/sass/buttons.scss ***!
@@ -222,6 +244,16 @@ window.onclick = function (event) {
 
 /***/ }),
 
+<<<<<<< develop
+<<<<<<< develop
+<<<<<<< develop
+=======
+/***/ "./resources/sass/notification.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/notification.scss ***!
+=======
+=======
+>>>>>>> Fixing display bugs and adding comments
 /***/ "./resources/sass/list-element.scss":
 /*!******************************************!*\
   !*** ./resources/sass/list-element.scss ***!
@@ -233,7 +265,7 @@ window.onclick = function (event) {
 
 /***/ }),
 
-<<<<<<< develop
+>>>>>>> Adding top articles carousel base
 /***/ "./resources/sass/notification.scss":
 /*!******************************************!*\
   !*** ./resources/sass/notification.scss ***!
@@ -264,6 +296,39 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
+/***/ "./resources/sass/payment.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/payment.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/purchase-element.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/purchase-element.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/purchase.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/purchase.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/search-bar.scss":
 /*!****************************************!*\
   !*** ./resources/sass/search-bar.scss ***!
@@ -275,10 +340,10 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
-/***/ "./resources/sass/user.scss":
-/*!**********************************!*\
-  !*** ./resources/sass/user.scss ***!
-  \**********************************/
+/***/ "./resources/sass/top-article.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/top-article.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -286,6 +351,7 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
+<<<<<<< develop
 /***/ 0:
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/administration.scss ***!
@@ -293,6 +359,7 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< develop
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
@@ -304,6 +371,99 @@ __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Lar
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
 module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+=======
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+=======
+/***/ "./resources/sass/top-article.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/top-article.scss ***!
+  \*****************************************/
+=======
+/***/ "./resources/sass/user.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/user.scss ***!
+  \**********************************/
+>>>>>>> Fixing display bugs and adding comments
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/search-bar.scss ./resources/sass/top-article.scss ./resources/sass/administration.scss ./resources/sass/articles/index.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ./resources/sass/payment.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+<<<<<<< develop
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\index.scss */"./resources/sass/articles/index.scss");
+<<<<<<< develop
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+>>>>>>> Adding top articles carousel base
+<<<<<<< develop
+>>>>>>> Adding top articles carousel base
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+<<<<<<< develop
+<<<<<<< develop
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\create.scss */"./resources/sass/articles/create.scss");
+>>>>>>> Adding articles create
+<<<<<<< develop
+>>>>>>> Adding articles create
+=======
+=======
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+>>>>>>> Finishing shop
+<<<<<<< develop
+>>>>>>> Finishing shop
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase-element.scss */"./resources/sass/purchase-element.scss");
+<<<<<<< develop
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+>>>>>>> Adding purchase component
+<<<<<<< develop
+>>>>>>> Adding purchase component
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\payment.scss */"./resources/sass/payment.scss");
+>>>>>>> Adding payment confirmation views
+>>>>>>> Adding payment confirmation views
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\top-article.scss */"./resources/sass/top-article.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\index.scss */"./resources/sass/articles/index.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase-element.scss */"./resources/sass/purchase-element.scss");
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\payment.scss */"./resources/sass/payment.scss");
+>>>>>>> Fixing display bugs and adding comments
 
 
 /***/ })

@@ -1,0 +1,133 @@
+#confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI';
+    justify-content: center;
+
+    h1 {
+        font-size: 120pt;
+        font-family: 'Baskerville Old Face';
+        margin-bottom: 5vh;
+    }
+
+    h2 {
+        font-size: 30pt;
+        font-weight: lighter;
+        margin-bottom: 10vh;
+    }
+
+    ul {
+        padding: 0;
+        li  {
+            margin-bottom: 5vh;
+            list-style-type: none;
+            color: #f44336;
+        }
+    }
+
+    
+
+    
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.hovered {
+    background: #ffc252;
+    color: white;
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    display: inline-block;
+    border-radius: 50px;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+.shop {
+    background: #ffc252;
+    color: white;
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    border: none;
+    font-size: 1.5em;
+    display: inline-block;
+    border-radius: 50px;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+.shop:hover{
+    color: black;
+    box-shadow: 0px 0px 10px 5px #ffc252;
+}
+
+.hovered:hover{
+    color: black;
+    box-shadow: 0px 0px 10px 5px #ffc252;
+}
+
+#purchase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI';
+    justify-content: center;
+    height: calc(100vh - 380px);
+
+    #checked {
+        display: flex;
+        margin-bottom: 5vh;
+
+        img {
+                height: 10vh;
+                margin-right: 2vh;
+            }
+
+        h1 {
+            color: #14b0b0;
+            font-size: 30pt;
+        }
+    }
+
+    p {
+        font-size: 20pt;
+        width: 25vw;
+        text-align: center;
+        margin-bottom: 15vh;
+    }
+
+    a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #confirmation-container h1{font-size: 40pt;}
+    #confirmation-container h2{font-size: 20pt; text-align: center;}
+    #purchase-container #checked{align-items:center; margin-bottom: 5vh;}
+    #purchase-container #checked img{height: 10vh;}
+    #purchase-container #checked h1{font-size: 15pt;}
+    #purchase-container p{font-size: 12pt; width: 100vw;margin-bottom: 5vh;}
+    #purchase-container a{text-align:center; width: 200px; font-size: 1em;margin-top: 0; display:inline-flex; height:50px;}
+}

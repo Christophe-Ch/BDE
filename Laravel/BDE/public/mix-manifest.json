@@ -9,5 +9,11 @@
     "/css/event.css": "/css/event.css",
     "/css/list-element.css": "/css/list-element.css",
     "/css/search-bar.css": "/css/search-bar.css",
-    "/css/administration.css": "/css/administration.css"
+    "/css/top-article.css": "/css/top-article.css",
+    "/css/administration.css": "/css/administration.css",
+    "/css/articles/index.css": "/css/articles/index.css",
+    "/css/articles/form.css": "/css/articles/form.css",
+    "/css/purchase-element.css": "/css/purchase-element.css",
+    "/css/purchase.css": "/css/purchase.css",
+    "/css/payment.css": "/css/payment.css"
 }

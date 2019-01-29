@@ -1,0 +1,67 @@
+label {
+        display: block;
+}
+
+#little-input-container {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+        margin: 0 auto;
+        padding: 0 10px;
+        
+
+        .little-input {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                input {
+                        text-align: center;
+                }
+        }
+}
+
+#select {
+        margin: 10px auto;
+
+        select {
+                width: 100%;
+                height: 100%;
+                border: none;
+                font-family: 'Segoe UI';
+                font-size: 15pt;
+                outline: none;
+        }
+}
+
+.left #title_left {
+        font-family: 'Baskerville Old Face';
+        font-weight: lighter;
+        margin: 0;
+}
+
+#description-input {
+        resize: none;
+        height: 100px;
+        overflow: hidden;
+        margin: 0;
+}
+
+.input_left {
+        outline: none;
+}
+
+li {
+        list-style-type: none;
+        color: #f44336;
+}
+
+.left .btn_left {
+        cursor: pointer;
+        margin: 0;
+}
+
+@media only screen and (max-width: 545px){
+        .left{#little-input-container{width: 75%;}}
+        .left{#title_left{font-size: 40pt;}}
+}

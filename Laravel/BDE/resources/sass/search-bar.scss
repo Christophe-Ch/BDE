@@ -17,27 +17,33 @@ body{
     padding: 10px;
     background: white;
 
-    div {
+    form {
+        margin: 0;
         width: 90%;
-        display: flex;
-        align-items: center;
+        
+        div {
+            display: flex;
+            align-items: center;
 
-        img {
-            height: 40px;
-        }
+            img {
+                height: 40px;
+            }
 
-        input {
-            width: 100%;
-            height: 100%;
-            border: none;
-            font-family: 'Segoe UI';
-            font-style: italic;
-            font-weight: lighter;
-            font-size: 2em;
-            padding: 0 7px;
-            outline: none;
+            input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                font-family: 'Segoe UI';
+                font-style: italic;
+                font-weight: lighter;
+                font-size: 2em;
+                padding: 0 7px;
+                outline: none;
+            }
         }
     }
+
+    
 
 
 
@@ -56,11 +62,10 @@ body{
     }
 }
 
-@media only screen and (max-width: 812px) {
-
-    #search-bar > div > input {
-                font-size: 5px;
-        }
-
+@media only screen and (max-width: 768px) {
+    #search-bar form div input{font-size: 1.2em;}
+    #search-bar form{width: 100%;}
+    #search-bar button{display: none;}
+    #search-bar form div img{height: 25px;}
 }
 

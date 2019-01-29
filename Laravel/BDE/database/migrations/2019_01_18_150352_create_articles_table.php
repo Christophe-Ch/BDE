@@ -16,10 +16,12 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom', 40);
-            $table->string('description', 255);
+            $table->string('description', 200);
+            $table->integer('categorie');
             $table->integer('prix');
             $table->string('photo', 40);
             $table->integer('stock');
+            $table->integer('achat')->default('0');
             $table->integer('centre_id');
         });
     }
