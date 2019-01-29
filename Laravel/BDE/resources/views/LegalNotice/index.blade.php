@@ -19,13 +19,13 @@
             <h3>1. Présentation du site.</h3>
             <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://www.bde-cesi-rouen.fr/">www.bde-cesi-rouen.fr</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
             <p><strong>Propriétaire</strong> : Bde cesi rouen –  – 1 Rue Guglielmo Marconi<br />
-            <strong>Créateur</strong>  : <a href="www.bde-cesi-rouen.fr">Chichmanian Cristophe</a><br />
+            <strong>Créateur</strong>  : <a href="www.bde-cesi-rouen.fr">Chichmanian Christophe</a><br />
             <strong>Responsable publication</strong> : Hangard Corentin – corentin.hangard76@laposte.net<br />
             Le responsable publication est une personne physique ou une personne morale.<br />
-            <strong>Webmaster</strong> : Chichmanian Cristophe – cristophe.chichmanian@viacesi.fr<br />
+            <strong>Webmaster</strong> : Chichmanian Christophe – christophe.chichmanian@viacesi.fr<br />
             <strong>Hébergeur</strong> : OVH – 2 rue Kellermann,59100 Roubaix<br />
             Crédits : Hangard Corentin, Chochoy Louis, Bénard Charlotte<br />
-            Le modèle de mentions légales est offert par Subdelirium.com <a target="_blank" href="https://www.subdelirium.com/generateur-de-mentions-legales/">Mentions légales</a></p>
+
 
             <h3>2. Conditions générales d’utilisation du site et des services proposés.</h3>
             <p>L’utilisation du site <a href="http://www.bde-cesi-rouen.fr/">www.bde-cesi-rouen.fr</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="http://www.bde-cesi-rouen.fr/">www.bde-cesi-rouen.fr</a> sont donc invités à les consulter de manière régulière.</p>
@@ -158,7 +158,7 @@
 
             <h3>Article 8 - Livraison</h3>
 
-            Les produits sont a retirés à l'adresse du CESI.
+            Les produits sont à retirer à l'adresse du CESI.
 
             <h3>Article 9 - Garantie</h3>
 
