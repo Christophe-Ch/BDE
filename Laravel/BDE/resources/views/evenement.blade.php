@@ -11,7 +11,7 @@
 @section('content')
     @component('layout.component.search-bar')
         @slot('url')
-            /event/search
+            /searchEvent
         @endslot
         @slot('placeholder')
             Rechercher un produit...

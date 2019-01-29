@@ -211,22 +211,6 @@ class EventController extends Controller
     }
 
     /**
-     * Search and return specific event.
-     * 
-     * @param  \Illuminate\Http\Request  $request
-     */
-    public function searchEvent(Request $request) {
-        //$events = Manifestation::all();
-        if($request->input('search') != null) {
-            $events = Manifestation::where("nom", 'LIKE', '%' . $request->input('search') . '%')->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
-            dd($events);
-            return view('event.index', compact('events'));
-        } else {
-            return redirect()->route('event.index');
-        }
-    }
-
-    /**
      * Register a user to an event.
      * 
      * @param \App\Manifestation $eventSelec
@@ -265,5 +249,23 @@ class EventController extends Controller
         $eventSelec->report = 1;
         $eventSelec->save();
         return redirect()->route('event.index');
+    }
+
+    /**
+     * Search and return specific event.
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     */
+    public function searchEvent(Request $request) {
+        if($request->input('search') != null) {
+            if(Auth::check()) {
+                $events = Manifestation::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", Auth::user()->centre_id)->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            } else {
+                $events = Manifestation::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", env("centre_id", 1))->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            }
+            return view('evenement', compact('events'));
+        } else {
+            return redirect()->route('event.index');
+        }
     }
 }

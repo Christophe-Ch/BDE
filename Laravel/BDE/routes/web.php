@@ -56,11 +56,11 @@ Route::delete('/notifications/{notification}', 'NotificationsController@delete')
 
 //Evenement
 Route::resource('event', 'EventController');
-Route::get('/event/search', 'EventController@searchEvent');
 Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
 Route::post('/event/unregister/{eventSelec}', 'EventController@unRegisterEvent')->middleware('auth');
 Route::post('/event/signal/{eventSelec}', 'EventController@signalEvent')->middleware('auth');
 Route::post('/event/downloadParticipant/{idEvent}', 'DownloadController@downloadParticipants')->middleware('auth');
+Route::get('/searchEvent', 'EventController@searchEvent');
 
 Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'destroy'])->middleware('auth');
 Route::resource('photoEvent', 'PhotoEventController')->only(['show']);

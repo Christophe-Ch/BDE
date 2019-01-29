@@ -1,6 +1,6 @@
 <div id="search-bar-container">
     <div id="search-bar">
-        <form id="search_form" action="{{ $url }}">
+        <form id="search_form" action="{{ $url }}" method="get">
             @csrf
             <div class="ui-widget">
                 <img src="/images/search.png" alt="Search">
