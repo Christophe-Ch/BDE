@@ -9,18 +9,18 @@
 @endsection
 
 @section('header')
-    <span class="header_title">
+    <div class="header_title">
         <h1>Administration</h1>
-    </span>
+    </div>
 @endsection
 
 @section('content')
-    <span id="api_token">{{ Auth::user()->api_token }}</span>
+    <span id="api_token" style="visibility: hidden">{{ Auth::user()->api_token }}</span>
     <div class="panel-container">
         <div class="panel">
             <h1>Utilisateurs</h1>
     
-            <table id="users" class="display nowrap" width="100%">
+            <table id="users" class="display nowrap">
                 <thead>
                     <tr>
                         <th>Prénom</th>
@@ -37,7 +37,7 @@
         <div class="panel">
             <h1>Articles</h1>
     
-            <table id="articles" class="display nowrap" width="100%">
+            <table id="articles" class="display nowrap">
                 <thead>
                     <tr>
                         <th>Nom</th>
@@ -53,7 +53,7 @@
         <div class="panel">
             <h1>Evènements</h1>
     
-            <table id="events" class="display nowrap" width="100%">
+            <table id="events" class="display nowrap">
                 <thead>
                     <tr>
                         <th>Nom</th>
@@ -69,7 +69,7 @@
         <div class="panel">
             <h1>Idées</h1>
     
-            <table id="ideas" class="display nowrap" width="100%">
+            <table id="ideas" class="display nowrap">
                 <thead>
                     <tr>
                         <th>Nom</th>

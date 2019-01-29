@@ -7,6 +7,6 @@
     <form action="/notifications/{{ $id }}" method="post">
         @csrf
         @method('delete')
-        <input type="image" src="/images/bin.png">
+        <input type="image" src="/images/bin.png" alt="Delete button">
     </form>
 </div>
