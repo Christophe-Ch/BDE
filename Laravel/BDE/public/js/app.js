@@ -48119,6 +48119,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/ideas.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/ideas.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
@@ -48142,9 +48153,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/administration.scss ***!
-  \************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/administration.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48153,6 +48164,7 @@ __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Lar
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
 module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
 
 
