@@ -60,3 +60,21 @@ body {
   width: 124px;
 }
 
+@media only screen and (max-width: 768px) {
+  #search-bar form div input {
+    font-size: 1.2em;
+  }
+
+  #search-bar form {
+    width: 100%;
+  }
+
+  #search-bar button {
+    display: none;
+  }
+
+  #search-bar form div img {
+    height: 25px;
+  }
+}
+

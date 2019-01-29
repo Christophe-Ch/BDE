@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Achat;
 use App\Article;
+use Mail;
 
 class PurchaseController extends Controller
 {
@@ -107,21 +108,18 @@ class PurchaseController extends Controller
 
         $purchases = Achat::where('user_id', Auth::user()->id)->get();
 
-        $achats = "Voici le résumé de la commande : <ul>";
+        $message = "Voici le résumé de la commande :";
+        $achats = [];
 
         foreach($purchases as $purchase) {
             $article = Article::find($purchase->article_id);
             $article->achat += $purchase->quantite;
             $article->save();
-            $achats .= "<li>" . $article->nom . " x" . $purchase->quantite . "</li>";
+            array_push($achats, $article->nom . " x" . $purchase->quantite);
             $purchase->delete();
         }
 
-        $achats .= "</ul>";
-
-        dd($achats);
-
-        $data = array('title' => 'Une commande a été effectuée' , 'subtitle' => 'Commande de ' . Auth::user()->prenom, "description" => $achats, "url" => "mailto:" . Auth::user()->email, 'linkText' => "Contacter");
+        $data = array('title' => 'Une commande a été effectuée' , 'subtitle' => 'Commande de ' . Auth::user()->prenom, "description" => $message, "list" => $achats, "url" => "mailto:" . Auth::user()->email, 'linkText' => "Contacter");
 
         Mail::send('layout.mail', $data, function($message) {
             $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Commande effectuée');

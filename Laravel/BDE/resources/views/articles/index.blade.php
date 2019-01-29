@@ -8,6 +8,7 @@
 @endsection
 
 @section('header')
+    <h1>Boutique</h1>
     <div class="carousel-container" id="top-article0">
         @component('layout.component.top-article')
             @slot('name')
@@ -140,7 +141,7 @@
 
     <div id="list-component-container">
         @foreach ($articles as $article)
-            <div id="article-element">
+            <div class="article-element">
                 @component('layout.component.list-element')
                     @slot('url')
                         /storage/{{$article->photo}}

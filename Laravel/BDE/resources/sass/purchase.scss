@@ -64,3 +64,16 @@ header {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    header #purchase-element-container{overflow-x:hidden;}
+    #purchase-element{flex-direction: column;height:auto;}
+    #left img{display:none;}
+    #right{flex-direction: column;}
+    #left h3{width:100%;}
+    #right #left-side{margin-bottom:10%;}
+    #price-container{display: none;}
+    #purchase-container #payment{text-align:center;}
+    #purchase-container #payment span{display: block; margin-bottom: 5%;}
+    #purchase-container #payment a{margin:0; width: 80px; font-size: 15pt; height: 40px;}
+}
+

@@ -24,6 +24,14 @@
   height: 35px;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Baskerville Old Face";
+  font-weight: lighter;
+  font-size: 50pt;
+  display: none;
+}
+
 #list-component-container {
   width: 100vw;
   display: flex;
@@ -32,34 +40,34 @@
   color: black;
 }
 
-#list-component-container #article-element {
+#list-component-container .article-element {
   margin-bottom: 100px;
 }
 
-#list-component-container #article-element img {
+#list-component-container .article-element img {
   background: #bdbbbb;
 }
 
-#list-component-container #article-element .actions {
+#list-component-container .article-element .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#list-component-container #article-element .actions #price {
+#list-component-container .article-element .actions #price {
   font-size: 1.8em;
 }
 
-#list-component-container #article-element .actions #purchase {
+#list-component-container .article-element .actions #purchase {
   margin: 0;
 }
 
-#list-component-container #article-element .actions #purchase button {
+#list-component-container .article-element .actions #purchase button {
   height: 40px;
   width: 150px;
 }
 
-#list-component-container #article-element .actions #edit a {
+#list-component-container .article-element .actions #edit a {
   height: 40px;
   width: 150px;
   background: #275086;
@@ -70,22 +78,22 @@
   text-decoration: none;
 }
 
-#list-component-container #article-element .actions #delete {
+#list-component-container .article-element .actions #delete {
   margin: 0;
 }
 
-#list-component-container #article-element .actions #delete button {
+#list-component-container .article-element .actions #delete button {
   height: 40px;
   width: 150px;
   background: #f44336;
 }
 
-#list-component-container #article-element .actions button {
+#list-component-container .article-element .actions button {
   width: 100px;
   height: 40px;
 }
 
-#list-component-container #article-element .actions button img {
+#list-component-container .article-element .actions button img {
   background: none;
   height: 30px;
 }
@@ -130,5 +138,51 @@
   text-decoration: none;
   color: black;
   font-size: 2em;
+}
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    display: block;
+  }
+
+  #top-article0 {
+    display: none;
+  }
+
+  #add img {
+    height: 50px;
+  }
+
+  #add a {
+    font-size: 1.5em;
+  }
+
+  #list-component-container .article-element .list-element {
+    flex-direction: column;
+  }
+
+  .list-element img {
+    width: 100%;
+  }
+
+  .list-element {
+    height: auto;
+  }
+
+  .list-element .content h2 {
+    font-size: 2.5em;
+  }
+
+  .list-element .content {
+    width: auto;
+  }
+
+  .list-element .actions {
+    flex-direction: column;
+  }
+
+  .list-element .actions .button {
+    margin-bottom: 10px;
+  }
 }
 

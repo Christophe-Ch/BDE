@@ -53,6 +53,11 @@
         }
     }
 
+    #left-side {
+        display: flex;
+        align-items: center;
+    }
+
     #price {
         text-align: center;
         width: 100px;

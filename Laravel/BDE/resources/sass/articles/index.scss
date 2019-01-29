@@ -25,7 +25,13 @@
 }
 
 
-
+h1 {
+    text-align: center;
+    font-family: 'Baskerville Old Face';
+    font-weight: lighter;
+    font-size: 50pt;
+    display: none;
+}
 
 
 #list-component-container {
@@ -35,7 +41,7 @@
     align-items: center;
     color: black;
 
-    #article-element {
+    .article-element {
         margin-bottom: 100px;
         
         img {
@@ -143,4 +149,18 @@
         color: black;
         font-size: 2em;
     }
+}
+
+@media only screen and (max-width: 992px) {
+    h1{display: block;}
+    #top-article0{display:none;}
+    #add img{height:50px;}
+    #add a{font-size: 1.5em;}
+    #list-component-container .article-element .list-element{flex-direction: column;}
+    .list-element img{width: 100%;}
+    .list-element {height: auto;}
+    .list-element .content h2{font-size: 2.5em;}
+    .list-element .content{width:auto;}
+    .list-element .actions{flex-direction: column;}
+    .list-element .actions .button{margin-bottom: 10px;}
 }

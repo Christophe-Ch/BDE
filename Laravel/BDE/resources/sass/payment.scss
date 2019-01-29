@@ -40,7 +40,7 @@
 .hovered {
     background: #ffc252;
     color: white;
-    width: 200px;
+    width: 300px;
     height: 50px;
     margin-top: 20px;
     border: none;
@@ -87,10 +87,19 @@
     }
 
     a {
-        width: 15vw;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
     }
+}
+
+@media only screen and (max-width: 992px) {
+    #confirmation-container h1{font-size: 40pt;}
+    #confirmation-container h2{font-size: 20pt; text-align: center;}
+    #purchase-container #checked{align-items:center; margin-bottom: 5vh;}
+    #purchase-container #checked img{height: 10vh;}
+    #purchase-container #checked h1{font-size: 15pt;}
+    #purchase-container p{font-size: 12pt; width: 100vw;margin-bottom: 5vh;}
+    #purchase-container a{text-align:center; display: inline-block; width: 200px; font-size: 1em; height:auto;}
 }

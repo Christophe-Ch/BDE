@@ -5,22 +5,23 @@
     </div>
     
     <div id="right">
-        <div id="quantity">
-            <form action="/purchase/{{$id}}" method="POST">
-                @csrf
-                @method('PUT')
-                <input type="submit" value="-" name="quantity">
-            </form>
-            <div id="quantity-id">{{$quantity}}</div>
-            <form action="/purchase/{{$id}}" method="POST">
-                @csrf
-                @method('PUT')
-                <input type="submit" value="+" name="quantity">
-            </form>
-            
-        </div>
-        <div id="price">
-            {{$price}}€
+        <div id="left-side">
+            <div id="quantity">
+                <form action="/purchase/{{$id}}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="submit" value="-" name="quantity">
+                </form>
+                <div id="quantity-id">{{$quantity}}</div>
+                <form action="/purchase/{{$id}}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="submit" value="+" name="quantity">
+                </form>
+            </div>
+            <div id="price">
+                {{$price}}€
+            </div>
         </div>
         <form action="/purchase/{{$id}}" method="POST">
             @csrf
