@@ -10,6 +10,9 @@
 
 @section('content')
     @component('layout.component.search-bar')
+        @slot('url')
+            /event/search
+        @endslot
         @slot('placeholder')
             Rechercher un produit...
         @endslot

@@ -47957,13 +47957,24 @@ var app = new Vue({
   el: '#app'
 });
 <<<<<<< develop
+<<<<<<< develop
 =======
+=======
+/**
+ * Set burger menu onclick.
+ */
+
+>>>>>>> Fix idee and add idee to event
 var burgerMenu = document.getElementById('burger_menu');
 var subMenuBurger = document.getElementById('submenu_burger');
 
 burgerMenu.onclick = function () {
   subMenuBurger.style = "display: inline-block; position: absolute; top: 60%; right: 0; width: 250px; padding: 0;z-index:10000;";
 };
+/**
+ * Open modal onclick
+ */
+
 
 var modal = document.getElementById('modal');
 var modalCross = document.getElementById('closeCross');
@@ -47971,6 +47982,10 @@ var modalCross = document.getElementById('closeCross');
 modalCross.onclick = function () {
   modal.style.display = "none";
 };
+/**
+ * Remove Burger menu and modal;
+ */
+
 
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -48197,7 +48212,21 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 
 /***/ }),
 
+<<<<<<< develop
 >>>>>>> Fix bdd and add register in event
+=======
+/***/ "./resources/sass/ideas.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/ideas.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+>>>>>>> Fix idee and add idee to event
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
@@ -48292,9 +48321,9 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -48302,6 +48331,7 @@ __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Lara
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
 __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");

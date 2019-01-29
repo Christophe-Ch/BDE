@@ -5,6 +5,7 @@
     "/css/buttons.css": "/css/buttons.css",
 <<<<<<< develop
 <<<<<<< develop
+<<<<<<< develop
     "/css/notification.css": "/css/notification.css",
 <<<<<<< develop
     "/css/ideas.css": "/css/ideas.css",
@@ -14,6 +15,9 @@
 =======
 =======
 >>>>>>> Fix Iphone, event, profil
+=======
+    "/css/ideas.css": "/css/ideas.css",
+>>>>>>> Fix idee and add idee to event
     "/css/user.css": "/css/user.css",
     "/css/event.css": "/css/event.css",
     "/css/list-element.css": "/css/list-element.css",

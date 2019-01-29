@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Auth;
 use App\Manifestation;
@@ -13,6 +14,8 @@ use App\Recurrence;
 use App\Participant;
 use App\Photo;
 use App\Centre;
+use App\Idee;
+use App\Vote;
 
 class EventController extends Controller
 {
@@ -37,7 +40,9 @@ class EventController extends Controller
     {
         if(Auth::user()->statut_id != 2) return back();
         $recurrences = Recurrence::all();
-        return view('evenement_add', compact('recurrences'));
+        $ideeId = Input::get('idee');
+        $idee = Idee::find($ideeId);
+        return view('evenement_add', compact('recurrences', 'idee'));
     }
 
     /**
@@ -55,7 +60,7 @@ class EventController extends Controller
             'date' => 'required|date',
             'prix' => 'required|integer',
             'recurrence' => 'required|integer',
-            'photo' => 'required|image'
+            'photo' => 'required|image|max:20480'
         ]);
         $events = Manifestation::all();
 
@@ -72,6 +77,15 @@ class EventController extends Controller
             'photo' => $path,
             'centre_id' => '1'
         ]);
+
+        if ($request->ideeId != null) {
+            Idee::find($request->ideeId)->delete();
+            $ideeLikes = Vote::where('idee_id',$request->ideeId)->get();
+            foreach ($ideeLikes as $ideeLike) {
+                $ideeLike->delete();
+            }
+        }
+
         return redirect()->route('event.index');
     }
 
@@ -116,7 +130,7 @@ class EventController extends Controller
     {
         if(Auth::user()->statut_id != 2) return back();
         $request->validate([
-            'photo' => 'required|image'
+            'photo' => 'required|image|max:20480'
         ]);
         $extension =  $request->file('photo')->extension();
         $path = $request->nom .'.'. $extension;
@@ -180,10 +194,11 @@ class EventController extends Controller
      * 
      * @param  \Illuminate\Http\Request  $request
      */
-    public function searchIdea(Request $request) {
-        $events = Manifestation::all();
+    public function searchEvent(Request $request) {
+        //$events = Manifestation::all();
         if($request->input('search') != null) {
             $events = Manifestation::where("nom", 'LIKE', '%' . $request->input('search') . '%')->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            dd($events);
             return view('event.index', compact('events'));
         } else {
             return redirect()->route('event.index');

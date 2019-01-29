@@ -56,3 +56,9 @@ body {
   width: 124px;
 }
 
+@media only screen and (max-width: 812px) {
+  #search-bar > div > input {
+    font-size: 5px;
+  }
+}
+

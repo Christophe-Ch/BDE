@@ -22,10 +22,10 @@
 <form action="{{ route('event.store') }}" method="post" enctype="multipart/form-data">
     @csrf
     <p class="title_input_left">Nom</p>
-    <input class="input_left" type="text" name="nom" value="{{ old('nom') }}"><br>
+    <input class="input_left" type="text" name="nom" value="{{{ isset($idee) ? $idee->nom : old('nom') }}}"><br>
 
     <p class="title_input_left">Description</p>
-    <input class="input_left" type="text" name="description" value="{{ old('description') }}"><br>
+    <input class="input_left" type="text" name="description" value="{{{ isset($idee) ? $idee->description : old('description') }}}"><br>
 
     <p class="title_input_left">Date</p>
     <input class="input_left" type="date" name="date" value="{{ old('date') }}"><br>
@@ -43,6 +43,7 @@
     <p class="title_input_left">Photo</p>
     <input class="input_left" type="file" name="photo" value="{{ old('photo') }}"><br>
 
+    <input type="hidden" name="ideeId" value="{{isset($idee) ? $idee->id : ''}}">
     <input class="btn_left" type="submit" value="Créer">
 </form>
 @endsection
