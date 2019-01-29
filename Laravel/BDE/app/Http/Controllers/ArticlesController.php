@@ -145,5 +145,23 @@ class ArticlesController extends Controller
 
         return redirect('/articles');
     }
+
+    public function search(Request $request) {
+
+        $request->validate([
+            'search' => 'max:40',
+        ]);
+
+        if($request->input('search') != null) {
+            if(Auth::check()) {
+                $ideas = Idee::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", Auth::user()->centre_id)->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            } else {
+                $ideas = Idee::where("nom", 'LIKE', '%' . $request->input('search') . '%')->where("centre_id", env("centre_id", 1))->orWhere("description", 'LIKE', '%' . $request->input('search') . '%')->get();
+            }
+            return view('ideas/index', compact('ideas', 'votes'));
+        } else {
+            return redirect('ideas');
+        }
+    }
     
 }

@@ -3493,6 +3493,7 @@
         },
         {
             "name": "vlucas/phpdotenv",
+<<<<<<< develop
             "version": "v2.6.1",
             "source": {
                 "type": "git",
@@ -3503,6 +3504,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
                 "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+=======
+            "version": "v2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "f3aae2877ecf916ee802b7a5b249d36658171df6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/f3aae2877ecf916ee802b7a5b249d36658171df6",
+                "reference": "f3aae2877ecf916ee802b7a5b249d36658171df6",
+>>>>>>> Sending mail when articles purchased
                 "shasum": ""
             },
             "require": {
@@ -3540,7 +3553,11 @@
                 "env",
                 "environment"
             ],
+<<<<<<< develop
             "time": "2019-01-29T11:11:52+00:00"
+=======
+            "time": "2019-01-28T20:57:27+00:00"
+>>>>>>> Sending mail when articles purchased
         },
         {
             "name": "zendframework/zend-diactoros",

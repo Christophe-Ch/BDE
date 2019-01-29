@@ -100,16 +100,33 @@ class PurchaseController extends Controller
     }
 
     public function paymentCash() {
+        if(Achat::where('user_id', Auth::user()->id)->count() == 0) 
+            return back();
+
         request()->validate(['condition' => 'required']);
 
         $purchases = Achat::where('user_id', Auth::user()->id)->get();
+
+        $achats = "Voici le résumé de la commande : <ul>";
 
         foreach($purchases as $purchase) {
             $article = Article::find($purchase->article_id);
             $article->achat += $purchase->quantite;
             $article->save();
+            $achats .= "<li>" . $article->nom . " x" . $purchase->quantite . "</li>";
             $purchase->delete();
         }
+
+        $achats .= "</ul>";
+
+        dd($achats);
+
+        $data = array('title' => 'Une commande a été effectuée' , 'subtitle' => 'Commande de ' . Auth::user()->prenom, "description" => $achats, "url" => "mailto:" . Auth::user()->email, 'linkText' => "Contacter");
+
+        Mail::send('layout.mail', $data, function($message) {
+            $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Commande effectuée');
+            $message->from(env('MAIL_USERNAME', 'bde@bde.fr'), 'BDE');
+        });
 
         return view('payment-cash');
     }

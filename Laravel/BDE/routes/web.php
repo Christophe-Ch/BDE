@@ -14,6 +14,7 @@
 use App\Http\Middleware\IpFilter;
 use Illuminate\Http\Request;
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -29,7 +30,7 @@ Route::post('mail', function (Request $request) {
     $data = array('title' => 'Message de la part de ' . request('nom'), 'subtitle' => 'Message', "description" => request('message'), "url" => "mailto:" . request('email'), 'linkText' => "Contacter");
 
     Mail::send('layout.mail', $data, function($message) {
-        $message->to(env('ADMIN_MAIL', ''), 'Administrator')->subject('Message depuis l\'interface');
+        $message->to(env('ADMIN_MAIL', 'cbenard2013@gmail.com'), 'Administrator')->subject('Message depuis l\'interface');
         $message->from(env('MAIL_USERNAME', 'bde@bde.fr'), 'BDE');
     });
 
@@ -116,6 +117,7 @@ Route::post('/articles', 'ArticlesController@store');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 Route::put('/articles/{article}', 'ArticlesController@update');
 Route::delete('/articles/{article}', 'ArticlesController@destroy');
+Route::get('/articles/search', 'ArticlesController@search');
 
 Route::get('/purchase', 'PurchaseController@index')->middleware('auth');
 Route::post('/purchase', 'PurchaseController@store')->middleware('auth');
