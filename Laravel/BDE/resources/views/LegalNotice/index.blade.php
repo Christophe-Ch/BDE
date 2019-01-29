@@ -84,13 +84,11 @@
 
             <h3>Article 1 - Objet</h3>
 
-            Les présentes conditions régissent les ventes par la société BDE Groupe 3 1 Rue Guglielmo Marconi 76130 Mont Saint Aignan de Goodies.
+            Les présentes conditions régissent les ventes par l'association BDE Groupe 3 1 Rue Guglielmo Marconi 76130 Mont Saint Aignan de Goodies.
 
             <h3>Article 2 - Prix</h3>
 
-            Les prix de nos produits sont indiqués en euros toutes taxes comprises (TVA et autres taxes applicables au jour de la commande), sauf indication contraire et hors frais de traitement et d'expédition.
-
-            En cas de commande vers un pays autre que la France métropolitaine vous êtes l'importateur du ou des produits concernés. Des droits de douane ou autres taxes locales ou droits d'importation ou taxes d'état sont susceptibles d'être exigibles. Ces droits et sommes ne relèvent pas du ressort de la société <b>BDE Groupe 3</b>. Ils seront à votre charge et relèvent de votre entière responsabilité, tant en termes de déclarations que de paiements aux autorités et organismes compétents de votre pays. Nous vous conseillons de vous renseigner sur ces aspects auprès de vos autorités locales.
+            Les prix de nos produits sont indiqués en euros toutes taxes comprises (TVA et autres taxes applicables au jour de la commande), sauf indication contraire et hors frais de traitement.
 
             Toutes les commandes quelle que soit leur origine sont payables en euros.
 
@@ -120,13 +118,13 @@
 
             La confirmation de commande vaudra signature et acceptation des opérations effectuées.
 
-            Un récapitulatif des informations de votre commande et des présentes Conditions Générales, vous sera communiqué en format PDF via l'adresse e-mail de confirmation de votre commande.
+            Un récapitulatif des informations de votre commande et des présentes Conditions Générales, vous sera communiqué via l'adresse e-mail de confirmation de votre commande.
 
             <h3>Article 5 - Paiement</h3>
 
             Le fait de valider votre commande implique pour vous l'obligation de payer le prix indiqué.
 
-            Le règlement de vos achats s'effectue par carte bancaire grâce au système sécurisé Paypal.
+            Le règlement de vos achats s'effectue par carte bancaire grâce au système sécurisé Paypal ou par espèce.
 
             Le débit de la carte n'est effectué qu'au moment de l'expédition de la commande. En cas de livraisons fractionnées, seuls les produits expédiés sont débités.
 
@@ -160,17 +158,9 @@
             Nos produits sont proposés tant qu'ils sont visibles sur le site <a href="bde-cesi-rouen.fr">bde-cesi-rouen.fr</a> et dans la limite des stocks disponibles. Pour les produits non stockés, nos offres sont valables sous réserve de disponibilité chez nos fournisseurs.
             En cas d'indisponibilité de produit après passation de votre commande, nous vous en informerons par mail. Votre commande sera automatiquement annulée et aucun débit bancaire ne sera effectué.
 
-            En outre, le site Internet <a href="bde-cesi-rouen.fr">bde-cesi-rouen.fr</a> n'a pas vocation à vendre ses produits en quantités importantes. Par conséquent la société <b>BDE Groupe 3</b> se réserve le droit de refuser les commandes de 1000 articles identiques.
-
             <h3>Article 8 - Livraison</h3>
 
-            Les produits sont livrés à l'adresse de livraison indiquée au cours du processus de commande, dans le délai indiqué sur la page de validation de la commande.
-
-            En cas de retard d'expédition, un mail vous sera adressé pour vous informer d'une éventuelle conséquence sur le délai de livraison qui vous a été indiqué.
-
-            Conformément aux dispositions légales, en cas de retard de livraison, vous bénéficiez de la possibilité d'annuler la commande dans les conditions et modalités définies à l'article L 138-2 du Code de la Consommation. Si entre temps vous recevez le produit nous procéderons à son remboursement et aux frais d'acheminement dans les conditions de l'article L 138-3 du Code de la Consommation.
-
-            En cas de livraisons par une transporteur, la société <b>BDE Groupe 3</b> ne peut être tenue pour responsable de retard de livraison dû exclusivement à une indisponibilité du client après plusieurs propositions de rendez-vous.
+            Les produits sont a retirés à l'adresse du CESI.
 
             <h3>Article 9 - Garantie</h3>
 
