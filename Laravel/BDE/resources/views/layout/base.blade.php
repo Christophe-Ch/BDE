@@ -119,7 +119,7 @@
             </div>
 
             <div id="legal">
-                <span><a href="#">Mentions légales</a></span>
+                <span><a href="/legal-notice">Mentions légales</a></span>
                 <span>Crédits</span>
                 <span>&copy; Groupe3 2019</span>
             </div>
