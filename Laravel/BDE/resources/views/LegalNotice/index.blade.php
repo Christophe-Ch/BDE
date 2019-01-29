@@ -41,7 +41,7 @@
         <p>Les données citées ne sont pas utilisées à des fins commerciales ou analytiques.</p>
         <h3>Clause n° 3 : Rabais et ristournes :</h3>
         <p>Les tarifs proposés comprennent les rabais et ristournes que la société BDE CESI MSA serait amenée à octroyer compte tenu de ses résultats ou de la prise en charge par l'acheteur de certaines prestations.</p>
-        <h3>Clause n° 3 : Rabais et ristournes :</h3>
+        <h3>Clause n° 4 : Modalités des paiements :</h3>
         <p>Le règlement des commandes s'effectue :<ul>
             <li>soit par espèce ;</li>
             <li>soit par carte bancaire ;</li>
