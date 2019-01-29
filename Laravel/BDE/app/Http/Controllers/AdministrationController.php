@@ -36,11 +36,18 @@ class AdministrationController extends Controller
     /**
      * Update user information
      */
-    public function update(User $user) {
+    public function update(User $user, Request $request) {
+        $request->validate([
+            "name" => "required",
+            "prenom" => "required",
+            "email" => "required|email"
+        ]);
+
         $user->name = request('name');
         $user->prenom = request('prenom');
         $user->email = request('email');
         $user->save();
+        
         return redirect('/administration');
     }
 }
