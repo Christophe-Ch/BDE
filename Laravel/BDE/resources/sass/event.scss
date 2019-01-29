@@ -133,6 +133,7 @@
     margin: 20px;
 }
 .modal .commentaire_list{
+    padding-top: 20px;
     text-align: center;
     width: 100%;
 }
@@ -190,13 +191,20 @@
 }
 
 @media only screen and (max-width:992px){
-    .modal .modal-content .content {width: 100%;}
-    .modal .modal-content .img_modal{display: none;}
-}
-@media only screen and (max-width:545px){
+    .modal .modal-content .modal-header {display: block;}
+    .modal .modal-content .content {width: 100%; padding: 0;}
+    .modal .modal-content .img_modal{width: 100%; max-width: 575px; max-height: 350px;}
     .modal .modal-content .modal-header {height: unset;}
     .modal .modal-content {text-align: center;}
-    .modal .modal-content .content{padding: 10px;}
     .modal .modal-content h2{font-size: 3em;}
     .modal .modal-content .actions{display: block;}
+    .modal .modal-content .infos{display: block;}
+    .modal .commentaire_element{display: block;}
+    .modal .commentaire_content{display: block; padding: 10px;}
+    .modal .modal-content .com_text{width: unset; margin: 0; display: block;}
+    .modal .modal-content .com_desc{text-align: center; margin: 10px;}
+    
+}
+@media only screen and (max-width:545px){
+    .modal .modal-content .photo{width: 200px;}
 }
