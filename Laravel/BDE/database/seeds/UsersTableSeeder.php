@@ -19,7 +19,8 @@ class UsersTableSeeder extends Seeder
             "password" => "$2y$10$7fhO/cPdBUnGEiGpRnNiEenUB4SNVTsZAQxzOJjSc/Q6IZEUnnWQG",
             "photo" => "default-avatar.png",
             "centre_id" => "1",
-            "statut_id" => "2"
+            "statut_id" => "2",
+            "api_token" => str_random(100)
         ]);
     }
 }

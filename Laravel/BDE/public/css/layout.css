@@ -565,3 +565,25 @@ footer #legal span {
   }
 }
 
+.cookie-consent {
+  background: #1c385e;
+  color: white;
+  width: calc(100% - 40px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-consent button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #00a390;
+  color: white;
+}
+

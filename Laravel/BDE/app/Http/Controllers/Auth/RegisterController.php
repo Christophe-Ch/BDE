@@ -65,15 +65,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'prenom' => $data['prenom'],
-            'email' => $data['email'],
-            'photo' => 'default-avatar.png',
-            'centre_id' => 1,
-            'statut_id' => 1,
-            'password' => Hash::make($data['password']),
-            'centre_id' => env("centre_id", 1),
-        ]);
+        do { // Generate token
+            $api_token = str_random(100); 
+        } while(User::where('api_token', $api_token)->count());
+
+        $user = new User();
+
+        $user->name = $data['name'];
+        $user->prenom = $data['prenom'];
+        $user->email = $data['email'];
+        $user->photo = 'default-avatar.png';
+        $user->password = Hash::make($data['password']);
+        $user->centre_id = env("centre_id", 1);
+        $user->statut_id = 1;
+        $user->api_token = str_random(100);
+
+        $user->save();
+
+        return $user;
     }
 }

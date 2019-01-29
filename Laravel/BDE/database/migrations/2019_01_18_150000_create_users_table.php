@@ -20,9 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('email', 255);
             $table->string('password');
             $table->string('photo', 255)->default('default-avatar.png');
-            $table->integer('centre_id')->nullable(1);
+            $table->integer('centre_id')->default(1);
             $table->integer('statut_id')->default(1);
-            $table->rememberToken();
+            $table->string("api_token", 100);
         });
     }
 

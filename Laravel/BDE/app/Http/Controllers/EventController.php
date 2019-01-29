@@ -29,7 +29,7 @@ class EventController extends Controller
     {
         $currentMonth = date('m');
         $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
-        return view('evenement', compact('events','participants'));
+        return view('evenement', compact('events'));
     }
 
     /**

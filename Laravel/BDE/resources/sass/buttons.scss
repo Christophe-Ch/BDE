@@ -38,3 +38,13 @@
 .btn_admin {
     width: 100px;
 }
+
+input[type="submit"]:disabled {
+    background: #dddddd;
+}
+
+input[type="submit"]:disabled:hover {
+    background: #dddddd;
+    color: white;
+    box-shadow: none;
+}

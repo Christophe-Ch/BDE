@@ -273,17 +273,17 @@ window.onclick = function (event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
-__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
-module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+__webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
 
 
 /***/ })
