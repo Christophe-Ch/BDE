@@ -86,10 +86,11 @@
 
                 <div id="contact">
                     <p>Contact</p>
-                    <form method="post" action="">
-                        <input type="text" placeholder="Nom">
-                        <input type="email" placeholder="E-mail">
-                        <textarea placeholder="Message..." rows="4"></textarea>
+                    <form method="post" action="/mail">
+                        @csrf
+                        <input type="text" name="nom" placeholder="Nom">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <textarea name="message" placeholder="Message..." rows="4"></textarea>
                         <button type="submit">Envoyer</button>
                     </form>
 
