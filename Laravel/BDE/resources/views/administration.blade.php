@@ -15,6 +15,7 @@
 @endsection
 
 @section('content')
+    <span id="api_token">{{ Auth::user()->api_token }}</span>
     <div class="panel-container">
         <div class="panel">
             <h1>Utilisateurs</h1>

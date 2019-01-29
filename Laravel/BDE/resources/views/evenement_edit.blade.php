@@ -1,7 +1,7 @@
 @extends('layout.duo')
 
 @section('title')
-    Modification d'un Evenement
+    Modification d'un évènement
 @endsection
 
 @section('img')
@@ -20,7 +20,7 @@
 @endif
 <form action="{{ route('event.update', ['event' => $id]) }}" method="post" enctype="multipart/form-data">
     @csrf
-    @method('put');
+    @method('put')
     <p class="title_input_left">Nom</p>
     <input class="input_left" type="text" name="nom" value="{{$event->nom}}"><br>
 
