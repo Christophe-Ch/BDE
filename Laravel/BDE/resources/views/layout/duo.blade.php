@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Le BDE (Bureau des élèves) du CESI Rouen ayant pour but d'animer la vie sur le campus. Il représente tous les étudiants de l'école que se soit l'EI, l'EXIA, ...">
+    <meta name="keyword" content="BDE, CESI, école d'ingénieure, BDE CESI rouen, bureau des étudiants rouen, BDE Mont-saint-aignan">
+    <meta name="author" content="Groupe 3" />
+    <meta name="copyright" content="© Groupe 3" />
     <title>BDE CESI ROUEN</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layout.css">

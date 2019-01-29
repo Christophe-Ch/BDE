@@ -33,7 +33,7 @@
                 </thead>
             </table>
         </div>
-        
+
         <div class="panel">
             <h1>Articles</h1>
     
@@ -49,7 +49,7 @@
                 </thead>
             </table>
         </div>
-            
+
         <div class="panel">
             <h1>Evènements</h1>
     
@@ -65,7 +65,7 @@
                 </thead>
             </table>
         </div>
-        
+
         <div class="panel">
             <h1>Idées</h1>
     

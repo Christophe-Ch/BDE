@@ -21,4 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/event.scss', 'public/css')
    .sass('resources/sass/list-element.scss', 'public/css')
    .sass('resources/sass/search-bar.scss', 'public/css')
+   .sass('resources/sass/legal-notice.scss', 'public/css')
    .sass('resources/sass/administration.scss', 'public/css');
