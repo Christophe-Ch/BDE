@@ -49,7 +49,7 @@
                         @if(Auth::user() && Auth::user()->statut_id == 3)
                             <form action="/event/signal/{{$event->id}}" method="post">@csrf<button class="button red btn_admin" type="submit">Signaler</button></form>
                         @endif
-                        <p>{{\App\Recurrence::where('id',$event->recurrence)->first()->nom}} | {{substr($event->date, 0, 10)}} | {{$event->prix}} €</p>
+                        <p>{{substr($event->date, 0, 10)}} | {{$event->prix}} €</p>
                         @endslot
                     @endcomponent
                 </div>
@@ -66,7 +66,7 @@
                         <div class="content">
                             <h2 id="modal_title">{{$eventSelec->nom}}</h2>
                             <div class="infos">
-                                <p>{{substr($eventSelec->date, 0, 10)}} | {{\App\Recurrence::where('id',$eventSelec->recurrence)->first()->nom}}</p>
+                                <p>{{substr($eventSelec->date, 0, 10)}}</p>
                                 <p>{{$eventSelec->prix}} €</p>
                             </div>
                             <p>{{$eventSelec->description}}</p>

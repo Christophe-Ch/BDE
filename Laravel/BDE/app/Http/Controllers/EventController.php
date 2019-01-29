@@ -16,6 +16,7 @@ use App\Photo;
 use App\Centre;
 use App\Idee;
 use App\Vote;
+use App\Like;
 
 class EventController extends Controller
 {
@@ -26,8 +27,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Manifestation::all();
-        $participants = Participant::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         return view('evenement', compact('events','participants'));
     }
 
@@ -62,21 +63,39 @@ class EventController extends Controller
             'recurrence' => 'required|integer',
             'photo' => 'required|image|max:20480'
         ]);
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
 
         $extension =  $request->file('photo')->extension();
         $path = $request->nom .'.'. $extension;
         Image::make($request->file('photo'))->save(public_path('storage/'.$path));
 
-        Manifestation::create([
-            'nom' => $request->nom,
-            'description' => $request->description,
-            'date' => $request->date,
-            'prix' => $request->prix,
-            'recurrence' => $request->recurrence,
-            'photo' => $path,
-            'centre_id' => '1'
-        ]);
+        if ($request->recurrence == 1) {
+            Manifestation::create([
+                'nom' => $request->nom,
+                'description' => $request->description,
+                'date' => $request->date,
+                'prix' => $request->prix,
+                'recurrence' => $request->recurrence,
+                'photo' => $path,
+                'centre_id' => env('CENTRE_ID', 1)
+            ]);
+        } else if($request->recurrence == 2){
+            $date = $request->date;
+            for ($i=0; $i < 12; $i++) {
+                Manifestation::create([
+                    'nom' => $request->nom,
+                    'description' => $request->description,
+                    'date' => $date,
+                    'prix' => $request->prix,
+                    'recurrence' => $request->recurrence,
+                    'photo' => $path,
+                    'centre_id' => env('CENTRE_ID', 1)
+                ]);
+                $date = date('Y-m-d', strtotime('+1 month', strtotime($date)));
+            }
+        }
+        
 
         if ($request->ideeId != null) {
             Idee::find($request->ideeId)->delete();
@@ -97,7 +116,8 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         $participants = Participant::all();
         $nbUser = Participant::where('manifestation_id', $id)->count();
         $photos = Photo::where('manifestation_id', $id)->get();
@@ -164,7 +184,8 @@ class EventController extends Controller
     {
         if(Auth::user()->statut_id != 2) return back();
 
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         $participants = Participant::all();
         foreach ($participants as $participant) {
             $participant->where('manifestation_id', $id)->delete();
@@ -211,7 +232,8 @@ class EventController extends Controller
      * @param \App\Manifestation $eventSelec
      */
     public function registerEvent(Manifestation $eventSelec){
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         Participant::create([
             'user_id' => Auth::user()->id,
             'manifestation_id' => $eventSelec->id
@@ -225,7 +247,8 @@ class EventController extends Controller
      * @param \App\Manifestation $eventSelec
      */
     public function unRegisterEvent(Manifestation $eventSelec){
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         Participant::where('manifestation_id',$eventSelec->id)->where('user_id',Auth::user()->id)->delete();
         return redirect()->route('event.index');
     }
@@ -237,7 +260,8 @@ class EventController extends Controller
      */
     public function signalEvent(Manifestation $eventSelec){
         if(Auth::user()->statut_id != 3) return back();
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         $eventSelec->report = 1;
         $eventSelec->save();
         return redirect()->route('event.index');

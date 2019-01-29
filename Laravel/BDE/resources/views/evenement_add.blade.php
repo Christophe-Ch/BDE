@@ -34,7 +34,7 @@
     <input class="input_left" type="text" name="prix" value="{{ old('prix') }}"><br>
 
     <p class="title_input_left">Recurrence</p>
-    <select name="recurrence" class="input_left" value="{{ old('recurrence') }}">
+    <select name="recurrence" class="input_left">
         @foreach ($recurrences as $recurrence)
             <option value="{{$recurrence->id}}">{{$recurrence->nom}}</option>
         @endforeach

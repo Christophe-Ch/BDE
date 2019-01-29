@@ -16,19 +16,7 @@ class RecurrenceTableSeeder extends Seeder
         ]);
 
         DB::table('recurrences')->insert([
-            "nom" => "Par jour"
-        ]);
-
-        DB::table('recurrences')->insert([
-            "nom" => "Par semaine"
-        ]);
-
-        DB::table('recurrences')->insert([
             "nom" => "Par mois"
-        ]);
-
-        DB::table('recurrences')->insert([
-            "nom" => "Par ans"
         ]);
     }
 }

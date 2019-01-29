@@ -52,7 +52,8 @@ class PhotoEventController extends Controller
      */
     public function show($id)
     {
-        $events = Manifestation::all();
+        $currentMonth = date('m');
+        $events = Manifestation::whereRaw('MONTH(date) = ?', [$currentMonth])->get();
         $photoEvent = Photo::where('id', $id)->first();
         $eventPhoto = Manifestation::where('id', $photoEvent->manifestation_id)->first();
         $commentaires = Commentaire::where('photo_id', $photoEvent->id)->get();
