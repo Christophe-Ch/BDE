@@ -44,8 +44,8 @@
     
                 <div id="payment">
                     <span>Payer par : </span>
-                    <a href="/payment/cash" class="button">Espèces</a>
-                    <a href="/payment/paypal" class="button">Paypal</a>
+                    <a href="/payment" class="button">Espèces</a>
+                    <a href="/payment" class="button">Paypal</a>
                 </div>
             </div>
         @else

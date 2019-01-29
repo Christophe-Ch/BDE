@@ -94,4 +94,23 @@ class PurchaseController extends Controller
         return redirect('/purchase');
 
     }
+
+    public function payment() {
+        return view('payment-confirmation');
+    }
+
+    public function paymentCash() {
+        request()->validate(['condition' => 'required']);
+
+        $purchases = Achat::where('user_id', Auth::user()->id)->get();
+
+        foreach($purchases as $purchase) {
+            $article = Article::find($purchase->article_id);
+            $article->achat += $purchase->quantite;
+            $article->save();
+            $purchase->delete();
+        }
+
+        return view('payment-cash');
+    }
 }

@@ -71,9 +71,9 @@
                     <li><a href="/">Acceuil</a></li>
                     <li><a href="/event">Événements</a></li>
                     <li><a href="/ideas">Boite à idées</a></li>
-                    <li><a href="#">Boutique</a></li>
                     <li><a href="/profil">Mon profil</a></li>
-                    <li><a href="#">Mes commandes</a></li>
+                    <li><a href="/articles">Boutique</a></li>
+                    <li><a href="/purchase">Mes commandes</a></li>
                     <li><a href="#">Mes notifs</a></li>
                     <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                 </ul>
@@ -90,12 +90,10 @@
                 <div id="links">
                     <p>Liens rapides</p>
                     <nav>
-                        <ul>
-                            <li><a href="#">Boutique</a></li>
+                        <li><a href="/articles">Boutique</a></li>
                             <li><a href="/event">Evènements</a></li>
                             <li><a href="/ideas">Idées</a></li>
                             <li><a href="#">Mon profil</a></li>
-                        </ul>
                     </nav>
                 </div>
 

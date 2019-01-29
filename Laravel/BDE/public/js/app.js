@@ -326,6 +326,17 @@ module.exports = __webpack_require__(/*! D:\workspace\Projet_web\laravel\bde\res
 
 /***/ }),
 
+/***/ "./resources/sass/payment.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/payment.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/purchase-element.scss":
 /*!**********************************************!*\
   !*** ./resources/sass/purchase-element.scss ***!
@@ -415,9 +426,9 @@ module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Pro
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/search-bar.scss ./resources/sass/list-element.scss ./resources/sass/articles/index.scss ./resources/sass/top-article.scss ./resources/sass/articles/form.scss ./resources/sass/purchase-element.scss ./resources/sass/purchase.scss ./resources/sass/payment.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -454,9 +465,17 @@ module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resource
 =======
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\articles\form.scss */"./resources/sass/articles/form.scss");
 __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase-element.scss */"./resources/sass/purchase-element.scss");
+<<<<<<< develop
 module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
 >>>>>>> Adding purchase component
+<<<<<<< develop
 >>>>>>> Adding purchase component
+=======
+=======
+__webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\purchase.scss */"./resources/sass/purchase.scss");
+module.exports = __webpack_require__(/*! D:\Dev\Laravel\BDE\Laravel\BDE\resources\sass\payment.scss */"./resources/sass/payment.scss");
+>>>>>>> Adding payment confirmation views
+>>>>>>> Adding payment confirmation views
 
 
 /***/ })

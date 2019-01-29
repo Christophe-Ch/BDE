@@ -122,3 +122,5 @@ Route::post('/purchase', 'PurchaseController@store')->middleware('auth');
 Route::delete('/purchase/{purchase}', 'PurchaseController@destroy')->middleware('auth');
 Route::put('/purchase/{purchase}', 'PurchaseController@update')->middleware('auth');
 
+Route::get('/payment', 'PurchaseController@payment')->middleware('auth');
+Route::get('/payment/cash', 'PurchaseController@paymentCash')->middleware('auth');

@@ -75,6 +75,11 @@
     "/css/top-article.css": "/css/top-article.css",
     "/css/articles/form.css": "/css/articles/form.css",
     "/css/purchase-element.css": "/css/purchase-element.css",
+<<<<<<< develop
     "/css/purchase.css": "/css/purchase.css"
 >>>>>>> Fixing stock issues
+=======
+    "/css/purchase.css": "/css/purchase.css",
+    "/css/payment.css": "/css/payment.css"
+>>>>>>> Adding payment confirmation views
 }

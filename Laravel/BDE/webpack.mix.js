@@ -28,4 +28,9 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/articles/create.scss', 'public/css/articles')
    .sass('resources/sass/articles/form.scss', 'public/css/articles')
    .sass('resources/sass/purchase-element.scss', 'public/css')
-   .sass('resources/sass/purchase.scss', 'public/css');
+   .sass('resources/sass/purchase.scss', 'public/css')
+   .sass('resources/sass/payment.scss', 'public/css');
+
+
+
+
