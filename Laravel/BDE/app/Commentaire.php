@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Commentaire extends Model
 {
-    //
+    public $timestamps=false;
 
     public function photo() {
         return $this->belongsTo('App\Photo');

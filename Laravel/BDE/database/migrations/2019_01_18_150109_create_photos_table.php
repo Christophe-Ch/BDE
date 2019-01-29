@@ -15,9 +15,10 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('url', 40);
+            $table->string('url', 255);
             $table->integer('manifestation_id');
             $table->integer('user_id');
+            $table->integer('report')->default(0);
         });
     }
 

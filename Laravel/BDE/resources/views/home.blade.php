@@ -1,4 +1,4 @@
-@extends('layout/base')
+@extends('layout.base')
 
 @section('header')
 <div id="text_home">
@@ -7,8 +7,8 @@
 </div>
 @if (!Auth::check())
     <div id="auth_home">
-        <a href="/login"><input id="input_home_color" type="button" value="Se connecter"></a>
-        <a href="/register"><input id="input_home" type="button" value="S'inscrire"></a>
+        <form action="/login" method="get"><button type="submit" class="button">Se connecter</button></form>
+        <form action="/register" method="get"><button type="submit" class="button transparent">S'inscrire</button></form>
     </div>
 @endif
 

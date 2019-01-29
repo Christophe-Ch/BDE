@@ -47956,6 +47956,47 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+<<<<<<< develop
+<<<<<<< develop
+=======
+=======
+/**
+ * Set burger menu onclick.
+ */
+
+>>>>>>> Fix idee and add idee to event
+var burgerMenu = document.getElementById('burger_menu');
+var subMenuBurger = document.getElementById('submenu_burger');
+
+burgerMenu.onclick = function () {
+  subMenuBurger.style = "display: inline-block; position: absolute; top: 60%; right: 0; width: 250px; padding: 0;z-index:10000;";
+};
+/**
+ * Open modal onclick
+ */
+
+
+var modal = document.getElementById('modal');
+var modalCross = document.getElementById('closeCross');
+
+modalCross.onclick = function () {
+  modal.style.display = "none";
+};
+/**
+ * Remove Burger menu and modal;
+ */
+
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+
+  if (event.target == subMenuBurger) {
+    subMenuBurger.style.display = "none";
+  }
+};
+>>>>>>> Fix Iphone, event, profil
 
 /***/ }),
 
@@ -48086,6 +48127,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< develop
+<<<<<<< develop
 /***/ "./resources/sass/administration.scss":
 /*!********************************************!*\
   !*** ./resources/sass/administration.scss ***!
@@ -48097,6 +48140,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+>>>>>>> Fix Iphone, event, profil
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -48119,6 +48166,55 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< develop
+<<<<<<< develop
+<<<<<<< develop
+<<<<<<< develop
+/***/ "./resources/sass/ideas.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/ideas.scss ***!
+=======
+/***/ "./resources/sass/event.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/event.scss ***!
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+/***/ "./resources/sass/event.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/event.scss ***!
+>>>>>>> Fix Iphone, event, profil
+=======
+/***/ "./resources/sass/event.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/event.scss ***!
+>>>>>>> Fix bdd and add register in event
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+<<<<<<< develop
+<<<<<<< develop
+<<<<<<< develop
+// removed by extract-text-webpack-plugin
+=======
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\resources\\sass\\event.scss'\n    at runLoaders (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at process.nextTick (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:73:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+// removed by extract-text-webpack-plugin
+>>>>>>> Fix Iphone, event, profil
+
+/***/ }),
+
+=======
+>>>>>>> Add controller and routes
+=======
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+<<<<<<< develop
+>>>>>>> Fix bdd and add register in event
+=======
 /***/ "./resources/sass/ideas.scss":
 /*!***********************************!*\
   !*** ./resources/sass/ideas.scss ***!
@@ -48130,6 +48226,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+>>>>>>> Fix idee and add idee to event
 /***/ "./resources/sass/layout.scss":
 /*!************************************!*\
   !*** ./resources/sass/layout.scss ***!
@@ -48141,9 +48238,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< develop
+<<<<<<< develop
 /***/ "./resources/sass/notification.scss":
 /*!******************************************!*\
   !*** ./resources/sass/notification.scss ***!
+=======
+/***/ "./resources/sass/list-element.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/list-element.scss ***!
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+/***/ "./resources/sass/list-element.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/list-element.scss ***!
+>>>>>>> Fix Iphone, event, profil
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -48152,6 +48261,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< develop
+<<<<<<< develop
+<<<<<<< develop
 /***/ 0:
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/notification.scss ./resources/sass/ideas.scss ./resources/sass/administration.scss ***!
@@ -48166,6 +48278,77 @@ __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Lar
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
 __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
 module.exports = __webpack_require__(/*! C:\Users\chris\Documents\eXia\A2\Projets\Web\Sources\Laravel\BDE\resources\sass\administration.scss */"./resources/sass/administration.scss");
+=======
+=======
+>>>>>>> Fix Iphone, event, profil
+=======
+/***/ "./resources/sass/notification.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/notification.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+>>>>>>> Fix Event supp and notif
+/***/ "./resources/sass/search-bar.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/search-bar.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/user.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/user.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+<<<<<<< develop
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\resources\\sass\\user.scss'\n    at runLoaders (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at process.nextTick (C:\\Users\\emmanuel\\Documents\\CESI\\A2\\Project\\WEB\\BDE\\Laravel\\BDE\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:73:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+=======
+// removed by extract-text-webpack-plugin
+>>>>>>> Fix Iphone, event, profil
+
+/***/ }),
+
+/***/ 0:
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout.scss ./resources/sass/buttons.scss ./resources/sass/ideas.scss ./resources/sass/user.scss ./resources/sass/event.scss ./resources/sass/list-element.scss ./resources/sass/notification.scss ./resources/sass/search-bar.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\buttons.scss */"./resources/sass/buttons.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\ideas.scss */"./resources/sass/ideas.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\list-element.scss */"./resources/sass/list-element.scss");
+<<<<<<< develop
+<<<<<<< develop
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\event.scss */"./resources/sass/event.scss");
+<<<<<<< develop
+>>>>>>> Auto stash before merge of "feature/pages" and "develop"
+=======
+>>>>>>> Fix Iphone, event, profil
+=======
+=======
+__webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\notification.scss */"./resources/sass/notification.scss");
+>>>>>>> Fix Event supp and notif
+module.exports = __webpack_require__(/*! C:\Users\emmanuel\Documents\CESI\A2\Project\WEB\BDE\Laravel\BDE\resources\sass\search-bar.scss */"./resources/sass/search-bar.scss");
+>>>>>>> Add controller and routes
 
 
 /***/ })

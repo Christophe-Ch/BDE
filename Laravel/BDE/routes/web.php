@@ -54,6 +54,44 @@ Route::put('/users/{user}', 'AdministrationController@update')->middleware('auth
 Route::get('/notifications', 'NotificationsController@index')->middleware('auth');
 Route::delete('/notifications/{notification}', 'NotificationsController@delete')->middleware('auth');
 
+//Evenement
+Route::resource('event', 'EventController');
+Route::get('/event/search', 'EventController@searchEvent');
+Route::post('/event/register/{eventSelec}', 'EventController@registerEvent')->middleware('auth');
+Route::post('/event/unregister/{eventSelec}', 'EventController@unRegisterEvent')->middleware('auth');
+Route::post('/event/signal/{eventSelec}', 'EventController@signalEvent')->middleware('auth');
+Route::post('/event/downloadParticipant/{idEvent}', 'DownloadController@downloadParticipants')->middleware('auth');
+
+Route::resource('photoEvent', 'PhotoEventController')->only(['store', 'destroy'])->middleware('auth');
+Route::resource('photoEvent', 'PhotoEventController')->only(['show']);
+Route::post('/photoEvent/signaler/{photo}', 'PhotoEventController@signal')->middleware('auth');
+Route::post('/photoEvent/like/{photo}', 'PhotoEventController@like')->middleware('auth');
+Route::post('/photoEvent/unlike/{photo}', 'PhotoEventController@unLike')->middleware('auth');
+Route::post('/photoEvent/comment/{photo}', 'PhotoEventController@comment')->middleware('auth');
+Route::post('/photoEvent/comment/signaler/{comment}', 'PhotoEventController@signalerComment')->middleware('auth');
+Route::delete('/photoEvent/comment/destroy/{comment}', 'PhotoEventController@destroyComment')->middleware('auth');
+
+// Ideas Box
+Route::get('ideas', 'IdeasController@index');
+Route::get('ideas/search', 'IdeasController@searchIdea');
+Route::post('ideas', 'IdeasController@createIdea')->middleware('auth');
+Route::get('ideas/create' , 'IdeasController@create')->middleware('auth');
+Route::get('ideas/{id}/edit', 'IdeasController@edit')->middleware('auth');
+Route::put('ideas/{id}', 'IdeasController@editIdea')->middleware('auth');
+Route::delete('ideas/{id}', 'IdeasController@deleteIdea')->middleware('auth');
+
+
+// Vote des idées
+Route::post('votes/{id}', 'IdeasController@addVote')->middleware('auth');
+Route::delete('votes/{id}', 'IdeasController@deleteVote')->middleware('auth');
+
+//Profil
+Route::get('/profil', 'UserController@index')->name('profil')->middleware('auth');
+Route::get('/profil/modifier/{user}', 'UserController@getModifier')->middleware('auth');
+Route::post('/profil/modifier/{user}', 'UserController@postModifier')->middleware('auth');
+Route::post('/profil/modifier/{user}/photo', 'UserController@postModifierAvatar')->middleware('auth');
+Route::get('/download', 'DownloadController@downloadImages')->middleware('auth');
+
 // Ideas Box
 Route::get('ideas', 'IdeasController@index');
 Route::get('ideas/search', 'IdeasController@searchIdea');

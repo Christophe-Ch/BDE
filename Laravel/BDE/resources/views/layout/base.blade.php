@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/list-element.css">
+    <link rel="stylesheet" href="/css/search-bar.css">
     <link rel="stylesheet" href="/css/notification.css">
     @yield('stylesheets')
+    <script src="/js/app.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +26,7 @@
             <nav>
                 <ul>
                     <li><a href="/">Accueil</a></li>
-                    <li><a href="#">Événements</a></li>
+                    <li><a href="/event">Événements</a></li>
                     <li><a href="/ideas">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
                 </ul>
@@ -32,16 +35,19 @@
             <div id="menu_profil">
                 @if (Auth::check())
                     <div id="menu_profil_content">
-                        <p id="user_name"><a href="">{{ Auth::user()->name }}</a></p>
+                        <p id="user_name"><a href="/profil">{{ Auth::user()->name }}</a></p>
                         <div class="{{ Auth::user()->hasNotifications() ? 'has-notifications' : ''}}">
-                            <img id="user_icon" src="/images/user_icon.png" alt="user">
+                            <img id="user_icon" src="/storage/{{Auth::user()->photo}}" alt="user">
                         </div>
                         <ul id="submenu_profil">
-                            <li><a href="#">Mon profil</a></li>
+                            <li><a href="/profil">Mon profil</a></li>
                             <li><a href="#">Mon panier</a></li>
                             <li><a href="/notifications">Mes notifications</a></li>
                             @if(Auth::user()->statut_id == 2)
                                 <li><a href="/administration">Administration</a></li>
+                            @endif
+                            @if (Auth::user()->statut_id == 3)
+                                <li><a href="/download">Télécharger les photos</a></li>
                             @endif
                             <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                         </ul>
@@ -49,23 +55,23 @@
                 @else
                     <div id="menu_profil_content">
                         <p id="user_name"><a href="/login">Se connecter</a></p>
-                        <img id="user_icon" src="/images/user_icon.png" alt="user">
                     </div>
                 @endif
             </div>
 
             <div id="burger_menu">
-                <div id="burger_bar"></div>
-                <div id="burger_bar"></div>
-                <div id="burger_bar"></div>
+                <div class="burger_bar"></div>
+                <div class="burger_bar"></div>
+                <div class="burger_bar"></div>
                 <ul id="submenu_burger">
                     <li><a href="/">Acceuil</a></li>
-                    <li><a href="#">Événements</a></li>
+                    <li><a href="/event">Événements</a></li>
                     <li><a href="/ideas">Boite à idées</a></li>
                     <li><a href="#">Boutique</a></li>
-                    <li><a href="#">Mon profil</a></li>
+                    <li><a href="/profil">Mon profil</a></li>
                     <li><a href="#">Mes commandes</a></li>
                     <li><a href="#">Mes notifs</a></li>
+                    <li><form action="/logout" method="post">@csrf<button class="button" type="submit">Déconnexion</button></form></li>
                 </ul>
             </div>
         </div>
@@ -80,10 +86,12 @@
                 <div id="links">
                     <p>Liens rapides</p>
                     <nav>
-                        <li><a href="#">Boutique</a></li>
-                        <li><a href="#">Evènements</a></li>
-                        <li><a href="/ideas">Idées</a></li>
-                        <li><a href="#">Mon profil</a></li>
+                        <ul>
+                            <li><a href="#">Boutique</a></li>
+                            <li><a href="/event">Evènements</a></li>
+                            <li><a href="/ideas">Idées</a></li>
+                            <li><a href="#">Mon profil</a></li>
+                        </ul>
                     </nav>
                 </div>
 
@@ -116,5 +124,19 @@
                 <span>&copy; Groupe3 2019</span>
             </div>
         </footer>
+        <script src="/js/app.js"></script>
+        <script>
+            var profilModal = document.getElementById('profil_modal');
+            var profilModalBtn = document.getElementById('profil_img_change');
+    
+            profilModalBtn.onclick = function(){
+                profilModal.style.display = "block";
+            }
+            window.onclick = function(event){
+                if(event.target == profilModal){
+                    profilModal.style.display = "none";
+                }
+            }
+        </script>
 </body>
 </html>

@@ -72,6 +72,10 @@ nav > ul > li > a:focus::after {
 #user_icon {
   width: 50px;
   height: 50px;
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #102138;
 }
 
 #submenu_profil {
@@ -117,7 +121,7 @@ nav > ul > li > a:focus::after {
   height: 60px;
 }
 
-#burger_bar {
+.burger_bar {
   width: 50px;
   height: 5px;
   background: white;
@@ -150,15 +154,6 @@ nav > ul > li > a:focus::after {
 #submenu_burger {
   background: #2b425f;
   border-radius: 5px;
-}
-
-#burger_menu:hover #submenu_burger {
-  display: inline-block;
-  position: absolute;
-  top: 60%;
-  right: 0;
-  width: 250px;
-  padding: 0;
 }
 
 .btn_logout {
@@ -219,6 +214,44 @@ nav > ul > li > a:focus::after {
   }
 }
 
+.header_title {
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  font-family: "Baskerville Old Face", sans-serif;
+  font-size: 120pt;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header_title {
+    font-size: 100pt;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header_title {
+    font-size: 75pt;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .header_title {
+    font-size: 50pt;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .header_title {
+    font-size: 30pt;
+  }
+}
+
 footer {
   background: black;
 }
@@ -229,7 +262,19 @@ footer #content {
   padding-top: 30px;
 }
 
-footer #content #links li {
+footer #content #links {
+  text-align: center;
+}
+
+footer #content #links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+footer #content #links ul li {
   list-style-type: none;
   font-family: "Segoe UI";
   font-style: italic;
@@ -238,13 +283,9 @@ footer #content #links li {
   font-size: 1.3em;
 }
 
-footer #content #links li a {
+footer #content #links ul li a {
   color: white;
   text-decoration: none;
-}
-
-footer #content #links li a:hover {
-  text-decoration: underline;
 }
 
 footer #content #links p {
@@ -480,6 +521,28 @@ footer #legal span {
   position: relative;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.right #modif_avatar {
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right #modif_avatar #profil_img {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.right #modif_avatar #profil_img_change {
+  margin: 20px;
 }
 
 @media only screen and (max-width: 992px) {

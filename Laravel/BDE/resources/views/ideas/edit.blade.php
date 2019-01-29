@@ -1,6 +1,6 @@
 @extends('layout.duo')
 
-@section('css')
+@section('stylesheets')
 <link rel="stylesheet" href="/css/ideas.css">
 @endsection
 

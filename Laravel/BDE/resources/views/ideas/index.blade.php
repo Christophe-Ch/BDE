@@ -44,7 +44,7 @@
             @auth
 
             @if(auth::user()->statut_id == 2)
-            <a id="plan_button" class="button_tel" href="#"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
+            <a id="plan_button" class="button_tel" href="{{ route('event.create', ['idee' => $idea->id]) }}"><input id="input_home_color" class="button" type="button" value="Planifier"></a>
             @else
             <a href="#"></a>
             @endif

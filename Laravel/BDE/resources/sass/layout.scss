@@ -62,6 +62,10 @@ nav > ul > li > a:focus::after{
 #user_icon{
     width: 50px;
     height: 50px;
+    border-radius: 50px;
+    // border: 2px solid white;
+    object-fit: cover;
+    background-color: #102138;
 }
 #submenu_profil{
     list-style-type: none;
@@ -99,7 +103,7 @@ nav > ul > li > a:focus::after{
     width: 60px;
     height: 60px;
 }
-#burger_bar{
+.burger_bar{
     width: 50px;
     height: 5px;
     background: white;
@@ -128,14 +132,14 @@ nav > ul > li > a:focus::after{
     background: #2b425f;
     border-radius: 5px;
 }
-#burger_menu:hover #submenu_burger{
-    display: inline-block;
-    position: absolute;
-    top: 60%;
-    right: 0;
-    width: 250px;
-    padding: 0;
-}
+// #burger_menu:hover #submenu_burger{
+//     display: inline-block;
+//     position: absolute;
+//     top: 60%;
+//     right: 0;
+//     width: 250px;
+//     padding: 0;
+// }
 .btn_logout{
     background: #ffc252;
     color: white;
@@ -162,7 +166,21 @@ nav > ul > li > a:focus::after{
     #menu_profil{display:none;}
     #burger_menu{display: unset;};
 }
-
+.header_title{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 120pt;
+    text-align: center;
+}
+@media only screen and (max-width:1200px){.header_title{font-size: 100pt;}}
+@media only screen and (max-width:992px){.header_title{font-size: 75pt;}}
+@media only screen and (max-width:745px){.header_title{font-size: 50pt;}}
+@media only screen and (max-width:545px){.header_title{font-size: 30pt;}}
 footer {
     background: black;
 
@@ -172,21 +190,26 @@ footer {
         padding-top: 30px;
 
         #links {
-            li {
-                list-style-type: none;
-                font-family: 'Segoe UI';
-                font-style: italic;
-                font-weight: lighter;
-                margin-bottom: 20px;
-                font-size: 1.3em;
+            text-align: center;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0;
 
-                a {
-                    color: white;
-                    text-decoration: none;
-                }
+                li {
+                    list-style-type: none;
+                    font-family: 'Segoe UI';
+                    font-style: italic;
+                    font-weight: lighter;
+                    margin-bottom: 20px;
+                    font-size: 1.3em;
 
-                a:hover {
-                    text-decoration: underline;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }                    
                 }
             }
             p {
@@ -393,6 +416,25 @@ footer {
         top: 50%;
         position: relative;
         transform: translateY(-50%);
+    }
+    #modif_avatar{
+        padding: 0;
+        height: 100vh;
+        align-items: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        #profil_img{
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+            object-fit: cover;
+        }
+        #profil_img_change{
+            margin: 20px;
+        }
     }
 }
 

@@ -16,11 +16,13 @@ class CreateManifestationsTable extends Migration
         Schema::create('manifestations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom', 40);
-            $table->string('description', 40);
+            $table->string('description', 255);
             $table->dateTime('date');
             $table->integer('prix');
             $table->string('photo', 255);
+            $table->string('recurrence', 255);
             $table->integer('centre_id');
+            $table->integer('report')->default(0);
         });
     }
 

@@ -42,30 +42,8 @@ body{
 #auth_home{
   margin-left: 15%;
   
-  #input_home_color{
-    background: #ffc252;
-    color: white;
-    width: 200px;
-    height: 50px;
-    margin-top: 20px;
-    border: none;
-    font-size: 1.5em;
+  form{
     display: inline-block;
-    border-radius: 50px;
-    outline: none;
-    transition-duration: 0.5s;
-  }
-  #input_home{
-    background: none;
-    color: white;
-    width: 200px;
-    height: 50px;
-    margin-top: 20px;
-    border: none;
-    font-size: 1.5em;
-    display: inline-block;
-    border-radius: 50px;
-    outline: none;
     transition-duration: 0.5s;
   }
   #input_home_color:hover{

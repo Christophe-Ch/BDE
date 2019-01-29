@@ -19,6 +19,7 @@ class CreateCommentairesTable extends Migration
             $table->dateTime('date');
             $table->integer('user_id');
             $table->integer('photo_id');
+            $table->integer('report')->default(0);
         });
     }
 

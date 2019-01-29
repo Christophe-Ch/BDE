@@ -2,6 +2,10 @@
 
 @section('title', 'INSCRIPTION')
 
+@section('img')
+<img id="img_right" src="/images/Logo_bde2.png" alt="Logo">
+@endsection
+
 @section('content_form')
 @if ($errors->any())
     <div class="alert alert-danger">
@@ -17,6 +21,9 @@
     <p class="title_input_left">Nom</p>
     <input class="input_left" type="text" name="name"><br>
 
+    <p class="title_input_left">Prenom</p>
+    <input class="input_left" type="text" name="prenom"><br>
+
     <p class="title_input_left">E-mail</p>
     <input class="input_left" type="email" name="email"><br>
 
@@ -28,7 +35,7 @@
 
     <div id="condition">
         <input type="checkbox" name="checkbox">
-        <p class="title_condition_left">J'accepte les conditions de règlements</p>
+        <p class="title_condition_left">J'accepte les <a href="#">conditions de règlements</a></p>
     </div><br>
 
     <input class="btn_left" type="submit" value="S'inscrire">
