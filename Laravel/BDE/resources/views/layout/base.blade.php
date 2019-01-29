@@ -124,6 +124,8 @@
                 <span>&copy; Groupe3 2019</span>
             </div>
         </footer>
+        @include('cookieConsent::index')
+
         <script src="/js/app.js"></script>
         <script>
             var profilModal = document.getElementById('profil_modal');

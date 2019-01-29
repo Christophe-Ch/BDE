@@ -447,3 +447,25 @@ footer {
     .left{.input_left{width: 75%;}}
     .left{#title_left{font-size: 40pt;}}
 }
+
+.cookie-consent {
+    background: #1c385e;
+    color: white;
+    width: calc(100% - 40px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        background: #00a390;
+        color: white;
+    }
+}
