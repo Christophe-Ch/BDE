@@ -121,7 +121,7 @@ nav > ul > li > a:focus::after {
   height: 60px;
 }
 
-#burger_bar {
+.burger_bar {
   width: 50px;
   height: 5px;
   background: white;
@@ -262,7 +262,19 @@ footer #content {
   padding-top: 30px;
 }
 
-footer #content #links li {
+footer #content #links {
+  text-align: center;
+}
+
+footer #content #links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+footer #content #links ul li {
   list-style-type: none;
   font-family: "Segoe UI";
   font-style: italic;
@@ -271,13 +283,9 @@ footer #content #links li {
   font-size: 1.3em;
 }
 
-footer #content #links li a {
+footer #content #links ul li a {
   color: white;
   text-decoration: none;
-}
-
-footer #content #links li a:hover {
-  text-decoration: underline;
 }
 
 footer #content #links p {

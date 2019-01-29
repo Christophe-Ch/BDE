@@ -43,7 +43,7 @@
                             <form action="/event/register/{{$event->id}}" method="post">@csrf<button class="button" type="submit">S'inscrire</button></form>
                         @endif
                         @if(Auth::user() && Auth::user()->statut_id == 2)
-                            <a href="{{ route('event.edit',['event' => $event->id]) }}"><button class="button blue btn_admin" type="submit">Modifier</button></a>
+                            <form action="{{ route('event.edit',['event' => $event->id]) }}" method="get"><button class="button blue btn_admin" type="submit">Modifier</button></form>
                             <form action="{{ route('event.destroy',['event' => $event->id]) }}" method="post">@method('delete')@csrf<button class="button red btn_admin" type="submit">Supprimer</button></form>
                         @endif
                         @if(Auth::user() && Auth::user()->statut_id == 3)
@@ -115,7 +115,7 @@
                                 <div class="modal_like">
                                     <p>{{\App\Like::where('photo_Id', $photoEvent->id)->count()}} like</p>
                                     @if (Auth::user() && !\App\Like::where('photo_Id', $photoEvent->id)->where('user_id', Auth::user()->id)->get()->isEmpty())
-                                        <form action="/photoEvent/unlike/{{$photoEvent->id}}" method="post">@csrf<button class="like_button" type="submit"><img src="/images/icons8-heart-outline-52 -green.png" alt="Like"></button></form>
+                                        <form action="/photoEvent/unlike/{{$photoEvent->id}}" method="post">@csrf<button class="like_button" type="submit"><img src="/images/icons8-heart-outline-52-green.png" alt="Like"></button></form>
                                     @else
                                         <form action="/photoEvent/like/{{$photoEvent->id}}" method="post">@csrf<button class="like_button" type="submit"><img src="/images/icons8-heart-outline-52.png" alt="Like"></button></form>
                                     @endif

@@ -32,12 +32,12 @@
             <h3 class="profil_title">Centre :</h3>
             <p class="profil_desc">{{Auth::user()->centre['nom']}}</p>
         </div>
-        <a href="/profil/modifier/{{Auth::user()->id}}"><button class="button" type="button">Modifier</button></a>
+        <form action="/profil/modifier/{{Auth::user()->id}}" method="get"><button class="button" type="submit">Modifier</button></form>
     </div>
 </div>
 
 <div class="profil_modal" id="profil_modal">
-    <div class="profil_content" id="profil_content">
+    <div class="profil_content">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -51,7 +51,7 @@
             @csrf
             <div class="profil_warp">
                 <h3 class="profil_title">Nouvelle photo :</h3>
-                <input class="profil_desc_input" type="file" name="photo" value="/storage/{{Auth::user()->photo}}">
+                <input class="profil_desc_input" type="file" name="photo">
             </div>
             <input class="button" type="submit" value="Modifier">
         </form>

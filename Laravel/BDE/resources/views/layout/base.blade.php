@@ -60,9 +60,9 @@
             </div>
 
             <div id="burger_menu">
-                <div id="burger_bar"></div>
-                <div id="burger_bar"></div>
-                <div id="burger_bar"></div>
+                <div class="burger_bar"></div>
+                <div class="burger_bar"></div>
+                <div class="burger_bar"></div>
                 <ul id="submenu_burger">
                     <li><a href="/">Acceuil</a></li>
                     <li><a href="/event">Événements</a></li>
@@ -86,10 +86,12 @@
                 <div id="links">
                     <p>Liens rapides</p>
                     <nav>
-                        <li><a href="#">Boutique</a></li>
-                        <li><a href="/event">Evènements</a></li>
-                        <li><a href="/ideas">Idées</a></li>
-                        <li><a href="#">Mon profil</a></li>
+                        <ul>
+                            <li><a href="#">Boutique</a></li>
+                            <li><a href="/event">Evènements</a></li>
+                            <li><a href="/ideas">Idées</a></li>
+                            <li><a href="#">Mon profil</a></li>
+                        </ul>
                     </nav>
                 </div>
 

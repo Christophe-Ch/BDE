@@ -26,7 +26,7 @@
                     @csrf
                     <div class="profil_warp">
                         <h3 class="profil_title">Nouvelle photo :</h3>
-                        <input class="profil_desc_input" type="file" name="photo" value="/storage/{{Auth::user()->photo}}">
+                        <input class="profil_desc_input" type="file" name="photo">
                     </div>
                     <input class="button" type="submit" value="Modifier">
                 </form>
