@@ -1,0 +1,72 @@
+header ::-webkit-scrollbar {
+  width: 8px;
+}
+
+header ::-webkit-scrollbar-track {
+  background: #1c4b5e;
+  border-radius: 10px;
+}
+
+header ::-webkit-scrollbar-thumb {
+  background: #102138;
+  border-radius: 10px;
+}
+
+header .notification {
+  width: 90%;
+  height: 42%;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+header .notification .content {
+  width: 65%;
+}
+
+header .notification .content h3 {
+  margin-top: 0;
+}
+
+header .notification input[type=image] {
+  height: 40px;
+}
+
+header .notification p {
+  margin-top: 0;
+}
+
+header .notifications-container {
+  height: 60vh;
+  width: 80vw;
+  margin-left: 10vw;
+  overflow-y: auto;
+}
+
+header .has-notifications {
+  position: relative;
+  z-index: 1;
+  height: 50px;
+}
+
+header .has-notifications:after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  bottom: -7.5px;
+  right: -7.5px;
+  background: red;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+header .has-notifications img {
+  height: 100%;
+}
+

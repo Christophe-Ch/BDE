@@ -1,0 +1,210 @@
+.evenement_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.evenement_add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 50px;
+        height: 50px;
+        padding-right: 25px;
+    }
+    h1{
+        padding-left: 25px;
+        color: black;
+        font-size: 20pt;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.evenement_list .evenement_element {
+    margin: 50px 0px;
+}
+
+.evenement_list .evenement_element .title_event {
+    text-decoration: none;
+    color: black;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .modal-content {
+    background: white;
+    color: black;
+    width: 80vw;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    position: absolute;
+    right: 10vw;
+    top: 10%;
+}
+
+.modal .modal-content .modal-header {
+    width: 80vw;
+    height: 460px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal .modal-content #closeCross{
+    background: none;
+    border: none;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.modal .modal-content .content {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal .modal-content h2 {
+    margin: 0;
+    font-size: 3.5em;
+    font-family: "Baskerville Old Face", sans-serif;
+}
+
+.modal .modal-content p {
+    font-size: 1.3em;
+}
+
+.modal .modal-content .img_modal {
+    width: 40%;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+}
+
+.modal .modal-content .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal .modal-content .infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal .modal-content .galerie_photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.modal .modal-content .photo{
+    margin:20px;
+    object-fit: contain;
+    background: rgb(209, 209, 209);
+    border-radius: 25px;
+    width: 360px;
+    height: 200px;
+    text-align: center;
+}
+.modal #ajout_photo{
+    text-align: center;
+    margin: 20px;
+}
+.modal .commentaire_list{
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+.modal #input_com{
+    width: 200px;
+    height: 25px;
+    padding: 10px;
+}
+.modal .commentaire_content{
+    display: flex;
+    flex-direction: column;
+    overflow-Y: scroll;
+    height: 200px;
+}
+.modal .commentaire_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.modal .com_avatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+}
+.modal .modal-content .com_desc{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.modal .modal-content .com_text{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+}
+.modal .modal-content .com_username{
+    margin: 0;
+}
+.modal .modal-content .modal_like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content .like_button{
+    background: none;
+    border: none;
+    padding: 0;
+}
+.modal .modal-content .like_button img{
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-width:992px){
+    .modal .modal-content .modal-header {display: block;}
+    .modal .modal-content .content {width: 100%; padding: 0;}
+    .modal .modal-content .img_modal{width: 100%; max-width: 575px; max-height: 350px;}
+    .modal .modal-content .modal-header {height: unset;}
+    .modal .modal-content {text-align: center;}
+    .modal .modal-content h2{font-size: 3em;}
+    .modal .modal-content .actions{display: block;}
+    .modal .modal-content .infos{display: block;}
+    .modal .commentaire_element{display: block;}
+    .modal .commentaire_content{display: block; padding: 10px;}
+    .modal .modal-content .com_text{width: unset; margin: 0; display: block;}
+    .modal .modal-content .com_desc{text-align: center; margin: 10px;}
+    
+}
+@media only screen and (max-width:545px){
+    .modal .modal-content .photo{width: 200px;}
+}

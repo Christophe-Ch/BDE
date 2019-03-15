@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -50,8 +50,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'prenom' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'password' => ['required', 'string', 'regex:/^(?=.?[A-Z])(?=.?[a-z])(?=.*?[0-9]).{6,}$/', 'confirmed'],
+            'checkbox' => ['required'],
         ]);
     }
 
@@ -63,10 +65,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        do { // Generate token
+            $api_token = str_random(100); 
+        } while(User::where('api_token', $api_token)->count());
+
+        $user = new User();
+
+        $user->name = $data['name'];
+        $user->prenom = $data['prenom'];
+        $user->email = $data['email'];
+        $user->photo = 'default-avatar.png';
+        $user->password = Hash::make($data['password']);
+        $user->centre_id = env("centre_id", 1);
+        $user->statut_id = 1;
+        $user->api_token = str_random(100);
+
+        $user->save();
+
+        return $user;
     }
 }

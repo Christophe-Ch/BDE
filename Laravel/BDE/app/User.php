@@ -2,29 +2,55 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    protected $fillable = ['name', 'prenom','email', 'password','photo','centre_id','statut_id'];
+    public $timestamps = false;
+    public $remember_token = false;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    public function centre() {
+        return $this->belongsTo('App\Centre');
+    }
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function statut() {
+        return $this->belongsTo('App\Statut');
+    }
+
+    public function idees() {
+        return $this->hasMany('\App\Idee');
+    }
+
+    public function manifestations() {
+        return $this->belongsToMany('App\Manifestation');
+    }
+
+    public function photos() {
+        return $this->hasMany('App\Photo');
+    }
+
+    public function achats() {
+        return $this->belongsToMany('\App\Article')->withPivot('quantite');
+    }
+
+    public function commentaires() {
+        return $this->hasMany('\App\Commentaire');
+    }
+
+    public function notifications() {
+        return $this->hasMany('App\Notification');
+    }
+
+    public function hasNotifications() {
+        foreach($this->notifications()->get() as $notification) {
+            if ($notification->lue == false) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

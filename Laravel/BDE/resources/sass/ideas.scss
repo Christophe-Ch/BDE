@@ -1,0 +1,154 @@
+.header_title {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header_title h1 {
+    text-align: center;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 120pt;
+}
+
+#create_idea {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#create_idea > a {
+    color: black;
+    text-decoration: none;
+    font-size: 25pt;
+    transition-duration: 0.5s;
+    margin-bottom: 50px;
+}
+
+#create_idea > a:hover {
+    font-size: 35pt;
+}
+
+.list-element {
+
+color: black;
+
+margin-bottom: 100px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.list-element .content{
+    width:100%;
+}
+
+.list-element img {
+    display: none;
+}
+
+.list-element > .content > h2 {
+    font-size: 30px;
+}
+
+.content > p {
+    float:left;
+    word-break: break-all;
+    overflow: auto;
+    width:100%;
+}
+
+.actions {
+    bottom: 5%;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#form-idea {
+    height: 50%;
+    width: 100%;
+    display: inline-grid;
+}
+
+#form-idea > input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+#form-idea > textarea {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    height: 25vh;
+    resize: none;
+    font-family: "Baskerville Old Face", sans-serif;
+}
+
+#informations {
+    display: inline-grid;
+    width: 50%;
+}
+
+#information {
+    background-color: red;
+    border-style: solid;
+    border-radius: 90px;
+    padding: 1%;
+    margin: 1%;
+}
+
+#form {
+    display: inline-flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 812px){
+
+.header_title h1 {
+    text-align: center;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 45pt;
+}
+
+#form {
+    display: inline-flex;
+    align-items: center;
+}
+
+.actions > a > input {
+    height: 45px;
+    width: 74px;
+    font-size: 14px;
+}
+
+.button_tel {
+    height: 45px;
+    width: 74px;
+    font-size: 14px;
+}
+
+.vote_button_tel {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    width: 45px;
+}
+
+.content > p {
+    float:left;
+    font-size: 14px;
+    word-break: break-all;
+    overflow: auto;
+    width:100%;
+}
+
+}
+
+
+
+
+
+

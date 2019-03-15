@@ -1,0 +1,55 @@
+.button {
+  background: #ffc252;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-size: 15pt;
+  display: inline-block;
+  text-align: center;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button :active {
+  cursor: click;
+}
+
+.transparent {
+  background: none;
+  color: white;
+}
+
+.is-light {
+  color: black;
+  background: white;
+}
+
+.is-valid {
+  background: #00a390;
+}
+
+.blue {
+  background: #275086;
+}
+
+.red {
+  background: #f44336;
+}
+
+.btn_admin {
+  width: 100px;
+}
+
+input[type=submit]:disabled {
+  background: #dddddd;
+}
+
+input[type=submit]:disabled:hover {
+  background: #dddddd;
+  color: white;
+  box-shadow: none;
+}
+

@@ -131,6 +131,13 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'nom' => [
+            'required' => 'Le champs `titre` doit être remplie',
+            'unique' => 'Le champs `titre` est déjà pris, veuillez en choisir un autre',
+        ],
+        'description' => [
+            'required' => 'Le champs `description` doit être remplie',
+        ]
     ],
 
     /*

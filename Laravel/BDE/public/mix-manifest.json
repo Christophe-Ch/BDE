@@ -1,0 +1,19 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/layout.css": "/css/layout.css",
+    "/css/buttons.css": "/css/buttons.css",
+    "/css/notification.css": "/css/notification.css",
+    "/css/ideas.css": "/css/ideas.css",
+    "/css/user.css": "/css/user.css",
+    "/css/event.css": "/css/event.css",
+    "/css/list-element.css": "/css/list-element.css",
+    "/css/search-bar.css": "/css/search-bar.css",
+    "/css/top-article.css": "/css/top-article.css",
+    "/css/administration.css": "/css/administration.css",
+    "/css/articles/index.css": "/css/articles/index.css",
+    "/css/articles/form.css": "/css/articles/form.css",
+    "/css/purchase-element.css": "/css/purchase-element.css",
+    "/css/purchase.css": "/css/purchase.css",
+    "/css/payment.css": "/css/payment.css"
+}

@@ -47,7 +47,11 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-
+        'manifestation' => [
+            'driver' => 'local',
+            'root' => public_path().('\images\manifestation'),
+            'visibility' => 'public',
+        ],
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

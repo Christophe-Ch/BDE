@@ -1,14 +1,87 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+// @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }
+
+@font-face{
+  font-family: 'font_content';
+  src: url('../../storage/font/segoeui.woff');
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: font_content;
+  color: white;
+}
+
+// Home CSS
+#text_home{
+  margin-left: 10%;
+  margin-top: 6%;
+  width: 50%;
+
+  #title_home{
+    font-size: 60pt;
+  }
+  #description_home{
+    font-size: 30pt;
+  }
+}
+
+#auth_home{
+  margin-left: 15%;
+  
+  form{
+    display: inline-block;
+    transition-duration: 0.5s;
+  }
+  #input_home_color:hover{
+    color: black;
+    box-shadow: 0px 0px 10px 5px #ffc252;
+  }
+  #input_home:hover{
+    color: black;
+  }
+}
+#img_home{
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+
+  img{
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  #img_home{display:none;}
+  #text_home{width: 90%;}
+}
+@media only screen and (max-width: 1280px){
+  #img_home{display:none;}
+  #text_home{width: 90%;}
+}
+@media only screen and (max-width: 812px){
+  #text_home{
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    #title_home{font-size: 30pt;}
+    #description_home{font-size: 10pt;}
+  }
+  #auth_home{
+    margin: 0;
+    text-align: center;}
 }
